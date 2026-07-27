@@ -1,0 +1,26 @@
+{
+  "name": "karwan-content-os",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.0.8",
+  "scripts": {
+    "canon:validate": "tsx packages/canon-schema/src/validate.ts",
+    "canon:guard": "tsx packages/canon-schema/src/guard.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "check": "pnpm typecheck && pnpm canon:validate && pnpm canon:guard"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "zod": "^3.23.0",
+    "@types/node": "^22.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

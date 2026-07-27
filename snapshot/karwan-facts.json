@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-07-27T00:00:00Z",
+  "commit": "local-dev",
+  "environment": "development",
+  "_note": "Placeholder. The Karwan deploy pipeline writes the real one, describing what shipped. Session 5 wires that; until then this records checks verified by hand against the repo on 2026-07-27.",
+  "checks": {
+    "contracts/src/KarwanEscrow.sol#releaseFinal": {
+      "ok": true,
+      "detail": "releaseFinal is a distinct buyer-called path; no timer reaches it"
+    },
+    "backend/src/routes/deals.ts#shipment-required": {
+      "ok": true,
+      "detail": "goods deliveries return shipment-required without a carrier and tracking ref"
+    },
+    "backend/src/deals/releaseWindow.ts#termsFloorMs": {
+      "ok": true,
+      "detail": "one window governs both the watcher and the seller claim"
+    },
+    "backend/src/routes/factoring.ts#factoringRequestedAt": {
+      "ok": true,
+      "detail": "/available and /offer both gate on the seller's request"
+    },
+    "KarwanPOFinancing.fund#atomic-advance": {
+      "ok": true,
+      "detail": "fund() transfers principal to the seller and calls assignPayout in one tx"
+    },
+    "backend/src/reputation/config.ts#tierCeilingForConcentration": {
+      "ok": true,
+      "detail": "concentration caps the tier independently of the score"
+    },
+    "KarwanEscrow.arbiter#is-safe": {
+      "ok": true,
+      "detail": "escrow.arbiter() returns the 2-of-3 Safe on Arc Testnet"
+    }
+  }
+}
