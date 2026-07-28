@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "site.karwan/mcp",
+  "title": "Karwan",
+  "description": "Karwan's published facts: what has shipped on this Arc trade settlement rail, and what has not.",
+  "websiteUrl": "https://karwan.site",
+  "repository": {
+    "url": "https://github.com/Iziedking/karwan-content-os",
+    "source": "github",
+    "subfolder": "packages/public-mcp"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@karwan/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "KARWAN_MCP_RATE_LIMIT",
+          "description": "Tool calls allowed per minute. Defaults to 60.",
+          "format": "number",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

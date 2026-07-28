@@ -5,3 +5,7 @@ out/
 .env
 .env.*
 !.env.example
+
+# The MCP registry DNS signing key. Whoever holds it can replace the
+# site.karwan listing.
+*.pem

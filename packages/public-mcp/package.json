@@ -2,6 +2,7 @@
   "name": "@karwan/mcp",
   "version": "0.1.0",
   "private": true,
+  "mcpName": "site.karwan/mcp",
   "type": "module",
   "main": "src/index.ts",
   "bin": {

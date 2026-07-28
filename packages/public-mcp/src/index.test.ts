@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn, type ChildProcessWithoutNullStreams } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadCanon } from '@karwan/canon-schema';
@@ -211,6 +212,35 @@ test('the rate limit refuses rather than serving, and says how long', async (t) 
   assert.ok(refused.length > 0, 'the limit never triggered');
   assert.match(refused[0]!, /Wait about \d+s/);
   assert.equal(bodies[0]?.includes('Rate limited'), false, 'the first call was refused');
+});
+
+test('the registry manifest stays consistent with the package', () => {
+  // The registry rejects a publish when these drift, and it does so after the
+  // npm publish has already happened, which is the wrong place to find out.
+  const read = (p: string) =>
+    JSON.parse(readFileSync(join(REPO_ROOT, 'packages', 'public-mcp', p), 'utf8'));
+  const manifest = read('server.json');
+  const pkg = read('package.json');
+
+  assert.equal(manifest.name, pkg.mcpName, 'server.json name and package.json mcpName must match');
+  assert.equal(manifest.version, pkg.version, 'the manifest version must match the package version');
+  assert.equal(manifest.packages[0].identifier, pkg.name);
+  assert.equal(
+    manifest.packages[0].version,
+    pkg.version,
+    'the registry rejects version ranges, so this must be the exact package version',
+  );
+
+  // Schema limits, checked here because the failure is otherwise a rejection at
+  // publish time with a JSON pointer for a message.
+  assert.ok(manifest.description.length <= 100, `description is ${manifest.description.length} chars, max 100`);
+  assert.ok(manifest.title.length <= 100);
+  assert.match(manifest.name, /^[a-zA-Z0-9.-]+\/[a-zA-Z0-9._-]+$/);
+  assert.equal(manifest.packages[0].transport.type, 'stdio');
+
+  // The namespace is claimed by DNS on karwan.site, so the name has to be its
+  // reverse form or the login grants nothing.
+  assert.ok(manifest.name.startsWith('site.karwan/'), 'the name no longer matches the claimed domain');
 });
 
 test('the token bucket refills over time rather than resetting on a window', () => {

@@ -60,15 +60,60 @@ where one process does serve many callers.
 
 ## Registry listing
 
-Listing copy, for the MCP registry entry at release. It is most people's first
-sentence about Karwan, so it reads as a claim rather than a summary.
+`server.json` is the manifest, written against the registry's
+`2025-12-11` schema.
 
-> **Karwan** · Cross-border trade settlement on Arc. Money sits in milestone
-> escrow and releases against delivery, and every settled deal writes to a credit
-> record the business owns. This server answers from Karwan's published canon:
-> what has shipped, what has not, the contract addresses, and the brand rules.
-> No key. Use it before writing anything about Karwan, because a model answering
-> from memory will describe a different product.
+The registry's `description` is capped at **100 characters**, so the listing is
+one line, not a paragraph:
 
-Verify the registry's current manifest schema against its own docs before
-publishing. This file carries the copy, not the format.
+> Karwan's published facts: what has shipped on this Arc trade settlement rail,
+> and what has not.
+
+The longer pitch lives at the top of this file, which is what npm renders on the
+package page.
+
+### Namespace
+
+The manifest claims `site.karwan/mcp`, the reverse DNS form of `karwan.site`.
+That requires DNS authentication: a TXT record on the **apex** of karwan.site,
+not under a selector like `_mcp-auth`.
+
+```bash
+openssl genpkey -algorithm Ed25519 -out key.pem
+PUBLIC_KEY="$(openssl pkey -in key.pem -pubout -outform DER | tail -c 32 | base64)"
+echo "karwan.site. IN TXT \"v=MCPv1; k=ed25519; p=${PUBLIC_KEY}\""
+```
+
+The alternative is GitHub auth, which forces the name into
+`io.github.iziedking/*`. The domain namespace is worth the TXT record: the name
+in the registry is the brand, and it should not read as a personal account.
+
+Whichever you pick, `name` in `server.json` and `mcpName` in `package.json` have
+to match it exactly, or the registry refuses the publish.
+
+### Release checklist
+
+The registry hosts metadata only, so npm comes first.
+
+1. Own the `@karwan` scope on npm. Nothing below works without it.
+2. Set `"private": false` in `package.json`. It is `true` today so an accidental
+   `npm publish` fails loudly instead of shipping.
+3. Decide what actually gets published. `@karwan/mcp` depends on `@karwan/kit`
+   through a `workspace:*` link, so the kit has to be published first and the
+   dependency rewritten to a real version range.
+4. `npm publish --access public`, then bump `version` in both `package.json` and
+   `server.json`. The registry rejects version ranges, so the two must be the
+   same exact string.
+5. Publish the listing, once the TXT record has propagated:
+
+   ```bash
+   PRIVATE_KEY="$(openssl pkey -in key.pem -noout -text | grep -A3 "priv:" | tail -n +2 | tr -d ' :\n')"
+   mcp-publisher login dns --domain karwan.site --private-key "${PRIVATE_KEY}"
+   mcp-publisher publish
+   ```
+
+   Keep `key.pem` out of the repo. It is the credential for the whole namespace,
+   and anyone holding it can replace the listing.
+
+The registry is in preview and resets its data during breaking changes, so treat
+a listing as replaceable rather than permanent.
