@@ -11,9 +11,10 @@
     "canon:guard": "tsx packages/canon-schema/src/guard.ts",
     "generate": "tsx packages/generator/src/emit.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "tsx --test \"packages/**/*.test.ts\" \"ops/**/*.test.ts\"",
+    "test": "tsx --test --test-force-exit \"packages/**/*.test.ts\" \"ops/**/*.test.ts\"",
     "check": "pnpm typecheck && pnpm test && pnpm canon:validate && pnpm canon:guard && pnpm generate",
-    "signals:drop": "tsx ops/dropSignalsCli.ts"
+    "signals:drop": "tsx ops/dropSignalsCli.ts",
+    "mcp:serve": "tsx packages/team-mcp/src/http.ts"
   },
   "devDependencies": {
     "tsx": "^4.19.0",

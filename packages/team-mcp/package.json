@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/index.ts",
   "bin": {
-    "karwan-team-mcp": "src/index.ts"
+    "karwan-team-mcp": "src/index.ts",
+    "karwan-team-mcp-http": "src/http.ts"
   },
   "dependencies": {
     "@karwan/canon-schema": "workspace:*",

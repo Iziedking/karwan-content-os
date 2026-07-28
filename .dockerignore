@@ -1,0 +1,15 @@
+node_modules
+dist
+out
+.git
+.github
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+# The registry signing key and anything else in PEM form. It would be in the
+# image layer forever, and anyone who pulled the image would hold it.
+*.pem
+**/*.test.ts
+ops
+README.md
