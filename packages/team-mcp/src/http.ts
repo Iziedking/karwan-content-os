@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
-import { TeamKeyVerifier } from '@karwan/team-auth';
-import { buildServer, LOCAL_VERSION } from './server.ts';
+import { TeamKeyVerifier, OAuthVerifier, looksLikeTeamKey } from '@karwan/team-auth';
+import { buildServer, LOCAL_VERSION, type Verifier } from './server.ts';
 import { allFiles } from './canon.ts';
 
 /// The team MCP, hosted.
@@ -21,6 +21,19 @@ import { allFiles } from './canon.ts';
 const PORT = Number(process.env.PORT ?? '8790');
 const BACKEND = process.env.KARWAN_BACKEND_URL ?? 'https://api.karwan.site';
 const MCP_PATH = '/mcp';
+
+/// This server's own identity, and the audience every OAuth token is checked
+/// against. Canonical form: no trailing slash, because the spec asks for one
+/// spelling and two spellings would mean two audiences.
+const RESOURCE = (process.env.KARWAN_MCP_RESOURCE ?? 'https://mcp.karwan.site/mcp').replace(/\/$/, '');
+/// The authorization server clients should go to. Its public address, not the
+/// internal one: this value is handed to a browser.
+const ISSUER = (process.env.KARWAN_OAUTH_ISSUER ?? 'https://api.karwan.site').replace(/\/$/, '');
+const INTROSPECT_TOKEN = process.env.KARWAN_INTROSPECT_TOKEN ?? '';
+
+const oauth = INTROSPECT_TOKEN
+  ? new OAuthVerifier({ backendUrl: BACKEND, introspectToken: INTROSPECT_TOKEN, resource: RESOURCE })
+  : null;
 
 /// Per-key ceiling. The key is the real access control; this is the guard
 /// against a client in a retry loop, or a leaked key being drained, doing it
@@ -54,6 +67,33 @@ function json(res: ServerResponse, status: number, body: unknown) {
 /// and a bare string leaves it reporting a parse failure instead of the reason.
 function rpcError(res: ServerResponse, status: number, message: string) {
   json(res, status, { jsonrpc: '2.0', error: { code: -32001, message }, id: null });
+}
+
+/// The 401 that starts an OAuth flow.
+///
+/// RFC 9728 section 5.1. Without `resource_metadata` a client has to guess
+/// where to look, and the Claude app and ChatGPT will simply fail to connect
+/// rather than probing. This header is the whole discovery mechanism.
+function unauthorized(res: ServerResponse, message: string) {
+  res.setHeader(
+    'WWW-Authenticate',
+    `Bearer resource_metadata="${RESOURCE_METADATA_URL}", scope="mcp"`,
+  );
+  rpcError(res, 401, message);
+}
+
+const RESOURCE_METADATA_URL = `${RESOURCE.replace(/\/mcp$/, '')}/.well-known/oauth-protected-resource${MCP_PATH}`;
+
+/// RFC 9728. Served at both the path-suffixed location and the root, because
+/// clients probe them in that order and supporting only one means the ones that
+/// start at the other end never find it.
+function protectedResourceMetadata() {
+  return {
+    resource: RESOURCE,
+    authorization_servers: [ISSUER],
+    scopes_supported: ['mcp'],
+    bearer_methods_supported: ['header'],
+  };
 }
 
 function bearer(req: IncomingMessage): string | null {
@@ -96,16 +136,15 @@ function readBody(req: IncomingMessage): Promise<unknown> {
 async function handleMcp(req: IncomingMessage, res: ServerResponse): Promise<void> {
   const token = bearer(req);
   if (!token) {
-    rpcError(
+    unauthorized(
       res,
-      401,
-      'This server needs a Karwan team key. Send it as "Authorization: Bearer karwan_...". Ask an admin for one.',
+      'This server needs authorization. Sign in through your app, or send a Karwan team key as "Authorization: Bearer karwan_...".',
     );
     return;
   }
 
   if (overLimit(token)) {
-    rpcError(res, 429, `Rate limited. This key may make ${MAX_PER_WINDOW} calls a minute.`);
+    rpcError(res, 429, `Rate limited. This credential may make ${MAX_PER_WINDOW} calls a minute.`);
     return;
   }
 
@@ -117,9 +156,26 @@ async function handleMcp(req: IncomingMessage, res: ServerResponse): Promise<voi
     return;
   }
 
-  // A verifier per request, so its cache belongs to this key and cannot hand a
-  // cached identity to a different one.
-  const verifier = new TeamKeyVerifier({ backendUrl: BACKEND, key: token });
+  // The shape of the credential decides how it is checked. A `karwan_` key goes
+  // to the key verifier that has always handled it, so Claude Code users are
+  // untouched by any of this; anything else is an OAuth token.
+  //
+  // Either way a verifier is built PER REQUEST, so nothing about one caller can
+  // reach the next.
+  let verifier: Verifier;
+
+  if (looksLikeTeamKey(token)) {
+    verifier = new TeamKeyVerifier({ backendUrl: BACKEND, key: token });
+  } else {
+    if (!oauth) {
+      rpcError(res, 503, 'This server is not configured to accept OAuth tokens.');
+      return;
+    }
+    // Wrapped so both paths present the same interface to the tool layer, which
+    // then does not need to know which one ran.
+    verifier = { identify: () => oauth.identify(token, LOCAL_VERSION) };
+  }
+
   const server = buildServer(verifier);
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
 
@@ -145,6 +201,17 @@ const httpServer = createServer((req, res) => {
     } catch (e) {
       json(res, 503, { ok: false, error: (e as Error).message });
     }
+    return;
+  }
+
+  // Both probe locations, because clients try the path-suffixed one first and
+  // fall back to the root. Serving only one strands whichever client starts at
+  // the other end.
+  if (
+    url.pathname === `/.well-known/oauth-protected-resource${MCP_PATH}` ||
+    url.pathname === '/.well-known/oauth-protected-resource'
+  ) {
+    json(res, 200, protectedResourceMetadata());
     return;
   }
 

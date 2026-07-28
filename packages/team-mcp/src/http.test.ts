@@ -192,6 +192,69 @@ test('a key the backend rejects gets a readable refusal, not the canon', async (
   assert.equal(text.includes('what-karwan-is'), false, 'a rejected key was served canon');
 });
 
+test('an unauthenticated request advertises where to get authorized', async (t) => {
+  const backend = await stubBackend(identities);
+  const mcp = await startMcp(backend.url);
+  t.after(async () => {
+    mcp.child.kill();
+    await backend.close();
+  });
+
+  const res = await fetch(`${mcp.url}/mcp`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize' }),
+  });
+
+  assert.equal(res.status, 401);
+  // This header is the entire discovery mechanism. Without it the Claude app
+  // and ChatGPT fail to connect rather than probing for metadata.
+  const challenge = res.headers.get('www-authenticate') ?? '';
+  assert.match(challenge, /^Bearer /);
+  assert.match(challenge, /resource_metadata="[^"]+\/\.well-known\/oauth-protected-resource\/mcp"/);
+});
+
+test('protected resource metadata is served at both probe locations', async (t) => {
+  const backend = await stubBackend(identities);
+  const mcp = await startMcp(backend.url);
+  t.after(async () => {
+    mcp.child.kill();
+    await backend.close();
+  });
+
+  // Clients try the path-suffixed one first and fall back to the root. Serving
+  // only one strands whichever client starts at the other end.
+  for (const path of ['/.well-known/oauth-protected-resource/mcp', '/.well-known/oauth-protected-resource']) {
+    const res = await fetch(`${mcp.url}${path}`);
+    assert.equal(res.status, 200, path);
+    const meta = (await res.json()) as { resource: string; authorization_servers: string[] };
+    assert.equal(meta.resource, 'https://mcp.karwan.site/mcp');
+    assert.deepEqual(meta.authorization_servers, ['https://api.karwan.site']);
+  }
+});
+
+test('an OAuth token is refused when the server has no way to check one', async (t) => {
+  // No KARWAN_INTROSPECT_TOKEN in this process, so the OAuth path is not
+  // configured. It must refuse rather than fall through to the key verifier and
+  // ask the backend whether an OAuth token is a team key.
+  const backend = await stubBackend(identities);
+  const mcp = await startMcp(backend.url);
+  t.after(async () => {
+    mcp.child.kill();
+    await backend.close();
+  });
+
+  const before = backend.calls.length;
+  const res = await rpc(mcp.url, 'not-a-karwan-key-at-all', 'initialize', INIT);
+
+  assert.equal(res.status, 503);
+  assert.equal(
+    backend.calls.length,
+    before,
+    'an OAuth token was sent to the team-key endpoint',
+  );
+});
+
 test('health reports the canon, and a wrong path says where the endpoint is', async (t) => {
   const backend = await stubBackend(identities);
   const mcp = await startMcp(backend.url);

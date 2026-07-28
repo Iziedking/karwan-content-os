@@ -181,3 +181,6 @@ export class TeamKeyVerifier {
     return { ...cached.identity, stale: true };
   }
 }
+
+// The OAuth path, for clients that cannot present a static key.
+export * from './oauth.ts';

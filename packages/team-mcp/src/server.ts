@@ -61,7 +61,17 @@ function asDocs(
     .join('\n\n---\n\n');
 }
 
-export function buildServer(verifier: TeamKeyVerifier): McpServer {
+/// All the tool layer needs from whatever checked the credential.
+///
+/// Structural rather than the concrete TeamKeyVerifier, because there are now
+/// two ways in: a long-lived team key and an OAuth access token. Neither should
+/// be visible from here. A tool asks who is calling and gets a role; how that
+/// was established is the transport's problem.
+export interface Verifier {
+  identify(): Promise<VerifiedIdentity>;
+}
+
+export function buildServer(verifier: Verifier): McpServer {
   /// Verify, then hand back the role and any warning that belongs on the
   /// response. Throws when access is denied, which the tool wrappers turn into
   /// a readable error rather than a stack trace.
