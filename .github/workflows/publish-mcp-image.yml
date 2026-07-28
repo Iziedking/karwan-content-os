@@ -15,7 +15,13 @@ on:
       - 'canon/**'
       - 'packages/**'
       - 'package.json'
+      # Every file below changes what the image contains or whether it builds at
+      # all. pnpm-workspace.yaml was missing from this list, so the commit that
+      # fixed a broken install did not rebuild the broken image.
+      - 'pnpm-workspace.yaml'
       - 'pnpm-lock.yaml'
+      - 'tsconfig.json'
+      - '.nvmrc'
       - 'Dockerfile'
       - '.dockerignore'
       - '.github/workflows/publish-mcp-image.yml'
