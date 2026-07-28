@@ -8,6 +8,8 @@ import {
   selectCanon,
   checkVoice,
   checkClaims,
+  parseBrandTokens,
+  type BrandToken,
   type Fact,
   type FactQuery,
   type Finding,
@@ -23,7 +25,7 @@ import {
 /// Everything here is a thin wrapper over the generator on purpose. Two
 /// implementations of "may we claim this" is one more than can stay correct.
 
-export type { Fact, FactQuery, Finding, Role, CanonFile };
+export type { BrandToken, Fact, FactQuery, Finding, Role, CanonFile };
 export { canonVersion };
 
 let cache: CanonFile[] | null = null;
@@ -64,39 +66,10 @@ export function brief(role?: Role, compact = false): string {
   });
 }
 
-export interface BrandToken {
-  name: string;
-  value: string;
-  note: string;
-}
-
-/// Brand tokens, parsed from the canon files tagged `tokens`.
-///
-/// The tokens live in a fenced block in prose rather than in frontmatter,
-/// because that block is what a designer reads. Parsing it is a small risk, so
-/// the kit's tests assert on known token names: if the block's shape changes,
-/// that fails loudly instead of this quietly returning nothing.
+/// Brand tokens, parsed from the canon files tagged `tokens`. The parser lives
+/// in the generator so this and the public kit read the block the same way.
 export function brandTokens(): BrandToken[] {
-  const out: BrandToken[] = [];
-
-  for (const file of files()) {
-    if (!file.frontmatter.tags.includes('tokens')) continue;
-
-    for (const block of file.body.matchAll(/```[a-z]*\n([\s\S]*?)```/g)) {
-      for (const line of (block[1] ?? '').split('\n')) {
-        // The value anchors the parse: everything before it is the name,
-        // everything after is the note. Names contain spaces and slashes, so
-        // splitting on whitespace would mangle "ink / dark".
-        const m = /^(.*?)\s{2,}(#[0-9a-fA-F]{3,8}|rgba?\([^)]*\))\s*(.*)$/.exec(line);
-        if (!m) continue;
-        const name = m[1]!.trim();
-        if (!name) continue;
-        out.push({ name, value: m[2]!.trim(), note: m[3]!.trim() });
-      }
-    }
-  }
-
-  return out;
+  return parseBrandTokens(files().map((f) => ({ tags: f.frontmatter.tags, body: f.body })));
 }
 
 /// Check a draft against the voice rules.

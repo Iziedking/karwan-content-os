@@ -76,7 +76,12 @@ export interface FactQuery {
   publishableOnly?: boolean;
 }
 
-export function queryFacts(facts: Fact[], query: FactQuery): Fact[] {
+/// The fields a query actually reads. Stated structurally so the public fact
+/// index, which carries a reduced `check`, goes through the same function
+/// rather than a near-copy written for it.
+export type QueryableFact = Pick<Fact, 'id' | 'title' | 'tags' | 'summary' | 'status' | 'publishable'>;
+
+export function queryFacts<T extends QueryableFact>(facts: T[], query: FactQuery): T[] {
   const terms = (query.q ?? '')
     .toLowerCase()
     .split(/\s+/)

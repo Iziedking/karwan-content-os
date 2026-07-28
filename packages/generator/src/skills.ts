@@ -1,6 +1,7 @@
 import type { CanonFile } from '@karwan/canon-schema';
 import { renderBrief } from './brief.ts';
 import { buildFactIndex } from './facts.ts';
+import { buildPublicSnapshot } from './publicBundle.ts';
 import { partition, type Role } from './select.ts';
 
 /// Skill bundles for the editors the team actually uses.
@@ -15,6 +16,11 @@ import { partition, type Role } from './select.ts';
 
 export type SkillTarget = 'claude' | 'codex' | 'cursor';
 
+/// The audiences a bundle can be cut for. `public` is not a team role: it is
+/// the bundle a community builder installs, cut from the public canon only, and
+/// it carries the claim rules without the house voice. Our voice is ours.
+export type SkillRole = Role | 'public';
+
 export interface GeneratedFile {
   /// Relative to the output root, always forward slashes.
   path: string;
@@ -22,7 +28,7 @@ export interface GeneratedFile {
 }
 
 export interface SkillOptions {
-  role: Role;
+  role: SkillRole;
   canonVersion: string;
   now?: Date;
 }
@@ -32,6 +38,8 @@ export interface SkillOptions {
 function instructions(files: CanonFile[], opts: SkillOptions): string {
   const p = partition(files, opts.now ?? new Date());
   const notLive = [...p.future, ...p.stale];
+
+  if (opts.role === 'public') return publicInstructions(p.shipped.length, notLive.length, opts);
 
   // Read the count out in words that stay correct at zero. "0 are not, and are
   // listed under Not shipped" points a reader at a section that does not exist.
@@ -64,12 +72,78 @@ like seamless or robust or game-changing.
 
 ## Before you hand anything over
 
-Check every capability sentence against \`facts.json\` in this bundle. A fact
-with \`"publishable": false\` cannot be stated in the present tense, whatever its
-\`blockedBy\` reason. If you cannot find a fact backing a sentence, the sentence
-is not a claim Karwan makes, so cut it or ask.
+Check every capability sentence against \`facts.json\` in this bundle, and read
+\`blockedBy\` rather than \`publishable\` on its own:
+
+- \`not-live\` or \`stale-check\`: barred. Future tense, or leave it out.
+- \`not-a-capability\`: brand, voice, glossary and FAQ entries. These do not
+  claim product behaviour, so nothing is barred. Use them freely.
+
+If you cannot find a fact backing a sentence, the sentence is not a claim Karwan
+makes, so cut it or ask.
 `;
 }
+
+/// The public bundle.
+///
+/// Written for somebody outside the team: an integrator, a community writer, a
+/// judge reading a submission. The claim rule is identical because a false
+/// claim is just as false in somebody else's post, and a wrong number written
+/// by a community builder is a wrong number the internet now attributes to us.
+/// The house voice rules are absent on purpose. We do not need strangers
+/// sounding like us, we need them getting the facts right.
+function publicInstructions(shipped: number, notLive: number, opts: SkillOptions): string {
+  const unshipped =
+    notLive === 0
+      ? 'Nothing else here is a capability claim.'
+      : `${notLive} further entries are real but not live, and the brief marks them so.`;
+
+  return `# Writing about Karwan
+
+This is Karwan's public canon, version ${opts.canonVersion}. Everything in this
+bundle is published and may be repeated. Nothing outside it is a claim Karwan
+makes, so if you cannot find something here, do not write it. Ask instead.
+
+## The rules
+
+1. **Only what has shipped, in the present tense.** ${shipped} capabilities are live.
+   ${unshipped} If a reader could not go and use it today, do not write it as
+   though they could.
+2. **Do not invent numbers.** No volumes, no user counts, no fee figures, no
+   addresses beyond the ones in \`facts.json\`. If a number is not in this
+   bundle, we have not published it.
+3. **Karwan runs on a testnet.** Never imply that real money is at stake unless
+   the canon says otherwise. Getting this wrong is not a wording problem.
+4. **Follow the brand rules in the brief** when you use the name or the mark.
+
+## Checking your work
+
+\`facts.json\` is the machine-readable version of everything above. Check each
+capability sentence against it, and read \`blockedBy\` rather than \`publishable\`
+on its own:
+
+- \`not-live\` or \`stale-check\`: do not write it in the present tense.
+- \`not-a-capability\`: brand rules, glossary and FAQ answers. These do not claim
+  product behaviour, so nothing is barred. Repeat them freely.
+`;
+}
+
+/// The public bundle carries the public fact index, with internal check refs
+/// stripped. Same call the public kit and public MCP make, so a fact cannot
+/// arrive in a community builder's editor richer than it arrives over the wire.
+function factsFor(files: CanonFile[], opts: SkillOptions): string {
+  const index =
+    opts.role === 'public'
+      ? buildPublicSnapshot(files, { canonVersion: opts.canonVersion, now: opts.now }).facts
+      : buildFactIndex(files, opts.now ?? new Date());
+  return JSON.stringify(index, null, 2);
+}
+
+const DESCRIPTIONS: Record<SkillRole, string> = {
+  dev: 'Write for Karwan in the house voice, using only facts the canon says have shipped.',
+  marketing: 'Write for Karwan in the house voice, using only facts the canon says have shipped.',
+  public: 'Write about Karwan using only its published facts, never claiming anything unshipped.',
+};
 
 export function generateSkillBundle(files: CanonFile[], target: SkillTarget, opts: SkillOptions): GeneratedFile[] {
   const brief = renderBrief(files, {
@@ -77,7 +151,7 @@ export function generateSkillBundle(files: CanonFile[], target: SkillTarget, opt
     audience: opts.role,
     now: opts.now,
   });
-  const facts = JSON.stringify(buildFactIndex(files, opts.now ?? new Date()), null, 2);
+  const facts = factsFor(files, opts);
   const body = instructions(files, opts);
   const root = `skills/${target}/karwan-${opts.role}`;
 
@@ -97,9 +171,9 @@ export function generateSkillBundle(files: CanonFile[], target: SkillTarget, opt
             '---',
             `name: karwan-${opts.role}`,
             `description: >`,
-            `  Write for Karwan in the house voice, using only facts the canon`,
-            `  says have shipped. Use for any Karwan post, page, email, thread,`,
-            `  or submission. Canon version ${opts.canonVersion}.`,
+            `  ${DESCRIPTIONS[opts.role]}`,
+            `  Use for any Karwan post, page, email, thread, or submission.`,
+            `  Canon version ${opts.canonVersion}.`,
             '---',
             '',
             body,
@@ -120,7 +194,7 @@ export function generateSkillBundle(files: CanonFile[], target: SkillTarget, opt
           path: `${root}/karwan-${opts.role}.mdc`,
           content: [
             '---',
-            `description: Write for Karwan in the house voice using canon ${opts.canonVersion}`,
+            `description: ${DESCRIPTIONS[opts.role]} Canon ${opts.canonVersion}.`,
             'globs:',
             'alwaysApply: false',
             '---',
@@ -147,15 +221,21 @@ export function generateSkillBundle(files: CanonFile[], target: SkillTarget, opt
 }
 
 export const SKILL_TARGETS: SkillTarget[] = ['claude', 'codex', 'cursor'];
+export const SKILL_ROLES: SkillRole[] = ['dev', 'marketing', 'public'];
 
 /// Every bundle, for every target and role.
+///
+/// `select` decides what each role may see, and it is the caller's job because
+/// the selection rule is the security boundary. Passing it in means the public
+/// bundle's inputs are chosen by the same lens the public MCP uses rather than
+/// by a second rule written here.
 export function generateAllSkills(
   files: CanonFile[],
   opts: { canonVersion: string; now?: Date },
-  select: (role: Role) => CanonFile[],
+  select: (role: SkillRole) => CanonFile[],
 ): GeneratedFile[] {
   const out: GeneratedFile[] = [];
-  for (const role of ['dev', 'marketing'] as Role[]) {
+  for (const role of SKILL_ROLES) {
     const scoped = select(role);
     for (const target of SKILL_TARGETS) {
       out.push(...generateSkillBundle(scoped, target, { role, canonVersion: opts.canonVersion, now: opts.now }));

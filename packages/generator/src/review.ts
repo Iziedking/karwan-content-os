@@ -1,5 +1,12 @@
 import type { Fact } from './facts.ts';
 
+/// What a claim check reads off a fact. Structural so the public fact index,
+/// whose `check` is reduced, runs through the same checker as the team one.
+export type ClaimableFact = Pick<
+  Fact,
+  'id' | 'title' | 'status' | 'capability' | 'publishable' | 'blockedBy'
+>;
+
 /// Checking a draft against the voice rules and against what actually shipped.
 ///
 /// Two failure modes, and the second is the expensive one. A draft that sounds
@@ -131,7 +138,7 @@ export function checkVoice(draft: string): Finding[] {
 /// occasionally flag a mention that was already careful about tense. That is the
 /// right way round to be wrong, because the alternative is a false public claim
 /// that nobody catches for months.
-export function checkClaims(draft: string, facts: Fact[]): Finding[] {
+export function checkClaims(draft: string, facts: ClaimableFact[]): Finding[] {
   const findings: Finding[] = [];
   const lines = draft.split('\n');
 
@@ -170,7 +177,7 @@ export interface ReviewResult {
   clean: boolean;
 }
 
-export function reviewDraft(draft: string, facts: Fact[]): ReviewResult {
+export function reviewDraft(draft: string, facts: ClaimableFact[]): ReviewResult {
   const findings = [...checkVoice(draft), ...checkClaims(draft, facts)].sort(
     (a, b) => a.line - b.line,
   );

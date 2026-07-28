@@ -1,18 +1,26 @@
-import { loadCanon } from './load.ts';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { loadCanon, REPO_ROOT } from './load.ts';
 
 /// `pnpm canon:guard`
 ///
 /// The leak guard. Enforced by a build step, not by care.
 ///
-/// Two separate failures it has to catch, because they are different mistakes:
+/// Three separate failures it has to catch, because they are different
+/// mistakes:
 ///
 ///   1. A team file that declares itself public, or sits in the wrong tree. The
 ///      loader already rejects a mismatch, so this asserts the tree is clean.
 ///   2. Team CONTENT reachable from a public file. A public file that quotes an
 ///      internal number, or references a team id, has leaked it just as surely
 ///      as if the file itself were public.
+///   3. Team content in the committed public snapshot, which is the file the
+///      public kit and the public MCP ship. The canon can be clean while the
+///      artifact cut from it is not, if the cut went wrong.
 ///
 /// Anything a public export can reach is public. That is the whole rule.
+
+const PUBLIC_SNAPSHOT = join(REPO_ROOT, 'packages', 'public-kit', 'canon.public.json');
 
 const { files, issues } = loadCanon();
 
@@ -56,6 +64,33 @@ const SECRET_PATTERNS: Array<{ label: string; re: RegExp }> = [
 for (const file of publicFiles) {
   for (const { label, re } of SECRET_PATTERNS) {
     if (re.test(file.body)) leaks.push(`${file.path}: looks like it contains a ${label}`);
+  }
+}
+
+// 4. The shipped artifact. Checked against the same team ids, plus whole
+// sentences: a paragraph copied across carries the content even when the id
+// never does.
+if (!existsSync(PUBLIC_SNAPSHOT)) {
+  leaks.push('packages/public-kit/canon.public.json is missing. Run `pnpm generate`');
+} else {
+  // Flatten the JSON's escaped newlines before comparing. The canon is hard
+  // wrapped, so almost every sentence spans lines in the source and appears as
+  // `\n` in the snapshot. Without this the sentence check would pass on
+  // everything and look like coverage it does not have.
+  const raw = readFileSync(PUBLIC_SNAPSHOT, 'utf8');
+  const snapshot = raw.replace(/\\n/g, ' ').replace(/\s+/g, ' ');
+  for (const file of teamFiles) {
+    if (snapshot.includes(file.frontmatter.id)) {
+      leaks.push(`public snapshot: contains team fact "${file.frontmatter.id}"`);
+    }
+    for (const sentence of file.body.split(/(?<=[.!?])\s+/)) {
+      const line = sentence.replace(/\s+/g, ' ').trim();
+      if (line.length < 60) continue;
+      if (snapshot.includes(line)) {
+        leaks.push(`public snapshot: contains a sentence from ${file.path}`);
+        break;
+      }
+    }
   }
 }
 

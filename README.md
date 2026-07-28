@@ -19,11 +19,19 @@ packages/
   team-auth/      key verification with a documented cache window
   team-mcp/       MCP server over the canon, role scoped
   team-kit/       the canon as a library, for builds and CI
+  public-mcp/     @karwan/mcp, open, no key, published facts only
+  public-kit/     @karwan/kit, the same for community builders
 dist/skills/      generated bundles for Claude, Codex and Cursor
 ```
 
 Every projection goes through `generator`. There is one implementation of "may
 we claim this", and everything else asks it.
+
+The two public packages do not filter the canon at read time. They read
+`packages/public-kit/canon.public.json`, a generated snapshot containing only
+public files, and the team canon is not in either package. A filter can be
+forgotten by whoever adds the next tool. A file that was never copied cannot be
+served.
 
 ## The rule the whole thing exists for
 
@@ -53,7 +61,12 @@ pnpm test            all packages
 ```
 
 `dist/` is wiped and rebuilt on every generate. An edit made there is gone at the
-next run, which is the point.
+next run, which is the point. `canon.public.json` is generated too, but it is
+committed rather than thrown in `dist/`, because it is what the public packages
+ship and a change to it belongs in a diff somebody reads.
+
+CI runs all of it on every push and every release tag, and fails if the
+committed snapshot differs from a fresh cut.
 
 ## Using the team MCP
 
@@ -97,6 +110,18 @@ assertPublishable(post); // throws with line numbers and specific fixes
 support, `review()` returns both with a pass/fail an exit code can use. They
 report rather than rewrite: a function that silently edits your copy is one
 nobody trusts twice.
+
+## The public packages
+
+`@karwan/mcp` is open, needs no key, and answers about Karwan from the published
+canon. `@karwan/kit` is the same data as a library. Both are documented in their
+own directories, and both are cut from the snapshot rather than from the canon
+tree.
+
+Skill bundles are generated for the public too, under `dist/skills/*/
+karwan-public/`. They carry the claim rules and the brand rules. They do not
+carry the house voice, because a stranger writing in our voice is not something
+we need, and getting our facts right is.
 
 ## Roles
 

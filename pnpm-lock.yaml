@@ -29,6 +29,32 @@ importers:
         specifier: workspace:*
         version: link:../canon-schema
 
+  packages/public-kit:
+    dependencies:
+      '@karwan/generator':
+        specifier: workspace:*
+        version: link:../generator
+    devDependencies:
+      '@karwan/canon-schema':
+        specifier: workspace:*
+        version: link:../canon-schema
+
+  packages/public-mcp:
+    dependencies:
+      '@karwan/kit':
+        specifier: workspace:*
+        version: link:../public-kit
+      '@modelcontextprotocol/sdk':
+        specifier: ^1.30.0
+        version: 1.30.0(zod@3.25.76)
+      zod:
+        specifier: ^3.23.0
+        version: 3.25.76
+    devDependencies:
+      '@karwan/canon-schema':
+        specifier: workspace:*
+        version: link:../canon-schema
+
   packages/team-auth: {}
 
   packages/team-kit:

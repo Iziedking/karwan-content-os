@@ -1,0 +1,56 @@
+name: CI
+
+# The leak guard runs here on every push, every pull request and every release
+# tag. That last one is the point: the public packages are cut from the same
+# canon as the team ones, and the only thing standing between a team file and an
+# npm publish is this job.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Typecheck, tests, canon, leak guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      # Includes the public MCP leak test, which spawns the real server, calls
+      # every tool and diffs the output against canon/team.
+      - name: Tests
+        run: pnpm test
+
+      - name: Canon validates
+        run: pnpm canon:validate
+
+      - name: Leak guard
+        run: pnpm canon:guard
+
+      # Last, and then checked for drift. Generated output that differs from
+      # what is committed means somebody edited the canon without regenerating,
+      # and the published snapshot would ship stale.
+      - name: Generate
+        run: pnpm generate
+
+      - name: Generated output is committed
+        run: git diff --exit-code -- packages/public-kit/canon.public.json
