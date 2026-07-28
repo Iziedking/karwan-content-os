@@ -1,8 +1,14 @@
 packages:
   - 'packages/*'
 
+# esbuild ships a postinstall that fetches its platform binary, and tsx cannot
+# run without it. pnpm 11 refuses to ignore a build script silently, so this must
+# be an explicit boolean. The placeholder pnpm writes here parses as a STRING,
+# which is not `true`, so a fresh install fails with ERR_PNPM_IGNORED_BUILDS.
+# A local install that is already satisfied never re-checks, which is why this
+# only ever breaks in CI.
 allowBuilds:
-  esbuild: set this to true or false
+  esbuild: true
 
 onlyBuiltDependencies:
   - esbuild
