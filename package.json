@@ -9,9 +9,10 @@
   "scripts": {
     "canon:validate": "tsx packages/canon-schema/src/validate.ts",
     "canon:guard": "tsx packages/canon-schema/src/guard.ts",
+    "generate": "tsx packages/generator/src/emit.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "tsx --test \"packages/**/*.test.ts\"",
-    "check": "pnpm typecheck && pnpm test && pnpm canon:validate && pnpm canon:guard"
+    "check": "pnpm typecheck && pnpm test && pnpm canon:validate && pnpm canon:guard && pnpm generate"
   },
   "devDependencies": {
     "tsx": "^4.19.0",
