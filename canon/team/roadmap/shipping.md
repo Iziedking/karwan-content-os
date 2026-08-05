@@ -33,6 +33,20 @@ identity wallet, but the live technical guide still says EOA only and the instal
 provider has no support for it. Waiting on Circle, not on us. Do not describe the
 pooled balance to a user in the meantime.
 
+One line ships WITH that and only makes sense attached to it. The backend spend in
+`gateway/spend.ts` pins its allocation to Arc, which is correct today because the
+Gateway EOA is funded only from Arc wallets, so its balance can only be on Arc. The
+moment the identity SCA can sign a burn intent, a user's unified balance can hold
+funds on several chains and that pin starts failing with
+`BALANCE_INSUFFICIENT_TOKEN` while the money is demonstrably there. The fix is to
+delete the `allocations` array and let auto-allocation choose: it prefers the
+destination chain first, so Arc to Arc keeps its zero crosschain fee. The web3 path
+in `features/gateway/lib.ts` already omits allocations and needs no change.
+
+Two numbers from Circle's auto-allocation write-up (2026-07-29) that bound this:
+crosschain draws cost 0.5 bps, and only CONFIRMED balances count, so a spend made
+against a still-pending deposit throws rather than waiting for it.
+
 **Carrier verification.** Goods deliveries carry a carrier and tracking reference
 today, but nothing calls a carrier API, so a seller can still enter a plausible
 reference for a shipment that does not exist. Real verification needs a carrier
