@@ -31,6 +31,10 @@
     "KarwanEscrow.arbiter#is-safe": {
       "ok": true,
       "detail": "escrow.arbiter() returns the 2-of-3 Safe on Arc Testnet"
+    },
+    "backend/src/routes/deposit.ts#depositRoutes": {
+      "ok": true,
+      "detail": "verified by hand 2026-08-05: the handler returns {supported, chains[{key,name,address}], solana}. key is a frontend chain key (baseSepolia) and name a short label (Base); no Circle blockchain code such as BASE-SEPOLIA is ever serialised. The four EVM entries share one derived address, so at most two distinct addresses are returned. Exercised end to end on production the same day: a 20 USDC deposit from Base credited and auto-bridged to the Arc identity wallet, mint 0xda19721eef0a484f497848f829b4518c444143382d67a6d44ef353668509da47"
     }
   }
 }
