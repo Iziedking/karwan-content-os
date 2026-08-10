@@ -154,6 +154,7 @@ test('serves the canon to a valid key, and never before verifying it', async (t)
     'karwan_facts',
     'karwan_playbook',
     'karwan_research',
+    'karwan_test_scenarios',
     'karwan_voice',
   ]);
 

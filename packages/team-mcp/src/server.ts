@@ -216,6 +216,18 @@ export function buildServer(verifier: Verifier): McpServer {
   );
 
   server.registerTool(
+    'karwan_test_scenarios',
+    {
+      title: 'Karwan product stress scenarios',
+      description: 'Full-loop tests for wallets, escrow, financing, reputation and permissions.',
+      inputSchema: {},
+    },
+    tool<Record<string, never>>((_args, s) =>
+      asDocs(underDir(s.role, 'team/testing/'), 'The canon has no test scenarios yet.'),
+    ),
+  );
+
+  server.registerTool(
     'karwan_research',
     {
       title: 'Karwan research strategies',
