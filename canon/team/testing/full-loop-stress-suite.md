@@ -6,7 +6,10 @@ visibility: team
 audience: all
 updated: 2026-08-10
 capability: false
-tags: [testing, stress-suite, full-loop]
+tags:
+  - testing
+  - stress-suite
+  - full-loop
 ---
 
 # Operating rule
