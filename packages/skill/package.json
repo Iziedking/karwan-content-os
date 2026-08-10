@@ -1,0 +1,1 @@
+{"name":"@karwan/skill","version":"0.1.0","description":"Install the Karwan agent skill for local AI coding tools.","type":"module","bin":{"karwan-skill":"src/cli.js"},"files":["src","skill"],"engines":{"node":">=18"},"publishConfig":{"access":"public"}}
