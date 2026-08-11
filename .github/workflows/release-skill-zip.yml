@@ -1,0 +1,42 @@
+name: Build Karwan skill ZIP
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-skill-zip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Validate skill package
+        run: node packages/skill/src/validate.js
+
+      - name: Test ZIP contract
+        run: node packages/skill/src/archive.test.js
+
+      - name: Build deterministic archive
+        run: node packages/skill/src/build-zip.js
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: karwan-skill
+          path: packages/skill/karwan-skill.zip
+          if-no-files-found: error
+
+      - name: Attach archive to GitHub Release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" packages/skill/karwan-skill.zip --clobber

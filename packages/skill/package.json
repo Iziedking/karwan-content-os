@@ -7,7 +7,10 @@
     "karwan-skill": "src/cli.js"
   },
   "files": [
-    "src",
+    "src/cli.js",
+    "src/archive.js",
+    "src/build-zip.js",
+    "src/validate.js",
     "skill"
   ],
   "engines": {
@@ -15,5 +18,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "validate": "node src/validate.js",
+    "build:zip": "node src/build-zip.js"
   }
 }

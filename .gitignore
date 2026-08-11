@@ -9,3 +9,6 @@ out/
 # The MCP registry DNS signing key. Whoever holds it can replace the
 # site.karwan listing.
 *.pem
+
+# Built for GitHub releases and local downloads; never commit the archive.
+packages/skill/karwan-skill.zip

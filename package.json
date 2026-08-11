@@ -12,9 +12,12 @@
     "generate": "tsx packages/generator/src/emit.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "tsx --test --test-force-exit \"packages/**/*.test.ts\" \"ops/**/*.test.ts\"",
-    "check": "pnpm typecheck && pnpm test && pnpm canon:validate && pnpm canon:guard && pnpm generate",
+    "check": "pnpm typecheck && pnpm test && pnpm skill:test && pnpm skill:validate && pnpm canon:validate && pnpm canon:guard && pnpm generate",
     "signals:drop": "tsx ops/dropSignalsCli.ts",
-    "mcp:serve": "tsx packages/team-mcp/src/http.ts"
+    "mcp:serve": "tsx packages/team-mcp/src/http.ts",
+    "skill:validate": "node packages/skill/src/validate.js",
+    "skill:test": "node packages/skill/src/archive.test.js",
+    "skill:zip": "node packages/skill/src/build-zip.js"
   },
   "devDependencies": {
     "tsx": "^4.19.0",
