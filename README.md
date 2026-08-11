@@ -125,11 +125,29 @@ we need, and getting our facts right is.
 
 ## Installing the Karwan skill
 
-The Karwan agent skill is available through npm and as a clean ZIP. The ZIP
-contains only `SKILL.md` and `references/` at its root, so it can be installed
-without unpacking repository or package files.
+The ZIP is for desktop apps that import skills directly. It contains only
+`SKILL.md` and `references/` at its root, which is the layout expected by skill
+importers.
 
-### npm installer
+[Download karwan-skill.zip](https://github.com/Iziedking/karwan-content-os/releases/latest/download/karwan-skill.zip)
+
+### Codex desktop app
+
+1. Download `karwan-skill.zip` from the link above.
+2. Open the Codex desktop app's skill management or import screen.
+3. Choose **Import skill** and select the ZIP without extracting it.
+4. Confirm that the imported skill is named `karwan`.
+
+### Claude Desktop
+
+1. Download `karwan-skill.zip` from the link above.
+2. Open **Settings > Capabilities > Skills**.
+3. Upload the ZIP without extracting it.
+4. Confirm that the imported skill is named `karwan`.
+
+### Codex CLI and Claude Code
+
+CLI users should use the npm installer rather than the ZIP:
 
 ```bash
 npx @karwanbuild/skill install
@@ -140,34 +158,6 @@ The installer writes the skill to both `~/.codex/skills/karwan` and
 `~/.claude/skills/karwan`. Run `update` to replace an installed copy or
 `uninstall` to remove it.
 
-### Codex from ZIP
-
-Download `karwan-skill.zip` from the
-[latest GitHub release](https://github.com/Iziedking/karwan-content-os/releases/latest),
-then extract it into the skill directory:
-
-```bash
-mkdir -p ~/.codex/skills/karwan
-unzip karwan-skill.zip -d ~/.codex/skills/karwan
-```
-
-Restart Codex so it discovers the new skill.
-
-### Claude Code from ZIP
-
-```bash
-mkdir -p ~/.claude/skills/karwan
-unzip karwan-skill.zip -d ~/.claude/skills/karwan
-```
-
-Restart Claude Code after extraction.
-
-### Claude Desktop from ZIP
-
-Download `karwan-skill.zip`, open **Settings > Capabilities > Skills** in
-Claude Desktop, and upload the ZIP. Keep the archive intact: Claude Desktop
-expects `SKILL.md` at the ZIP root.
-
 ### Building the ZIP locally
 
 ```bash
@@ -177,8 +167,7 @@ pnpm skill:zip
 ```
 
 The archive is written to `packages/skill/karwan-skill.zip`. It is a generated
-release artifact and is intentionally ignored by Git.
-
+GitHub Release asset and is intentionally ignored by Git.
 ## Roles
 
 Two, and only two. `dev` reads the whole landscape including architecture, the

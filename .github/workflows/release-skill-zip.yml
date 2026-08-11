@@ -1,8 +1,8 @@
-name: Build Karwan skill ZIP
+name: Release Karwan skill ZIP
 
 on:
-  release:
-    types: [published]
+  push:
+    tags: ['v*']
   workflow_dispatch:
 
 permissions:
@@ -35,8 +35,13 @@ jobs:
           path: packages/skill/karwan-skill.zip
           if-no-files-found: error
 
-      - name: Attach archive to GitHub Release
-        if: github.event_name == 'release'
+      - name: Create GitHub Release with ZIP
+        if: github.ref_type == 'tag'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "${{ github.event.release.tag_name }}" packages/skill/karwan-skill.zip --clobber
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" packages/skill/karwan-skill.zip --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" packages/skill/karwan-skill.zip --generate-notes --title "$GITHUB_REF_NAME"
+          fi
