@@ -129,6 +129,11 @@ The ZIP is for desktop apps that import skills directly. It contains only
 `SKILL.md` and `references/` at its root, which is the layout expected by skill
 importers.
 
+`references/build-shape.md` is the one to read on a bug report: it maps a
+reported symptom to every layer of the codebase that has to change, so a coding
+agent stops fixing only the screen that was in the screenshot. The archive
+validator requires it, so a bundle cannot ship without it.
+
 [Download karwan-skill.zip](https://github.com/Iziedking/karwan-content-os/releases/latest/download/karwan-skill.zip)
 
 ### Codex desktop app

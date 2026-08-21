@@ -7,6 +7,7 @@ import { buildSkillZip, validateSkillSource } from './archive.js';
 
 const EXPECTED = [
   'SKILL.md',
+  'references/build-shape.md',
   'references/full-product-usage.md',
   'references/product.md',
   'references/testing.md',
@@ -56,7 +57,7 @@ test('validation refuses an incomplete skill before archive creation', async () 
   try {
     await mkdir(join(dir, 'references'));
     await writeFile(join(dir, 'SKILL.md'), '---\nname: karwan\ndescription: test\n---\n');
-    await assert.rejects(validateSkillSource(dir), /missing required file: references\/full-product-usage\.md/);
+    await assert.rejects(validateSkillSource(dir), /missing required file: references\//);
   } finally {
     await rm(dir, { recursive: true, force: true });
   }

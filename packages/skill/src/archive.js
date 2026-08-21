@@ -3,6 +3,7 @@ import { dirname, join } from 'node:path';
 
 export const REQUIRED_FILES = [
   'SKILL.md',
+  'references/build-shape.md',
   'references/full-product-usage.md',
   'references/product.md',
   'references/testing.md',
@@ -70,6 +71,9 @@ export async function validateSkillSource(source) {
   if (!/^description:\s*\S.+$/m.test(skill)) throw new Error('SKILL.md must declare a description');
   if (!skill.includes('references/full-product-usage.md')) {
     throw new Error('SKILL.md must require references/full-product-usage.md');
+  }
+  if (!skill.includes('references/build-shape.md')) {
+    throw new Error('SKILL.md must require references/build-shape.md');
   }
   return files;
 }
