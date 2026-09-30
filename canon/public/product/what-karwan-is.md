@@ -4,27 +4,42 @@ title: What Karwan is
 status: live
 visibility: public
 audience: all
-updated: 2026-07-27
+updated: 2026-09-30
 capability: false
 tags:
   - overview
+  - market
+  - local-trade
+  - cross-border
 sources:
   - url: https://karwan.site
-    date: 2026-07-27
+    date: 2026-09-30
 ---
 
-Karwan is a settlement and credit layer for cross-border SME trade. Money sits in
-milestone escrow and releases against delivery. Every settled deal writes to a
-credit record that belongs to the business and travels with it, so a supplier
-finishes their first shipment with cash in hand and a credit file a financier can
-read.
+Karwan unifies online reputation, starting with an open market for secure local
+and cross-border trade. People join a new marketplace, job board or region and
+have to vet themselves from zero every time; Karwan is building one reputation
+that travels with a person, so hidden talent becomes visible and opportunity
+follows. It starts with Karwan's market, where every completed deal is
+protected in escrow and recorded.
 
-It runs on Arc, where USDC is the gas token, so a business never buys a second
-asset to move its own money.
+People and businesses can buy or sell services, goods, supplies and eligible
+business orders. A trade may be local, with both parties in the same country,
+or cross-border, with parties in different countries.
 
-The escrow underneath does not care who is trading. It is the same whether a
-supplier in Karachi ships cotton to a wholesaler in Dubai or a designer in Lagos
-sells a logo to a buyer in Berlin. Two parties agree, the money waits, the work
-lands, the money moves. What changes is the surface on top: SME Trades carries
-invoice factoring, purchase-order financing and the credit passport, while P2P
-Trades is the same escrow without the trade-finance machinery.
+Trade can start as a direct deal with a known counterparty, an email invite, an
+open buyer request, an open seller offer, a verified business connection or an
+agent-assisted match. The parties agree the commercial terms before test USDC
+moves into milestone escrow on Arc Testnet. Money sits in the escrow contract,
+not with Karwan or the counterparty, and releases against the agreed outcome.
+
+Individual and business trade use the same protection layer. Business accounts
+can also build a portable credit record from settled trade and request financing
+for eligible Karwan-originated accepted invoices or purchase orders. Financing
+is opt-in: approved financiers quote terms and the supplier chooses. Direct deals
+remain available without verification, while agent matching, verified-business
+features and financing may have eligibility gates.
+
+The current release is testnet software. Local trade does not mean local-currency
+payment is live. Unified reputation across platforms, browser capture, mainnet
+settlement and local bank payout are planned expansion, not current capabilities.

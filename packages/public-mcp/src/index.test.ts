@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadCanon } from '@karwan/canon-schema';
+import { canonVersion } from '@karwan/kit';
 import { RateLimiter } from './rateLimit.ts';
 
 /// The leak guard, run against the real server rather than against the data it
@@ -120,7 +121,10 @@ test('it serves the public canon with no key at all', async (t) => {
 
   const overview = await client.call('karwan_overview');
   assert.ok(overview.includes('What Karwan is'), overview);
-  assert.ok(overview.includes('canon 0.1.0'), 'the response did not state its canon version');
+  assert.ok(
+    overview.includes(`canon ${canonVersion()}`),
+    'the response did not state its canon version',
+  );
 });
 
 test('no team content appears in any tool output', async (t) => {

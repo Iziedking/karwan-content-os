@@ -4,29 +4,26 @@ title: Typography
 status: live
 visibility: public
 audience: all
-updated: 2026-07-27
+updated: 2026-09-30
 capability: false
 tags:
   - brand
   - tokens
 sources:
   - url: https://karwan.site
-    date: 2026-07-27
+    date: 2026-09-30
 ---
 
-Three faces, each with one job.
+One family: General Sans. Hierarchy comes from size and weight, not from a
+second face or from capitals.
 
-**Display.** A neo-grotesque, weight 700, tracking `-0.02em`, line height `0.95`,
-uppercase. Used for intent: page titles and section headings.
+**Headings.** Sentence case, weight 500 to 600, slightly tight tracking.
 
-**Mono.** Uppercase, letterspaced, bracketed. Used for system metadata and
-status, never for prose. This is what makes a Karwan surface read as an
-instrument rather than a marketing page.
+**Money.** Tabular figures, the amount larger than anything around it, the
+currency written after it.
 
-**Serif.** Reserved for the instrument-readout register on deal surfaces.
+**Metadata.** The same family with tabular figures. Uppercase letterspaced
+labels and brackets are reserved for technical metadata such as references,
+network names and timestamps, never for section titles or prose.
 
-Numbers are always tabular. Any digit cluster that can change, a balance, an
-amount, a countdown, sets `font-variant-numeric: tabular-nums` so it does not
-jitter as it updates.
-
-Fonts are self-hosted. Do not add a CDN font link.
+Email uses the system sans stack with the same rules.

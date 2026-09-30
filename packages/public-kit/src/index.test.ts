@@ -121,7 +121,7 @@ test('overview and faq answer from the canon', () => {
 test('brand tokens parse out of the public snapshot', () => {
   const byName = Object.fromEntries(brandTokens().map((t) => [t.name, t.value]));
   assert.equal(byName['accent'], '#AFC95B');
-  assert.equal(byName['ink / dark'], '#0E0E0E');
+  assert.equal(byName['ink / dark'], '#16202A');
 });
 
 test('findFacts narrows, and an unknown term returns nothing', () => {

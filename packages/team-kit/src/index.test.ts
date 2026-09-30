@@ -41,7 +41,7 @@ test('brand tokens parse out of the canon', () => {
   // Named tokens rather than a count, so a change to the block's shape fails
   // here instead of silently returning an empty list.
   assert.equal(byName['accent'], '#AFC95B', 'the accent token did not parse');
-  assert.equal(byName['ink / dark'], '#0E0E0E', 'a token name containing spaces did not parse');
+  assert.equal(byName['ink / dark'], '#16202A', 'a token name containing spaces did not parse');
   assert.ok(tokens.some((t) => t.value.startsWith('rgba(')), 'rgba tokens did not parse');
 
   // The canon is explicit that the older bright lime is not the shipped value.
