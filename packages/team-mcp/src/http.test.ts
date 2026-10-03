@@ -21,7 +21,6 @@ import { fileURLToPath } from 'node:url';
 
 const REPO_ROOT = fileURLToPath(new URL('../../../', import.meta.url));
 const ENTRY = join(REPO_ROOT, 'packages', 'team-mcp', 'src', 'http.ts');
-const TSX = join(REPO_ROOT, 'node_modules', '.bin', process.platform === 'win32' ? 'tsx.CMD' : 'tsx');
 
 /// Stands in for the Karwan backend. Answers per key, so one stub can play both
 /// a dev and a marketing member, and can revoke one of them mid-test.
@@ -54,18 +53,26 @@ async function stubBackend(reply: (key: string) => { status: number; body: unkno
   };
 }
 
+/// Node runs the server itself with tsx as a loader. Going through the tsx
+/// launcher (and on Windows a shell) left a chain of processes where kill()
+/// stopped only the first, and every run leaked one live server per test.
 async function startMcp(backendUrl: string) {
-  const child = spawn(TSX, [ENTRY], {
+  const child = spawn(process.execPath, ['--import', 'tsx', ENTRY], {
+    cwd: REPO_ROOT,
     env: { ...process.env, KARWAN_BACKEND_URL: backendUrl, PORT: '0' },
     stdio: ['pipe', 'pipe', 'pipe'],
-    shell: process.platform === 'win32',
   }) as ChildProcessWithoutNullStreams;
 
   // PORT 0 would be ephemeral but the server logs the port it took, so read it
   // back rather than guessing a free one and racing another test.
   const port = await new Promise<number>((resolve, reject) => {
     let out = '';
-    const timer = setTimeout(() => reject(new Error(`server never started. stderr: ${out}`)), 25_000);
+    const timer = setTimeout(() => {
+      // A server that never announced itself is still running; stop it here,
+      // because no t.after has been registered for it yet.
+      child.kill();
+      reject(new Error(`server never started. stderr: ${out}`));
+    }, 25_000);
     child.stderr.setEncoding('utf8');
     child.stderr.on('data', (chunk: string) => {
       out += chunk;
