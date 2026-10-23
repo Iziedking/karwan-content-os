@@ -4,7 +4,7 @@ title: Setting up Karwan the way you use it
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-20
+updated: 2026-10-23
 capability: true
 tags:
   - agents
@@ -18,7 +18,8 @@ sources:
 After agent wallets are active, Karwan asks what you want it to do: get paid
 for your work, sell products, buy or hire, run business deals, or build a
 record clients trust. It then asks only what those answers need, such as
-what you do, your usual price and how fast you deliver, and where you are.
+what you do, your usual price and how fast you deliver, how your clients
+usually pay you, and where you are.
 It shows the result as "Here's your Karwan" and saves nothing until you
 say it looks right. The same questions run on the website, in Telegram, and
 from a conversation with your agent.
