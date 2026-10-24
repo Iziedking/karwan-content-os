@@ -1,6 +1,6 @@
 {
   "canonVersion": "0.4.0",
-  "canonUpdated": "2026-10-23",
+  "canonUpdated": "2026-10-24",
   "docs": [
     {
       "id": "agent-record-checks",
@@ -114,6 +114,25 @@
         }
       ],
       "body": "One family: General Sans. Hierarchy comes from size and weight, not from a\nsecond face or from capitals.\n\n**Headings.** Sentence case, weight 500 to 600, slightly tight tracking.\n\n**Money.** Tabular figures, the amount larger than anything around it, the\ncurrency written after it.\n\n**Metadata.** The same family with tabular figures. Uppercase letterspaced\nlabels and brackets are reserved for technical metadata such as references,\nnetwork names and timestamps, never for section titles or prose.\n\nEmail uses the system sans stack with the same rules."
+    },
+    {
+      "id": "confirming-it-is-you",
+      "title": "Confirming it is you, with a passkey or a Karwan PIN",
+      "status": "roadmap",
+      "updated": "2026-10-24",
+      "tags": [
+        "money",
+        "agents",
+        "testnet"
+      ],
+      "path": "public/product/confirming-it-is-you.md",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/27-deals-on-the-escrow-family.md",
+          "date": "2026-10-24"
+        }
+      ],
+      "body": "A person's agents run their deals for them: they pay into a deal, accept,\ndeliver and release inside the limits the person set, so a deal keeps moving\nwhile the person is away. Karwan asks the person to be present for three\nthings only, and then they confirm with a passkey, which is their phone's\nface or fingerprint check, or with a 6-digit Karwan PIN.\n\nThe three things: setting up their Karwan record and their buying agent's\nlimits, putting up deal insurance, and money leaving Karwan for an address\nthat is not one of their own Karwan wallets. Putting up deal insurance is\nthe consent for it to protect their buyers and back advances from\nfinanciers on their deals, so taking an advance later is one tap.\n\nFive wrong PINs lock the PIN for 15 minutes, and a passkey still works in\nthe meantime. A forgotten PIN is reset with a code sent to the person's\nemail. A PIN is never typed into a chat: the agent sends a one-time Karwan\nlink and the person confirms on that page. Someone who signs in with their\nown wallet confirms by signing in that wallet.\n\nEach confirmation fits one action and one amount, and works once."
     },
     {
       "id": "credit-passport",
@@ -334,6 +353,25 @@
       "body": "A broader quote market for eligible Karwan-originated receivables and purchase\norders is planned. Invoice factoring, purchase-order financing and the financier\ndesk exist in the current testnet build, while the broader open market does not.\n\nThe supplier will compare the advance, repayment, spread, expiry, recourse and\nconcentration controls, then choose whether to accept. Karwan does not finance\narbitrary outside invoices and does not guarantee an advance."
     },
     {
+      "id": "photos-on-offers",
+      "title": "Photos on offers",
+      "status": "roadmap",
+      "updated": "2026-10-24",
+      "tags": [
+        "market",
+        "offers",
+        "testnet"
+      ],
+      "path": "public/product/photos-on-offers.md",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/28-photos-on-listings.md",
+          "date": "2026-10-24"
+        }
+      ],
+      "body": "An offer on Karwan's market can carry up to four photos, so a buyer sees the\nitem before agreeing a deal. The first photo shows on the market card and all\nof them on the offer page.\n\nYou add photos on the offer form, or send them to your assistant before it\ndrafts the offer. On the website you choose that the photo is for an offer.\nIn Telegram or WhatsApp you say so in the caption, for example \"for my\noffer\". The assistant's offer card shows how many photos it adds, and nothing\nis posted until you confirm.\n\nPhotos are resized on your device before they are sent, which also drops the\nlocation data a phone camera adds. Anyone signed in can report an offer or\nits photos from the offer page, and the team reviews every report.\n\nThis is built for testnet and not live yet."
+    },
+    {
       "id": "po-financing",
       "title": "Purchase-order financing",
       "status": "live",
@@ -548,6 +586,26 @@
         }
       ],
       "body": "On an agent deal on Arc Testnet, Karwan's trust rules ask a person to confirm\nwith World ID only for one of four reasons: their first deal, a deal of 1,000\nUSDC or more, many deals from a new account in one day, or a link they sent\nearlier that was judged malicious.\n\nThe buyer confirms when choosing an offer. The seller confirms before escrow\nfunds, and escrow funds as soon as they pass. A person who already passed World\nID anywhere on Karwan is not asked again for a first deal.\n\nA price far from the market, a low score or a link judged only suspicious never\nasks for World ID. Replayed over 197 testnet deals, these rules asked on 55\ndeals, down from 97 under the earlier rules.\n\nOn testnet the check can be skipped so testing is never blocked. World ID is\nnot configured on mainnet, where escrow is not enabled yet."
+    },
+    {
+      "id": "your-karwan-record",
+      "title": "Your Karwan record, set up once",
+      "status": "roadmap",
+      "updated": "2026-10-24",
+      "tags": [
+        "reputation",
+        "agents",
+        "escrow",
+        "testnet"
+      ],
+      "path": "public/product/your-karwan-record.md",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/27-deals-on-the-escrow-family.md",
+          "date": "2026-10-24"
+        }
+      ],
+      "body": "Deals held by Karwan's escrow family count on each side's Karwan record. A\nperson sets their record up once: before their first payment as a buyer,\nand as a seller when they agree to their first deal's terms or before their\nselling agent offers on a request. Setting it up links their buying and\nselling agents to it. The buying agent can then pay up to 1,005 USDC at a\ntime and 10,000 USDC in total for one year, and asks to be renewed after\nthat.\n\nA seller sets it up when they agree because the escrow notes each side's\nrecord at the moment the buyer pays in. A deal paid in before the seller\nhad a record runs normally but does not count on the seller's record.\nUntil a seller has a record, their selling agent does not offer on new\nrequests and tells them once a day.\n\nIt takes one confirmation with a passkey or a Karwan PIN, or, for someone\nwho signs in with their own wallet, signing in that wallet. In Telegram the\ncard shows in the chat and the confirmation happens on Karwan.\n\nAfter each payment on a deal, the seller's earnings move from their selling\nagent to their own wallet; a move that is still waiting shows in their\nbalance and is tried again. Once a deal settles, the deal page says when it\nis on both records. Deals can be up to 1,000 USDC while Karwan is in beta.\n\nThis runs on Arc Testnet once new deals are switched over to the escrow\nfamily; mainnet follows an external audit."
     }
   ],
   "facts": [
@@ -697,6 +755,30 @@
       "check": null,
       "updated": "2026-09-30",
       "path": "public/brand/typography.md"
+    },
+    {
+      "id": "confirming-it-is-you",
+      "title": "Confirming it is you, with a passkey or a Karwan PIN",
+      "status": "roadmap",
+      "publishable": false,
+      "blockedBy": "not-live",
+      "capability": true,
+      "audience": "all",
+      "tags": [
+        "money",
+        "agents",
+        "testnet"
+      ],
+      "summary": "A person's agents run their deals for them: they pay into a deal, accept, deliver and release inside the limits the person set, so a deal keeps moving while the person is away. Karwan asks the person to be present for three things only, and then they confirm with a passkey, which is their phone's face or fingerprint check, or with a 6-digit Karwan PIN.",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/27-deals-on-the-escrow-family.md",
+          "date": "2026-10-24"
+        }
+      ],
+      "check": null,
+      "updated": "2026-10-24",
+      "path": "public/product/confirming-it-is-you.md"
     },
     {
       "id": "credit-passport",
@@ -1001,6 +1083,30 @@
       "path": "public/product/open-trade-finance-roadmap.md"
     },
     {
+      "id": "photos-on-offers",
+      "title": "Photos on offers",
+      "status": "roadmap",
+      "publishable": false,
+      "blockedBy": "not-live",
+      "capability": true,
+      "audience": "all",
+      "tags": [
+        "market",
+        "offers",
+        "testnet"
+      ],
+      "summary": "An offer on Karwan's market can carry up to four photos, so a buyer sees the item before agreeing a deal. The first photo shows on the market card and all of them on the offer page.",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/28-photos-on-listings.md",
+          "date": "2026-10-24"
+        }
+      ],
+      "check": null,
+      "updated": "2026-10-24",
+      "path": "public/product/photos-on-offers.md"
+    },
+    {
       "id": "po-financing",
       "title": "Purchase-order financing",
       "status": "live",
@@ -1286,6 +1392,31 @@
       },
       "updated": "2026-10-16",
       "path": "public/product/world-id-risk-checks.md"
+    },
+    {
+      "id": "your-karwan-record",
+      "title": "Your Karwan record, set up once",
+      "status": "roadmap",
+      "publishable": false,
+      "blockedBy": "not-live",
+      "capability": true,
+      "audience": "all",
+      "tags": [
+        "reputation",
+        "agents",
+        "escrow",
+        "testnet"
+      ],
+      "summary": "Deals held by Karwan's escrow family count on each side's Karwan record. A person sets their record up once: before their first payment as a buyer, and as a seller when they agree to their first deal's terms or before their selling agent offers on a request. Setting it up links their buying and selling agents to it. The buying agent can then pay up to 1,005 USDC at a time and 10,000 USDC in total for one year, and asks to be renewed after that.",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/27-deals-on-the-escrow-family.md",
+          "date": "2026-10-24"
+        }
+      ],
+      "check": null,
+      "updated": "2026-10-24",
+      "path": "public/product/your-karwan-record.md"
     }
   ]
 }
