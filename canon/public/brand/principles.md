@@ -4,7 +4,7 @@ title: Brand principles
 status: live
 visibility: public
 audience: all
-updated: 2026-09-30
+updated: 2026-10-24
 capability: false
 tags:
   - brand
@@ -35,4 +35,9 @@ thin lines. Forms stay in a narrow reading column.
 
 **Honest states and no internals.** Sending is never shown as failed. Chain ids,
 addresses and protocol names stay behind "Proof on Arc". Motion only explains
-change and respects reduced motion.
+change and respects reduced motion. On desktop a mouse wheel glides the page to
+a stop; phones keep their own scrolling.
+
+**Line drawings, not stock.** Pictures are pencil or line drawings of real
+trade: two people dealing, goods, the money held between them, the record that
+follows. No stock photos, generated imagery, gradients or mixed styles.
