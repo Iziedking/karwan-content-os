@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-08-05
+updated: 2026-10-24
 capability: true
 tags:
   - money
@@ -22,10 +22,11 @@ Money moves in and out of Arc on one screen. What that screen asks for depends o
 who holds the funds, and the difference is the point rather than an inconsistency.
 
 An account that signs in with email or a passkey gets one address. Copy it, send
-USDC from Ethereum, Base, Arbitrum or Polygon, and the balance updates itself.
+USDC from Ethereum, Base, Arbitrum, Optimism, Polygon, Avalanche or Unichain,
+and the balance updates itself.
 There is no chain to choose, no amount to declare and no wallet to connect,
 because Circle derives every deposit wallet from that user's identity anchor, so
-the same address serves all four. Solana has its own address on the same screen: a
+the same address serves all seven. Solana has its own address on the same screen: a
 different signature curve cannot share one.
 
 An account that connects its own wallet keeps the explicit flow. It holds the
