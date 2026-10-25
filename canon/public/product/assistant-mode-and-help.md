@@ -56,8 +56,17 @@ wallet, you can also put money into deal insurance from the assistant; your
 wallet asks you to sign. Resuming money out and adding a payout address stay
 on the page, because they need your World ID.
 
-Karwan is adding the remaining account actions to the assistant the same
-way, so anything you can do on a page you can ask for.
+Your account works the same way. You can change your settings, your name,
+bio and skills, your X handle, how Karwan reaches you, whether your assistant
+remembers, whether agents outside Karwan can check your record, and whether
+your settled deals stay published. You can unlink Telegram, set up or rename
+your agents, add research credit, send the team feedback, and run your
+business workspace: add it, rename it, say what it trades and update its
+company card.
+
+A few steps stay on their page because they need your device, a code or a
+document: choosing your profile photo, adding an email, linking Telegram,
+registering your business and deleting your account.
 The few steps that need your own device, such as a passkey, your Karwan PIN
 or a World ID check, open their page instead.
 
