@@ -47,8 +47,17 @@ on a near match. You can edit your offer on the market, stop your agent
 bidding on a request, and write in a deal's chat. In Telegram, the steps
 that pay out or pay in open the Karwan page, where you confirm them.
 
-Karwan is adding the remaining money and account actions to the assistant
-the same way, so anything you can do on a page you can ask for.
+Money works the same way. You can pay someone's payment link from your
+balance, get free test USDC on testnet, have a transfer between networks
+that has not arrived checked again or carried on, retry or cancel a money
+move, have a deal payment that did not confirm checked again, pause money
+leaving your account, and remove a saved payout address. With your own
+wallet, you can also put money into deal insurance from the assistant; your
+wallet asks you to sign. Resuming money out and adding a payout address stay
+on the page, because they need your World ID.
+
+Karwan is adding the remaining account actions to the assistant the same
+way, so anything you can do on a page you can ask for.
 The few steps that need your own device, such as a passkey, your Karwan PIN
 or a World ID check, open their page instead.
 
