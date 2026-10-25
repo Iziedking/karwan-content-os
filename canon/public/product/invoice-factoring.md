@@ -4,13 +4,15 @@ title: Invoice factoring
 status: live
 visibility: public
 audience: all
-updated: 2026-07-27
+updated: 2026-10-25
 capability: true
 tags:
   - financing
 sources:
   - url: https://karwan.site/financier
     date: 2026-07-27
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/31-assistant-does-everything.md
+    date: 2026-10-25
 check:
   kind: grep
   ref: backend/src/routes/factoring.ts#factoringRequestedAt
@@ -30,3 +32,13 @@ Offers are priced against what the escrow can still pay, not the invoice face.
 Face includes the platform fee and every tranche already released, and the
 financier is only ever repaid out of what is left. On settlement the escrow pays
 the financier ahead of the supplier, so repayment is not something anyone chases.
+
+All of it can also be done by asking the Karwan assistant, on the website or in
+Telegram: the supplier asks to be paid early, reads the offers ranked as the deal
+page ranks them, and takes or turns one down; a financier sees the requests they
+may fund and makes an offer, which is refused before anything moves if their
+wallet does not hold the advance. Taking an offer and making one are confirmed on
+Karwan, where every figure is shown before money moves.
+
+Being paid early is not yet open on deals made on Karwan's new escrow. Deals made
+before it can use it now.

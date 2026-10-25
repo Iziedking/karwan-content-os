@@ -20,9 +20,9 @@ item before agreeing a deal. The first photo shows on the market card and all
 of them on the offer page.
 
 You add photos on the offer form, or send them to your assistant before it
-drafts the offer. On the website you choose that the photo is for an offer.
-In Telegram or WhatsApp you say so in the caption, for example "for my
-offer". The assistant's offer card shows how many photos it adds, and nothing
+drafts the offer. You say so in the words you send with it, for example
+"selling this" or "for my offer", on the website or in Telegram. On the
+website a photo sent with no words asks whether it is for an offer. The assistant's offer card shows how many photos it adds, and nothing
 is posted until you confirm.
 
 Photos are resized on your device before they are sent, which also drops the
