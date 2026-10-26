@@ -4,7 +4,7 @@ title: Your Karwan record, set up once
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-24
+updated: 2026-10-26
 capability: true
 tags:
   - reputation
@@ -30,8 +30,10 @@ had a record runs normally but does not count on the seller's record.
 Until a seller has a record, their selling agent does not offer on new
 requests and tells them once a day.
 
-It takes one confirmation with a passkey or a Karwan PIN, or, for someone
-who signs in with their own wallet, signing in that wallet. In Telegram the
+On Arc Testnet, when Karwan holds the person's wallets, Karwan sets the
+record up itself the first time it is needed, with no step from them.
+Otherwise it takes one confirmation with a passkey or a Karwan PIN, or, for
+someone who signs in with their own wallet, signing in that wallet. In Telegram the
 card shows in the chat and the confirmation happens on Karwan.
 
 After each payment on a deal, the seller's earnings move from their selling

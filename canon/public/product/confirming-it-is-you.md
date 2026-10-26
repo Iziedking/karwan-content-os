@@ -4,7 +4,7 @@ title: Confirming it is you, with a passkey or a Karwan PIN
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-24
+updated: 2026-10-26
 capability: true
 tags:
   - money
@@ -22,7 +22,8 @@ things only, and then they confirm with a passkey, which is their phone's
 face or fingerprint check, or with a 6-digit Karwan PIN.
 
 The three things: setting up their Karwan record and their buying agent's
-limits, putting up deal insurance, and money leaving Karwan for an address
+limits (on Arc Testnet Karwan does this itself for accounts whose wallets
+it holds), putting up deal insurance, and money leaving Karwan for an address
 that is not one of their own Karwan wallets. Putting up deal insurance is
 the consent for it to protect their buyers and back advances from
 financiers on their deals, so taking an advance later is one tap.
