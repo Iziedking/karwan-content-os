@@ -4,9 +4,9 @@
   "environment": "development",
   "_note": "Placeholder. The Karwan deploy pipeline writes the real one, describing what shipped. Session 5 wires that; until then this records checks verified by hand against the repo on 2026-07-27.",
   "checks": {
-    "contracts/src/KarwanEscrow.sol#releaseFinal": {
+    "backend/src/deals/suiteReviewEnd.ts#reviewEndStep": {
       "ok": true,
-      "detail": "releaseFinal is a distinct buyer-called path; no timer reaches it"
+      "detail": "verified by hand 2026-10-26: claim only on escrow-family deals, not disputed, delivered, not a deposit, no failed check, once the chain's review end has passed"
     },
     "backend/src/routes/deals.ts#shipment-required": {
       "ok": true,
