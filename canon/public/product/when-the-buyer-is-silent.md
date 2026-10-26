@@ -4,7 +4,7 @@ title: When a buyer does not respond after delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-25
+updated: 2026-10-26
 capability: true
 tags:
   - escrow
@@ -25,6 +25,10 @@ out, Karwan reminds them, on the website, by email and on Telegram.
 If the time runs out with no release and no problem raised, that payment
 goes to the seller. This works the same for a milestone and for the final
 payment. A buyer cannot raise a problem after their time to check has ended.
+
+On a deal paid in milestones, the seller delivers each milestone on its own.
+The buyer can release the next milestone, and its time to check starts, only
+once the seller has delivered it.
 
 Once either side raises a problem, the payment stays held and each side has
 72 hours to give their side of what happened. A side that gives no account
