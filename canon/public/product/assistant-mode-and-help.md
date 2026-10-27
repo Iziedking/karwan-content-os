@@ -22,8 +22,10 @@ sources:
 With Use assistant switched on, the whole account runs from one
 conversation. You say what you want, your agent prepares it as a card, and
 nothing moves until you confirm the card. Conversations are kept on your
-account. A card from an earlier conversation shows whether it was done and
-can never be confirmed again.
+account. To change a card before you confirm it, say what to change, such as
+a later due date, and the agent prepares it again with the rest kept. A card
+from an earlier conversation shows whether it was done and can never be
+confirmed again; ask, and the agent prepares a new one.
 
 A deal is built the same way. Name the person and say what the deal is
 for, or just say you want to make your first deal and the agent asks who it
