@@ -52,5 +52,5 @@ agent to their own wallet; a move that is still waiting shows in their
 balance and is tried again. Once a deal settles, the deal page says whether
 it is on both records. Deals can be up to 1,000 USDC while Karwan is in beta.
 
-This runs on Arc Testnet once new deals are switched over to the escrow
-family; mainnet follows an external audit.
+New deals on Arc Testnet have opened on the escrow family since 24 October
+2026; mainnet follows an external audit.

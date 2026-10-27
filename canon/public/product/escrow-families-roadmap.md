@@ -4,7 +4,7 @@ title: Escrow families for every kind of trade
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-23
+updated: 2026-10-27
 capability: true
 tags:
   - escrow
@@ -17,7 +17,11 @@ sources:
 
 Karwan's next escrow contracts are deployed on Arc Testnet and not on mainnet.
 A timelock owns them, so every rule change waits a day in public, queued by a
-multi-signature owner. The Karwan app does not use them yet.
+multi-signature owner. On Arc Testnet, new deals have opened on the Agreement
+family since 24 October 2026. A deal that opened before keeps the escrow it
+started on and finishes there; all of them are listed together on the legacy
+page so they can be reconciled. The other families are not used by the app
+yet.
 
 Arc limits each contract to 24,576 bytes, so escrow is split into families,
 each holding only its own deals' money, so a fault in one cannot reach another
