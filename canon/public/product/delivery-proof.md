@@ -4,7 +4,7 @@ title: What counts as delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-26
+updated: 2026-10-27
 capability: true
 tags:
   - delivery
@@ -24,7 +24,9 @@ depends on the kind of deal.
 
 Work, such as a design, writing, code or a video, is delivered as a link to the
 work, with a short note. The link has to point to a real site before the
-delivery is accepted.
+delivery is accepted. Every link is checked for safety; one the check holds is
+hidden from the buyer and never paid for, not even when the buyer's review time
+ends, until a person at Karwan clears it or the seller sends another link.
 
 Goods sent with a courier are delivered with the carrier and the tracking
 number. Karwan builds the tracking link for DHL, FedEx, UPS and the main
