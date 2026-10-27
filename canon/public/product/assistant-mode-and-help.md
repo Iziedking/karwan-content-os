@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-25
+updated: 2026-10-27
 capability: true
 tags:
   - agents
@@ -26,7 +26,8 @@ account. A card from an earlier conversation shows whether it was done and
 can never be confirmed again.
 
 A deal is built the same way. Name the person and say what the deal is
-for; the agent asks only for what is missing, such as the amount and when it
+for, or just say you want to make your first deal and the agent asks who it
+is with; it asks only for what is missing, such as the amount and when it
 is due, says the usual terms in one line, and shows one card with every term,
 goods terms included. Sending it moves no money. Once the other person
 accepts, the payment card appears in the same conversation and in your
@@ -44,7 +45,9 @@ when the delivery check has not answered, claim a payment the buyer left in
 silence, ask a buyer to release, or answer that ask. On requests you can
 make your own offer, withdraw it, take a seller's offer, and go ahead or pass
 on a near match. You can edit your offer on the market, stop your agent
-bidding on a request, and write in a deal's chat. In Telegram, the steps
+bidding on a request, and write in a deal's chat. Ask what is in demand and
+it names the kinds of work requested most this week, the same list as the
+Trending on Karwan card on Home. In Telegram, the steps
 that pay out or pay in open the Karwan page, where you confirm them.
 
 Money works the same way. You can pay someone's payment link from your
