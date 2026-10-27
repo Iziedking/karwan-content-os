@@ -4,7 +4,7 @@ title: Confirming it is you, with a passkey or a Karwan PIN
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-26
+updated: 2026-10-27
 capability: true
 tags:
   - money
@@ -12,7 +12,7 @@ tags:
   - testnet
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/27-deals-on-the-escrow-family.md
-    date: 2026-10-24
+    date: 2026-10-27
 ---
 
 A person's agents run their deals for them: they pay into a deal, accept,
@@ -23,7 +23,8 @@ face or fingerprint check, or with a 6-digit Karwan PIN.
 
 The three things: setting up their Karwan record and their buying agent's
 limits (on Arc Testnet Karwan does this itself for accounts whose wallets
-it holds), putting up deal insurance, and money leaving Karwan for an address
+it holds, and someone with their own wallet signs it along with their next
+transaction, with no separate step), putting up deal insurance, and money leaving Karwan for an address
 that is not one of their own Karwan wallets. Putting up deal insurance is
 the consent for it to protect their buyers and back advances from
 financiers on their deals, so taking an advance later is one tap.
