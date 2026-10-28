@@ -4,7 +4,7 @@ title: Your Karwan record, set up on the way
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-27
+updated: 2026-10-28
 capability: true
 tags:
   - reputation
@@ -50,7 +50,9 @@ payment still goes through, and it is linked again with the next setup.
 After each payment on a deal, the seller's earnings move from their selling
 agent to their own wallet; a move that is still waiting shows in their
 balance and is tried again. Once a deal settles, the deal page says whether
-it is on both records. Deals can be up to 1,000 USDC while Karwan is in beta.
+it is on both records. On mainnet, deals can be up to 1,000 USDC while
+Karwan is in beta; testnet allows larger deals. A deal over the limit is
+refused before any money moves, with the largest amount allowed.
 
 New deals on Arc Testnet have opened on the escrow family since 24 October
 2026; mainnet follows an external audit.
