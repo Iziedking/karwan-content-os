@@ -30,6 +30,13 @@ it asks you, with a suggested answer, and you decide.
 A goods way can be priced per item. A request that names a count, like 3
 pairs, is then compared per item, and the buyer sees what each comes to.
 
+Your agent learns from what you accept and only suggests, never changes a
+setting on its own: a way to save after you said yes to a request of a kind you
+had not set up, a new usual price after three agreed deals, or a level under
+which it stops asking you after you said no three times. Each comes as the same
+card you set things up with, and a no is remembered. Under a level you set, your
+agent says no politely and keeps the door open instead of asking you.
+
 Setup starts you with one way, from how your clients usually pay you. You
 add, change or remove ways on your profile or by telling your agent, and
 nothing is saved until you confirm. Money never moves without your
