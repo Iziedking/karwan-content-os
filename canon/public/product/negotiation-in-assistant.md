@@ -55,4 +55,15 @@ posted, not on a timer, and a seller who sets up a new way is matched against
 the open requests straight away. Example stock on the market never counts as a
 seller.
 
+The agents haggle like people. Neither opens at its limit. A seller's agent
+comes down by a schedule, firm while there is time and little competition,
+steadier near the deadline or with several offers, one step only after your
+agent moved, never under the seller's lowest, and it offers more time before it
+reaches that lowest. It aims to agree within three exchanges and never runs
+past five; the fourth is a last price, and anything past it is a question to
+the seller. Every move carries one short reason you can read, and a reason
+never names a limit, a budget or another offer. A seller's agent agrees to a
+price under its own offer only when the seller chose Agree for me; otherwise
+it asks them first.
+
 This is built for testnet and not live yet.
