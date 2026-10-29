@@ -16,8 +16,16 @@ sources:
 
 A hirer can pay someone by the hour or monthly. A virtual assistant, for
 example, might earn 15 USDC an hour for up to 20 hours a week, for 4 weeks.
-The hirer names the person by their Karwan tag, and sees who the tag belongs
-to before anything is paid.
+There are two ways to start. The hirer can name someone they know by their
+Karwan tag, or post the work on the market and let their agent find the best
+fit.
+
+The agent judges people by what they have actually done on Karwan: the skills
+their finished work shows, the checks Karwan ran, delivering on time, and
+ratings. Skill fit counts first, and reputation only breaks a tie. Nobody has
+to upload samples to prove themselves. The hirer sees up to five people, the
+best fit recommended, and hiring one pays for the first week; the worker
+already offered those terms, so it starts as planned.
 
 The hirer pays one week (or month) at a time. The money is held on Karwan's
 escrow on Arc until that week is settled. A worker new to Karwan is paid for
