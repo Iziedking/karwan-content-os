@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-27
+updated: 2026-10-29
 capability: true
 tags:
   - agents
@@ -35,10 +35,13 @@ goods terms included. Sending it moves no money. Once the other person
 accepts, the payment card appears in the same conversation and in your
 alerts, and the money moves only when you confirm it.
 
-Deal insurance works the same way. Ask to take it out and the card shows the
-amount, the 7-day wait and the day you can collect it; while it waits it no
-longer protects your deals. You can ask to cancel the wait, and to collect it
-once the wait ends.
+Your deal guarantee works the same way. It is money you set aside to protect
+your buyers, and on testnet it earns at the USYC rate, paid by Karwan. Ask to
+put some up or take some out and the card shows the amount, the 7-day wait
+and the day you can collect it; while it waits it no longer protects your
+deals. You can ask to keep it instead, and to collect it once the wait ends.
+Money still on an older Karwan contract is listed under Legacy contracts, and
+the assistant can take each step there too.
 
 Every step of a deal after it starts works the same way. You can change a
 deal or counter it before money is in, take back a deal the seller has not
@@ -57,7 +60,7 @@ balance, get free test USDC on testnet, have a transfer between networks
 that has not arrived checked again or carried on, retry or cancel a money
 move, have a deal payment that did not confirm checked again, pause money
 leaving your account, and remove a saved payout address. With your own
-wallet, you can also put money into deal insurance from the assistant; your
+wallet, you can also put up a deal guarantee from the assistant; your
 wallet asks you to sign. Resuming money out and adding a payout address stay
 on the page, because they need your World ID.
 

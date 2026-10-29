@@ -4,7 +4,7 @@ title: Purchase-order financing
 status: live
 visibility: public
 audience: all
-updated: 2026-07-27
+updated: 2026-10-29
 capability: true
 tags:
   - financing
@@ -28,5 +28,5 @@ immediately. An advance they cannot touch until after they deliver is not workin
 capital.
 
 On settlement the escrow pays the financier ahead of the supplier. If the deal
-settles short, the shortfall alone is recovered from the supplier's staked
-collateral, and the rest of the bond returns to them.
+settles short, the shortfall alone is recovered from the supplier's deal
+guarantee, and the rest of it returns to them.

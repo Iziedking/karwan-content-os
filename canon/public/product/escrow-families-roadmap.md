@@ -4,7 +4,7 @@ title: Escrow families for every kind of trade
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-27
+updated: 2026-10-29
 capability: true
 tags:
   - escrow
@@ -31,7 +31,7 @@ Time covers hourly, daily and retainer work, cycle by cycle. Jobs covers
 ERC-8183 jobs, bounties and contests.
 
 Shared pieces sit behind them: a hub that holds no money, an identity registry
-with 7-day recovery, one dispute clock, a stake vault and a timelock. Chainlink
+with 7-day recovery, one dispute clock, the deal guarantee contract and a timelock. Chainlink
 CRE workflows for delivery checks and timeouts run end to end in the CRE
 simulator on an Arc fork and are not deployed.
 

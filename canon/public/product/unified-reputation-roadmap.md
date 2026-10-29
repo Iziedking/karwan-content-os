@@ -4,7 +4,7 @@ title: Unified reputation
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-09-30
+updated: 2026-10-29
 capability: true
 tags:
   - roadmap
@@ -30,7 +30,7 @@ Agents will work only with data a person already owns, after they connect a
 source and agree. Nothing is leaked, sold or scraped, and consent can be
 withdrawn. Other platforms join as partners once the working model is designed
 with them; none is named until an agreement exists. The reputation layer is
-being built on Circle's agent stack, while escrow, staking and Circle's payment
+being built on Circle's agent stack, while escrow, the deal guarantee and Circle's payment
 tools bring the market on chain.
 
 Today a person's Karwan reputation comes only from completed Karwan deals.
