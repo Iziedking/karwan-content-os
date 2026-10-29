@@ -1,32 +1,35 @@
 ---
 id: po-financing
-title: Purchase-order financing
-status: live
+title: Getting paid early on a business order
+status: shipping
 visibility: public
 audience: all
 updated: 2026-10-29
 capability: true
 tags:
   - financing
+  - testnet
 sources:
-  - url: https://karwan.site/financier
-    date: 2026-07-27
-check:
-  kind: contract
-  ref: KarwanPOFinancing.fund#atomic-advance
-  note: fund() pays the seller and assigns the receivable in one transaction.
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/18-trade-finance.md
+    date: 2026-10-29
 ---
 
-Working capital advanced against an accepted purchase order whose escrow the
-buyer has already funded.
+A seller on a business order made on Karwan's newer escrow can be paid before
+the buyer releases. Purchase-order financing and invoice factoring are the
+same action, Get paid now, from the moment the order is accepted and paid in:
+before delivery, or after it while the buyer reviews or Net terms run.
 
-The advance goes straight to the supplier, in the same transaction that redirects
-that deal's settlement to the financier. That atomicity is the whole design.
-There is no state in which the redirect is live and the supplier has not been
-paid, so nothing can strand the advance, and the supplier can spend the capital
-immediately. An advance they cannot touch until after they deliver is not working
-capital.
+A financier offers an advance and what they are paid back. When the seller
+takes the offer, one transaction pays the advance straight to them, assigns
+the deal's payout to the financier up to the payback, and holds part of the
+seller's deal guarantee, at least a tenth of the advance, until the financier
+is repaid. When the buyer releases, the escrow pays the financier back first
+and the seller the rest. If the deal settles short, the shortfall is paid to
+the financier from the held guarantee.
 
-On settlement the escrow pays the financier ahead of the supplier. If the deal
-settles short, the shortfall alone is recovered from the supplier's deal
-guarantee, and the rest of it returns to them.
+A financier whose wallet Karwan holds is charged at the seller's tap. One who
+pays from their own wallet has 24 hours to do it; until then nothing is held
+and nothing moves. On Arc Testnet a financier run by Karwan offers on every
+order that asks, alongside invited partners. Orders on the older escrows
+finish as they are and take no new advances. This is built and not yet on
+testnet or mainnet.
