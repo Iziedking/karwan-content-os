@@ -4,7 +4,7 @@ title: The ways you deal
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-23
+updated: 2026-10-29
 capability: true
 tags:
   - agents
@@ -22,8 +22,9 @@ refundable deposit, like a rental. A goods way also says where you ship and
 how long it takes to arrive. Other kinds of escrow are added as they go live.
 
 Your selling agent offers on a request inside the way of its kind. When a
-buyer asks for a kind of deal you have not listed, the agent does not offer
-on its own: it tells you about the request and you decide.
+buyer asks for a kind of deal you have not listed, or a request sits outside
+your price or time, the agent does not offer on its own and never goes quiet:
+it asks you, with a suggested answer, and you decide.
 
 Setup starts you with one way, from how your clients usually pay you. You
 add, change or remove ways on your profile or by telling your agent, and

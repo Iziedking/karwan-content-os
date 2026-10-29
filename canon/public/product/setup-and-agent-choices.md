@@ -47,8 +47,9 @@ final. Your agent can give you the link.
 
 Three answers change what your agents do. If you only work with clients you
 already have, your selling agent stays off the market. If you choose "Ask me
-first" on the summary, it does not make offers on its own: it tells you about
-a request that fits and you decide. "How should we reach you" picks Telegram,
+first" on the summary, it does not make offers on its own: it asks you about
+each request that fits, with the price it would offer, and you answer with one
+tap or change the price. "How should we reach you" picks Telegram,
 email or both. Money never moves without your confirmation.
 
 This is built for testnet and not live yet.

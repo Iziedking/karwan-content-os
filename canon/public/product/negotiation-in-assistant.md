@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-27
+updated: 2026-10-29
 capability: true
 tags:
   - market
@@ -39,8 +39,17 @@ see how far above your budget you would go.
 
 When your budget is far under what the work goes for and no seller takes it,
 your agent tells you plainly, with the market price, and you choose to allow
-more or post again. Nobody is pushed below their own price. A seller whose
-range a request falls outside, but whose work fits it, hears about it once by
-email, Telegram and in the app, and decides.
+more or post again. Nobody is pushed below their own price. Agents never go
+quiet. A request that fits what a seller sells but sits outside their price or
+time, or of a kind they have not set up yet, and a counter under their lowest
+price, become one question to that seller, in the app, the assistant, by
+email and on Telegram, with a suggested answer they take, change or turn
+down. While they decide, you see that the seller is checking, never their
+price or limit. Nothing is offered or agreed while a question waits.
+
+Your request page says how many sellers fit, how many offered and how many are
+checking the price, never who. When a minute passes and nobody on Karwan sells
+it yet, it says so plainly, and you can share the request with a seller you
+know while your agent keeps looking.
 
 This is built for testnet and not live yet.
