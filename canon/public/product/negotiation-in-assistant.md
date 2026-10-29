@@ -50,6 +50,9 @@ price or limit. Nothing is offered or agreed while a question waits.
 Your request page says how many sellers fit, how many offered and how many are
 checking the price, never who. When a minute passes and nobody on Karwan sells
 it yet, it says so plainly, and you can share the request with a seller you
-know while your agent keeps looking.
+know while your agent keeps looking. Sellers who fit hear of your request when it is
+posted, not on a timer, and a seller who sets up a new way is matched against
+the open requests straight away. Example stock on the market never counts as a
+seller.
 
 This is built for testnet and not live yet.
