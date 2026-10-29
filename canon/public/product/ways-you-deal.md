@@ -27,6 +27,9 @@ buyer asks for a kind of deal you have not listed, or a request sits outside
 your price or time, the agent does not offer on its own and never goes quiet:
 it asks you, with a suggested answer, and you decide.
 
+A goods way can be priced per item. A request that names a count, like 3
+pairs, is then compared per item, and the buyer sees what each comes to.
+
 Setup starts you with one way, from how your clients usually pay you. You
 add, change or remove ways on your profile or by telling your agent, and
 nothing is saved until you confirm. Money never moves without your
