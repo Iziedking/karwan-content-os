@@ -16,7 +16,8 @@ sources:
 ---
 
 Your agents work from the ways you deal, for selling and for buying. Each way
-is one kind of deal with its own price and time: one-time, milestones paid in
+is one kind of deal with its lowest and usual price and its time (there is no
+highest): one-time, milestones paid in
 stages, goods with delivery, where review starts when the item arrives, and a
 refundable deposit, like a rental. A goods way also says where you ship and
 how long it takes to arrive. Other kinds of escrow are added as they go live.

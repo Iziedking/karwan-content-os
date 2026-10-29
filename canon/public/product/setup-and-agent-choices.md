@@ -28,9 +28,9 @@ Karwan sets up your agents on its own when you create your account, so
 there is nothing to activate. Then your agent asks what you want Karwan to
 do: get paid for your work, sell products, buy or hire, run business deals,
 or build a record clients trust. It asks only what those answers need: what
-you do and your usual price on one screen, which it reads back to you as a
-price range and delivery time, then whether you have clients and how to
-reach you. A line from your agent on each screen says what the answer is for.
+you do and your usual price on one screen, which it reads back to you as your
+usual and lowest price and delivery time (one price is both; a range makes its
+low end your lowest), then whether you have clients and how to reach you. A line from your agent on each screen says what the answer is for.
 
 What you tell your agent sets up your agent and your public profile by
 itself. It shows the result as "Here's your Karwan", with the first offer or
