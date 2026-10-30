@@ -4,7 +4,7 @@ title: The ways you deal
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-10-30
 capability: true
 tags:
   - agents
@@ -22,10 +22,12 @@ stages, goods with delivery, where review starts when the item arrives, and a
 refundable deposit, like a rental. A goods way also says where you ship and
 how long it takes to arrive. Other kinds of escrow are added as they go live.
 
-Your selling agent offers on a request inside the way of its kind. When a
-buyer asks for a kind of deal you have not listed, or a request sits outside
-your price or time, the agent does not offer on its own and never goes quiet:
-it asks you, with a suggested answer, and you decide.
+Your selling agent offers on every request that fits the way of its kind. A
+budget above your usual price is a bigger deal. A budget under your lowest
+still gets an offer, at your lowest, and the buyer sees it is above what they
+asked. When a buyer asks for a kind of deal you have not listed, or needs it
+sooner than you take, the agent does not offer on its own and never goes
+quiet: it asks you, with a suggested answer, and you decide.
 
 A goods way can be priced per item. A request that names a count, like 3
 pairs, is then compared per item, and the buyer sees what each comes to.
