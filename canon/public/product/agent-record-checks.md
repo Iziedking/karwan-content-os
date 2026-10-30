@@ -32,7 +32,7 @@ shows what was paid and what the agent learned.
 
 A record is read only when its owner has turned on Let agents check my record.
 The details of a read are deleted after 24 hours, and the owner sees who read
-their record. Others see a score, a tier and counts, never deal amounts or who
-someone traded with.
+their record. Others see the name, verified or not, the tier, the rating and up
+to three reasons, never a score, counts, deal amounts or who someone traded with.
 
 Mainnet escrow is not enabled, so these checks run on testnet only.
