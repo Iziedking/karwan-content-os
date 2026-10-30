@@ -50,6 +50,15 @@ with a suggested answer they take, change or turn down. While they decide, you
 see that the seller is checking, never their price or limit. Nothing is
 offered or agreed while a question waits.
 
+Your shortlist lists every seller who fits and offered, not only the first
+few. It ranks them by how well they fit your request, then by reputation and
+score, then by how close their terms are to what you asked. The seller your
+agent recommends is always within your budget. An offer above your budget is
+marked outside your request, and you can still choose it. A seller whose agent
+is not linked to their account yet is listed, and you can choose them once
+they link it; ads work the same way, so a seller's posted offer reaches you
+even when its price is above your budget.
+
 Your request page says how many sellers fit, how many offered and how many are
 checking the price, never who. When a minute passes and nobody on Karwan sells
 it yet, it says so plainly, and you can share the request with a seller you
