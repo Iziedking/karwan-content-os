@@ -4,7 +4,7 @@ title: What counts as delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-27
+updated: 2026-10-30
 capability: true
 tags:
   - delivery
@@ -27,6 +27,16 @@ work, with a short note. The link has to point to a real site before the
 delivery is accepted. Every link is checked for safety; one the check holds is
 hidden from the buyer and never paid for, not even when the buyer's review time
 ends, until a person at Karwan clears it or the seller sends another link.
+
+Separately from links, the security agent screens each match when it is funded.
+A match it holds shows Held for a look on the deal, with one shared line and
+only the lines meant for that side. The money stays in escrow and release
+follows the deal’s own rules; nothing is blocked. Either person can ask a
+person at Karwan to check from that card, and a person at Karwan clears the
+hold with a reason, after which both see one line in the deal chat. A person
+at Karwan can also review an earlier delivery link, or one on a closed deal,
+for the record: clearing it takes the offence off the seller and changes
+nothing for the money.
 
 Goods sent with a courier are delivered with the carrier and the tracking
 number. Karwan builds the tracking link for DHL, FedEx, UPS and the main
