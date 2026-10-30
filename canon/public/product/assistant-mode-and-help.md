@@ -39,7 +39,7 @@ alerts, and the money moves only when you confirm it.
 
 Your deal guarantee works the same way. It is money you set aside to protect
 your buyers, and on testnet it earns at the USYC rate, paid by Karwan. Ask to
-put some up or take some out and the card shows the amount, the 7-day wait
+deposit or withdraw and the card shows the amount, the 7-day wait
 and the day you can collect it; while it waits it no longer protects your
 deals. You can ask to keep it instead, and to collect it once the wait ends.
 Money still on an older Karwan contract is listed under Legacy contracts, and
@@ -62,8 +62,9 @@ balance, get free test USDC on testnet, have a transfer between networks
 that has not arrived checked again or carried on, retry or cancel a money
 move, have a deal payment that did not confirm checked again, pause money
 leaving your account, and remove a saved payout address. With your own
-wallet, you can also put up a deal guarantee from the assistant; your
-wallet asks you to sign. Resuming money out and adding a payout address stay
+wallet, you can also deposit to your deal guarantee from the assistant; your
+wallet asks you to sign. The same goes for the deposit a financier's offer
+may need before you get paid now. Resuming money out and adding a payout address stay
 on the page, because they need your World ID.
 
 Your account works the same way. You can change your settings, your name,
