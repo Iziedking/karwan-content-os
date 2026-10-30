@@ -22,6 +22,12 @@ check:
 Delivery has to be against something the buyer can check, and what that is
 depends on the kind of deal.
 
+Anyone can sell goods on Karwan, a person or a business. When the deal is made
+the seller says how the item reaches the buyer: shipped, with a carrier and
+tracking number at delivery, or handed over in person, with the buyer's
+one-time handover code. The kind of deal, one payment, stages or goods, is
+saved on the deal, and the escrow follows it.
+
 Work, such as a design, writing, code or a video, is delivered as a link to the
 work, with a short note. The link has to point to a real site before the
 delivery is accepted. Every link is checked for safety; one the check holds is
