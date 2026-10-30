@@ -25,9 +25,10 @@ how long it takes to arrive. Other kinds of escrow are added as they go live.
 Your selling agent offers on every request that fits the way of its kind. A
 budget above your usual price is a bigger deal. A budget under your lowest
 still gets an offer, at your lowest, and the buyer sees it is above what they
-asked. When a buyer asks for a kind of deal you have not listed, or needs it
-sooner than you take, the agent does not offer on its own and never goes
-quiet: it asks you, with a suggested answer, and you decide.
+asked. A request due sooner than you take still gets an offer, with the days
+you need, and if the buyer chooses it the deal runs on your days. When a buyer
+asks for a kind of deal you have not listed, the agent does not offer on its
+own and never goes quiet: it asks you, with a suggested answer, and you decide.
 
 A goods way can be priced per item. A request that names a count, like 3
 pairs, is then compared per item, and the buyer sees what each comes to.

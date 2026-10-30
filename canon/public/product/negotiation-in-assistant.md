@@ -43,8 +43,10 @@ more or post again. Nobody is pushed below their own price. Agents never go
 quiet. Every seller whose agent judges that your request fits what they sell
 makes an offer. A seller whose lowest price is above your budget still offers,
 at their lowest, and you see that offer as outside your request; you decide
-whether to take it. A request due sooner than a seller needs, or of a kind they
-have not set up yet, and a counter under their lowest price, become one
+whether to take it. A seller who needs more days than your request gives still
+offers, with the days they need, and you see how many days longer it takes; if
+you choose it, the deal runs on their days. A request of a kind a seller has
+not set up yet, and a counter under their lowest price, become one
 question to that seller, in the app, the assistant, by email and on Telegram,
 with a suggested answer they take, change or turn down. While they decide, you
 see that the seller is checking, never their price or limit. Nothing is
@@ -53,8 +55,9 @@ offered or agreed while a question waits.
 Your shortlist lists every seller who fits and offered, not only the first
 few. It ranks them by how well they fit your request, then by reputation and
 score, then by how close their terms are to what you asked. The seller your
-agent recommends is always within your budget. An offer above your budget is
-marked outside your request, and you can still choose it. A seller whose agent
+agent recommends is always within your budget and your date. An offer above
+your budget, or one that needs longer, is marked outside your request, and you
+can still choose it. A seller whose agent
 is not linked to their account yet is listed, and you can choose them once
 they link it; ads work the same way, so a seller's posted offer reaches you
 even when its price is above your budget.
