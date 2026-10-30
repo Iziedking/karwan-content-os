@@ -4,7 +4,7 @@ title: Pay someone by the hour, or monthly
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-10-30
 capability: true
 tags:
   - market
@@ -26,6 +26,12 @@ ratings. Skill fit counts first, and reputation only breaks a tie. Nobody has
 to upload samples to prove themselves. The hirer sees up to five people, the
 best fit recommended, and hiring one pays for the first week; the worker
 already offered those terms, so it starts as planned.
+
+A seller can save an hourly rate or a monthly price in their ways of dealing:
+the lowest they take, their usual rate and the most hours a week. When work
+that fits is posted, their agent offers at once, at the usual rate lowered to
+the hirer's most but never under their lowest. They are told and can change or
+withdraw the offer.
 
 The hirer pays one week (or month) at a time. The money is held on Karwan's
 escrow on Arc until that week is settled. A worker new to Karwan is paid for
