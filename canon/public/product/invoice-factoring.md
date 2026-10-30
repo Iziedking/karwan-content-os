@@ -4,7 +4,7 @@ title: Invoice factoring
 status: live
 visibility: public
 audience: all
-updated: 2026-10-25
+updated: 2026-10-30
 capability: true
 tags:
   - financing
@@ -22,6 +22,11 @@ check:
 The supplier asks to be paid early, naming a floor if they want one. Financiers
 then bid a discount against the supplier's reputation tier, and the supplier
 accepts one or ignores them all.
+
+A supplier who holds their own wallet gets their Karwan record with that first
+ask: the website sends the record setup with their wallet signature before the
+request goes out. From Telegram the assistant says to open the deal on the
+website for that one step.
 
 Nothing reaches a financier until that request exists. An invoice is never listed
 for funding on the strength of the supplier having opened a deal, because that
