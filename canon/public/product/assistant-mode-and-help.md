@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-10-30
 capability: true
 tags:
   - agents
@@ -17,6 +17,8 @@ sources:
     date: 2026-10-23
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/31-assistant-does-everything.md
     date: 2026-10-25
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/42-deal-reference.md
+    date: 2026-10-30
 ---
 
 With Use assistant switched on, the whole account runs from one
@@ -86,5 +88,11 @@ Help answers how things work and what went wrong, from what your account
 shows. A person from the Karwan team joins the same conversation when you
 ask for one, or when the assistant cannot do it, with the conversation so
 far, so you do not repeat yourself.
+
+Every deal has a short reference, such as D68F-E7D8, shown on the deal page
+with a copy button. Give it to the assistant, on the website or in Telegram,
+and it finds the deal among your own deals; you never need the long deal id.
+Help opened on a deal page already knows which deal you mean, and a person
+brought in from there sees that deal.
 
 This is built for testnet and not live yet.
