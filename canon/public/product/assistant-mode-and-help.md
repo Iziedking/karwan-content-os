@@ -42,7 +42,7 @@ your buyers, and on testnet it earns at the USYC rate, paid by Karwan. Ask to
 deposit or withdraw and the card shows the amount, the 7-day wait
 and the day you can collect it; while it waits it no longer protects your
 deals. You can ask to keep it instead, and to collect it once the wait ends.
-Money still on an older Karwan contract is listed under Legacy contracts, and
+Money still on an earlier Karwan deal is listed under Earlier deals, and
 the assistant can take each step there too.
 
 Every step of a deal after it starts works the same way. You can change a
@@ -52,7 +52,7 @@ when the delivery check has not answered, claim a payment the buyer left in
 silence, ask a buyer to release, or answer that ask. On requests you can
 make your own offer, withdraw it, take a seller's offer, and go ahead or pass
 on a near match. You can edit your offer on the market, stop your agent
-bidding on a request, and write in a deal's chat. Ask what is in demand and
+offering on a request, and write in a deal's chat. Ask what is in demand and
 it names the kinds of work requested most this week, the same list as the
 Trending on Karwan card on Home. In Telegram, the steps
 that pay out or pay in open the Karwan page, where you confirm them.
