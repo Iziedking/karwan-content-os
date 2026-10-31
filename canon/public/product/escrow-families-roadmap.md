@@ -4,7 +4,7 @@ title: Escrow families for every kind of trade
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-10-31
 capability: true
 tags:
   - escrow
@@ -13,6 +13,8 @@ tags:
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/11-contracts.md
     date: 2026-10-23
+  - url: https://github.com/Iziedking/Karwan/blob/main/cre/DEPLOY-SUITE.md
+    date: 2026-10-31
 ---
 
 Karwan's next escrow contracts are deployed on Arc Testnet and not on mainnet.
@@ -31,8 +33,14 @@ Time covers hourly, daily and retainer work, cycle by cycle. Jobs covers
 ERC-8183 jobs, bounties and contests.
 
 Shared pieces sit behind them: a hub that holds no money, an identity registry
-with 7-day recovery, one dispute clock, the deal guarantee contract and a timelock. Chainlink
-CRE workflows for delivery checks and timeouts run end to end in the CRE
-simulator on an Arc fork and are not deployed.
+with 7-day recovery, one dispute clock, the deal guarantee contract and a timelock.
+
+Three Chainlink CRE workflows run on Chainlink's hosted network: one checks a
+delivery against the agreed tests, one records verified GitHub work, and one
+triggers the timeouts each family allows. The CRE adapter on Arc Testnet takes
+a report only from the workflow bound to its job, and those bindings change
+only through the same timelock. On 31 October 2026 a buyer's agent paid 0.25
+USDC over x402 for a dry run of a deal's agreed checks; Chainlink's network
+replayed them on GitHub, and its signed answer released the fee on Arc.
 
 They go live on mainnet only after an external audit.
