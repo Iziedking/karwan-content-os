@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-30
+updated: 2026-11-01
 capability: true
 tags:
   - market
@@ -15,6 +15,8 @@ sources:
     date: 2026-10-24
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/35-offers-that-move.md
     date: 2026-10-27
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/46-offers-you-can-read.md
+    date: 2026-11-01
 ---
 
 Post what you need in the assistant, on the website or Telegram, and you can
@@ -61,6 +63,15 @@ can still choose it. A seller whose agent
 is not linked to their account yet is listed, and you can choose them once
 they link it; ads work the same way, so a seller's posted offer reaches you
 even when its price is above your budget.
+
+On your request page each offer is one line: the seller's photo, name and
+price, and its place in your agent's order, with the agent's pick marked. Tap
+an offer to see the rest and to accept it.
+
+When your agent cannot agree a price with anyone, the request says so and
+stays yours until its date. You can still accept an offer, cancel the request
+(nothing was paid), or change it, and a change makes your agent look at the
+offers again and ask the sellers again.
 
 Your request page says how many sellers fit, how many offered and how many are
 checking the price, never who. When a minute passes and nobody on Karwan sells
