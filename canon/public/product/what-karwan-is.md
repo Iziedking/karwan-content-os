@@ -4,7 +4,7 @@ title: What Karwan is
 status: live
 visibility: public
 audience: all
-updated: 2026-09-30
+updated: 2026-11-01
 capability: false
 tags:
   - overview
@@ -14,6 +14,8 @@ tags:
 sources:
   - url: https://karwan.site
     date: 2026-09-30
+  - url: https://search.cac.gov.ng
+    date: 2026-11-01
 ---
 
 Karwan unifies online reputation, starting with an open market for secure local
@@ -39,6 +41,13 @@ for eligible Karwan-originated accepted invoices or purchase orders. Financing
 is opt-in: approved financiers quote terms and the supplier chooses. Direct deals
 remain available without verification, while agent matching, verified-business
 features and financing may have eligibility gates.
+
+Karwan is built by Karwan Technologies Limited, a private company limited by
+shares incorporated in Nigeria with the Corporate Affairs Commission on 29
+October 2026, registration number RC 9974106. The certificate is linked as
+Company registration in the site footer, and the company can be looked up on the
+CAC public search. Incorporation makes it a company; it is not a licence to hold
+customer money or provide payment or financial services.
 
 The current release is testnet software. Local trade does not mean local-currency
 payment is live. Unified reputation across platforms, browser capture, mainnet
