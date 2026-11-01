@@ -4,7 +4,7 @@ title: Setting up Karwan the way you use it
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-11-01
 capability: true
 tags:
   - agents
@@ -17,6 +17,8 @@ sources:
     date: 2026-10-29
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/39-start-to-home.md
     date: 2026-10-29
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/45-your-agent.md
+    date: 2026-11-01
 ---
 
 Signing up is one page in three parts: your account (an email and a code,
@@ -51,5 +53,12 @@ first" on the summary, it does not make offers on its own: it asks you about
 each request that fits, with the price it would offer, and you answer with one
 tap or change the price. "How should we reach you" picks Telegram,
 email or both. Money never moves without your confirmation.
+
+Later, Your agent on your profile keeps it on one page: whether your agent is
+on and how many of its offers wait on buyers, then what you sell, your price,
+how you get paid (all at once, in stages or on delivery), what it does alone
+and, if you buy, the most it pays without asking you. Each is changed in place
+on that page, or by telling your agent. Until you give a usual price, the page
+says so, because your agent offers at the buyer's budget until then.
 
 This is built for testnet and not live yet.
