@@ -4,7 +4,7 @@ title: Typography
 status: live
 visibility: public
 audience: all
-updated: 2026-09-30
+updated: 2026-11-02
 capability: false
 tags:
   - brand
@@ -14,15 +14,16 @@ sources:
     date: 2026-09-30
 ---
 
-One family: General Sans. Hierarchy comes from size and weight, not from a
-second face or from capitals.
+The product is set in Inter, the interface face since 22 October 2026. General
+Sans sets the wordmark and posters. Hierarchy comes from size and weight, not
+from a third face or from capitals.
 
 **Headings.** Sentence case, weight 500 to 600, slightly tight tracking.
 
 **Money.** Tabular figures, the amount larger than anything around it, the
 currency written after it.
 
-**Metadata.** The same family with tabular figures. Uppercase letterspaced
+**Metadata.** Inter with tabular figures. Uppercase letterspaced
 labels and brackets are reserved for technical metadata such as references,
 network names and timestamps, never for section titles or prose.
 

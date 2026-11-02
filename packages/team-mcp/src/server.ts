@@ -166,7 +166,7 @@ export function buildServer(verifier: Verifier): McpServer {
     {
       title: 'Karwan brand',
       description:
-        'Colour tokens, typography, logo usage and the brand principles. Use before producing anything visual or anything that names the product.',
+        'Colour tokens, typography, logo usage, the brand principles and the design quality standard. Use before producing anything visual or anything that names the product.',
       inputSchema: {},
     },
     tool<Record<string, never>>((_args, s) =>

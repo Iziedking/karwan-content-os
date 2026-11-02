@@ -14,6 +14,7 @@
     "test": "tsx --test --test-force-exit \"packages/**/*.test.ts\" \"ops/**/*.test.ts\"",
     "check": "pnpm typecheck && pnpm test && pnpm skill:test && pnpm skill:validate && pnpm canon:validate && pnpm canon:guard && pnpm generate",
     "signals:drop": "tsx ops/dropSignalsCli.ts",
+    "status:sync": "tsx ops/buildStatusCli.ts",
     "mcp:serve": "tsx packages/team-mcp/src/http.ts",
     "skill:validate": "node packages/skill/src/validate.js",
     "skill:test": "node packages/skill/src/archive.test.js",
