@@ -4,7 +4,7 @@ title: Brand principles
 status: live
 visibility: public
 audience: all
-updated: 2026-10-24
+updated: 2026-11-02
 capability: false
 tags:
   - brand
@@ -13,7 +13,7 @@ sources:
     date: 2026-09-30
 ---
 
-Six rules, in order of how often they get broken.
+Eight rules, in order of how often they get broken.
 
 **Calm and legible.** Karwan is where strangers put money in escrow with each
 other, so the interface earns trust: calm like a good financial product, never
@@ -38,6 +38,11 @@ addresses and protocol names stay behind "Proof on Arc". Motion only explains
 change and respects reduced motion. On desktop a mouse wheel glides the page to
 a stop; phones keep their own scrolling.
 
-**Line drawings, not stock.** Pictures are pencil or line drawings of real
-trade: two people dealing, goods, the money held between them, the record that
-follows. No stock photos, generated imagery, gradients or mixed styles.
+**One hero, real material.** Every screen, flow and picture has one clear hero,
+given real scale. Surfaces feel made: fine grain, a physical edge, one light.
+Lime is one confident surface with ink on it, not scattered pieces. In a flow,
+one object carries from the first step to the receipt.
+
+**Made for Karwan, never stock.** Pictures are real objects lit and rendered for
+Karwan, with real type, or line drawings where a picture has to explain how trade
+works. No stock photos, generated imagery, decorative gradients or glows.
