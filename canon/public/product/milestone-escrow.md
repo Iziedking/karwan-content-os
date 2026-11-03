@@ -4,7 +4,7 @@ title: Milestone escrow
 status: live
 visibility: public
 audience: all
-updated: 2026-10-26
+updated: 2026-11-03
 capability: true
 tags:
   - escrow
@@ -20,6 +20,9 @@ check:
 
 A deal is paid in one to five parts. The seller marks a part delivered, and
 the buyer has the review time the deal set, at most 30 days, to check it.
+
+An offer or a new deal is one payment unless you choose Pay in parts. Either
+way the form shows the terms once more before anything is sent.
 
 During that time the buyer can release the payment, ask once for more time
 to check, or raise a problem. Karwan reminds them a day before the time runs
