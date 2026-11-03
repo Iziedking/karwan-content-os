@@ -63,7 +63,9 @@ can still choose it. A seller whose agent is not linked to their account yet
 is listed too; only a deal on an older escrow asks them to link it before you
 choose them. Ads work the same way, so a seller's posted offer reaches you
 even when its price is above your budget. If Karwan restarts while offers are
-coming in, your shortlist still arrives when the window closes.
+coming in, your shortlist still arrives when the window closes. A seller who
+does not answer your agent's counter within three minutes is passed over, and
+your agent goes to the next offer, also across a restart.
 
 You post a request on one screen: what you need, your budget and when you
 need it. It is paid at once unless you choose to pay in parts.
