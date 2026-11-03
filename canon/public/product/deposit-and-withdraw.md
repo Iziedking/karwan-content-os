@@ -37,6 +37,9 @@ never require that chain's gas token to receive.
 Before a withdrawal moves, Karwan shows it once more: where it goes, on which
 network, and that it cannot be undone. Nothing leaves until you confirm.
 
+Every move lands in Activity under its day with a plus or minus sign, not a
+colour, and opens a receipt you can save as an image or a PDF.
+
 The word for this is Deposit and Withdraw. Not top up, not add money, not cash
 out, and never the name of the transfer protocol underneath: which rail carries a
 move is not something a person sending money needs to hold in their head.
