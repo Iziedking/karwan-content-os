@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-01
+updated: 2026-11-03
 capability: true
 tags:
   - market
@@ -64,9 +64,13 @@ is not linked to their account yet is listed, and you can choose them once
 they link it; ads work the same way, so a seller's posted offer reaches you
 even when its price is above your budget.
 
+You post a request on one screen: what you need, your budget and when you
+need it. It is paid at once unless you choose to pay in parts.
+
 On your request page each offer is one line: the seller's photo, name and
-price, and its place in your agent's order, with the agent's pick marked. Tap
-an offer to see the rest and to accept it.
+rating, the price, and its place in your agent's order, with the agent's pick
+marked. Tap an offer to see its facts and why your agent placed it there, and
+to accept it.
 
 When your agent cannot agree a price with anyone, the request says so and
 stays yours until its date. You can still accept an offer, cancel the request

@@ -4,7 +4,7 @@ title: Message anyone by their Karwan tag
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-30
+updated: 2026-11-03
 capability: true
 tags:
   - agents
@@ -23,6 +23,8 @@ tag, country and tier. She answers with her agent's help.
 A market listing, a request a seller is looking at, and a person's public
 record page have a Message button, so a buyer can ask before agreeing. The
 first message names the ad it is about, and the conversation links back to it.
+A public record also has Ask them for an offer, which starts a protected
+deal with that person.
 
 When they agree, either agent starts the protected deal. Money never moves
 from a message. A message with a phone number, an email or a link, sent

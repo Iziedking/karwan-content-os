@@ -1,12 +1,12 @@
 {
   "canonVersion": "0.4.0",
-  "canonUpdated": "2026-11-02",
+  "canonUpdated": "2026-11-03",
   "docs": [
     {
       "id": "agent-record-checks",
       "title": "Agents check each other before a deal",
       "status": "live",
-      "updated": "2026-10-16",
+      "updated": "2026-11-03",
       "tags": [
         "agents",
         "reputation",
@@ -20,13 +20,33 @@
           "date": "2026-10-16"
         }
       ],
-      "body": "On Arc Testnet, a Karwan agent pays 0.01 USD over x402 to read the other\nside's deal record before it commits. Payment settles through Circle Gateway.\nThe first live read ran on 16 October 2026.\n\nA buyer's agent reads each seller's record before building the shortlist, and\na seller's agent reads the buyer's record before it bids. The seller's agent\npasses on a buyer who has lost more disputes than they have completed, and\nflags a new buyer on a large request for the seller to look at. The seller desk\nshows what was paid and what the agent learned.\n\nA record is read only when its owner has turned on Let agents check my record.\nThe details of a read are deleted after 24 hours, and the owner sees who read\ntheir record. Others see the name, verified or not, the tier, the rating and up\nto three reasons, never a score, counts, deal amounts or who someone traded with.\n\nMainnet escrow is not enabled, so these checks run on testnet only."
+      "body": "On Arc Testnet, a Karwan agent pays 0.005 USDC over x402 to read the other\nside's deal record before it commits. Payment settles through Circle Gateway.\nThe first live read ran on 16 October 2026.\n\nA buyer's agent reads each seller's record before building the shortlist, and\na seller's agent reads the buyer's record before it bids. The seller's agent\npasses on a buyer who has lost more disputes than they have completed, and\nflags a new buyer on a large request for the seller to look at. The seller desk\nshows what was paid and what the agent learned.\n\nAn agent pays for a person's record once per request. Checking it again on the\nsame request, after an edit or in a later round, uses the same read unless the\nrecord changed since, and each payment shows in what the agent spent.\n\nA record is read only when its owner has turned on Let agents check my record.\nThe details of a read are deleted after 24 hours, and the owner sees who read\ntheir record. Others see the name, verified or not, the tier, the rating and up\nto three reasons, never a score, counts, deal amounts or who someone traded with.\n\nMainnet escrow is not enabled, so these checks run on testnet only."
+    },
+    {
+      "id": "agents-pay-for-research",
+      "title": "Your agent pays for its own research",
+      "status": "shipping",
+      "updated": "2026-11-03",
+      "tags": [
+        "agents",
+        "x402",
+        "research",
+        "testnet"
+      ],
+      "path": "public/product/agents-pay-for-research.md",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/48-one-agent-per-person.md",
+          "date": "2026-11-03"
+        }
+      ],
+      "body": "On Arc Testnet, a person's agent pays for the market research it uses, from\nits own balance, over x402 on Arc settled through Circle Gateway. Karwan runs\nthe web searches and pays the search provider.\n\nA search costs 0.007 USDC, and 0.002 USDC when another agent ran the same one\nrecently. The agent runs only the searches a question needs: price takes two,\ndemand or suppliers one, and everything four. An agent researching a request\nit is negotiating runs three: price, marketplace rates and demand.\n\nAsk your assistant to research something and it tells you the exact cost\nbefore it runs. When your agent's balance is short it says so, nothing is\npaid, and you can add money to it and ask again. Every payment shows in what\nyour agent spent. Web results are marked as from the web; Karwan's own market\ncomes first.\n\nYour agents have a weekly budget for the data they pay for, record checks and\nweb searches together: 0.25 USDC unless you change it, from 0 (free data only)\nup to 5 USDC. They never go over it. When the budget is reached they carry on\nwith free data and you hear once that week; a search you ask for says when it\nwould go over and offers to raise the budget. Once a week, unless you turn it\noff, you get one line in the app and on Telegram on what your agents spent and\nwhat for.\n\nOn mainnet, agents will pay Circle's services marketplace directly for this."
     },
     {
       "id": "assistant-mode-and-help",
       "title": "Assistant mode and Help",
       "status": "roadmap",
-      "updated": "2026-10-30",
+      "updated": "2026-11-03",
       "tags": [
         "agents",
         "assistant",
@@ -51,13 +71,13 @@
           "date": "2026-10-30"
         }
       ],
-      "body": "With Use assistant switched on, the whole account runs from one\nconversation. You say what you want, your agent prepares it as a card, and\nnothing moves until you confirm the card. Conversations are kept on your\naccount. To change a card before you confirm it, say what to change, such as\na later due date, and the agent prepares it again with the rest kept. A card\nfrom an earlier conversation shows whether it was done and can never be\nconfirmed again; ask, and the agent prepares a new one.\n\nA deal is built the same way. Name the person and say what the deal is\nfor, or just say you want to make your first deal and the agent asks who it\nis with; it asks only for what is missing, such as the amount and when it\nis due, says the usual terms in one line, and shows one card with every term,\ngoods terms included. Sending it moves no money. Once the other person\naccepts, the payment card appears in the same conversation and in your\nalerts, and the money moves only when you confirm it.\n\nYour deal guarantee works the same way. It is money you set aside to protect\nyour buyers, and on testnet it earns at the USYC rate, paid by Karwan. Ask to\ndeposit or withdraw and the card shows the amount, the 7-day wait\nand the day you can collect it; while it waits it no longer protects your\ndeals. You can ask to keep it instead, and to collect it once the wait ends.\nMoney still on an earlier Karwan deal is listed under Earlier deals, and\nthe assistant can take each step there too.\n\nEvery step of a deal after it starts works the same way. You can change a\ndeal or counter it before money is in, take back a deal the seller has not\naccepted, say the goods arrived, add review time, check a delivery yourself\nwhen the delivery check has not answered, claim a payment the buyer left in\nsilence, ask a buyer to release, or answer that ask. On requests you can\nmake your own offer, withdraw it, take a seller's offer, and go ahead or pass\non a near match. You can edit your offer on the market, stop your agent\noffering on a request, and write in a deal's chat. Ask what is in demand and\nit names the kinds of work requested most this week, the same list as the\nTrending on Karwan card on Home. In Telegram, the steps\nthat pay out or pay in open the Karwan page, where you confirm them.\n\nMoney works the same way. You can pay someone's payment link from your\nbalance, get free test USDC on testnet, have a transfer between networks\nthat has not arrived checked again or carried on, retry or cancel a money\nmove, have a deal payment that did not confirm checked again, pause money\nleaving your account, and remove a saved payout address. With your own\nwallet, you can also deposit to your deal guarantee from the assistant; your\nwallet asks you to sign. The same goes for the deposit a financier's offer\nmay need before you get paid now. Resuming money out and adding a payout address stay\non the page, because they need your World ID.\n\nYour account works the same way. You can change your settings, your name,\nbio and skills, your X handle, how Karwan reaches you, whether your assistant\nremembers, whether agents outside Karwan can check your record, and whether\nyour settled deals stay published. You can unlink Telegram, set up or rename\nyour agents, add research credit, send the team feedback, and run your\nbusiness workspace: add it, rename it, say what it trades and update its\ncompany card.\n\nA few steps stay on their page because they need your device, a code or a\ndocument: choosing your profile photo, adding an email, linking Telegram,\nregistering your business and deleting your account.\nThe few steps that need your own device, such as a passkey, your Karwan PIN\nor a World ID check, open their page instead.\n\nA picture or PDF can be picked, pasted or dragged into the message box. It\nwaits there until you send, and shows in your message with the words you\ntyped beside it.\n\nHelp answers how things work and what went wrong, from what your account\nshows. A person from the Karwan team joins the same conversation when you\nask for one, or when the assistant cannot do it, with the conversation so\nfar, so you do not repeat yourself.\n\nEvery deal has a short reference, such as D68F-E7D8, shown on the deal page\nwith a copy button. Give it to the assistant, on the website or in Telegram,\nand it finds the deal among your own deals; you never need the long deal id.\nHelp opened on a deal page already knows which deal you mean, and a person\nbrought in from there sees that deal.\n\nThis is built for testnet and not live yet."
+      "body": "With Use assistant switched on, the whole account runs from one\nconversation. You say what you want, your agent prepares it as a card, and\nnothing moves until you confirm the card. Conversations are kept on your\naccount. To change a card before you confirm it, say what to change, such as\na later due date, and the agent prepares it again with the rest kept. A card\nfrom an earlier conversation shows whether it was done and can never be\nconfirmed again; ask, and the agent prepares a new one.\n\nA deal is built the same way. Name the person and say what the deal is\nfor, or just say you want to make your first deal and the agent asks who it\nis with; it asks only for what is missing, such as the amount and when it\nis due, says the usual terms in one line, and shows one card with every term,\ngoods terms included. Sending it moves no money. Once the other person\naccepts, the payment card appears in the same conversation and in your\nalerts, and the money moves only when you confirm it.\n\nYour deal guarantee works the same way. It is money you set aside to protect\nyour buyers, and on testnet it earns at the USYC rate, paid by Karwan. Ask to\ndeposit or withdraw and the card shows the amount, the 7-day wait\nand the day you can collect it; while it waits it no longer protects your\ndeals. You can ask to keep it instead, and to collect it once the wait ends.\nMoney still on an earlier Karwan deal is listed under Earlier deals, and\nthe assistant can take each step there too.\n\nEvery step of a deal after it starts works the same way. You can change a\ndeal or counter it before money is in, take back a deal the seller has not\naccepted, say the goods arrived, add review time, check a delivery yourself\nwhen the delivery check has not answered, claim a payment the buyer left in\nsilence, ask a buyer to release, or answer that ask. On requests you can\nmake your own offer, withdraw it, take a seller's offer, and go ahead or pass\non a near match. You can edit your offer on the market, stop your agent\noffering on a request, and write in a deal's chat. Ask what is in demand and\nit names the market categories requested most this week against last week,\nwhich are rising, and what Karwan deals in them settled at, the same\ncategories as the Trending on Karwan card on Home. In Telegram, the steps\nthat pay out or pay in open the Karwan page, where you confirm them.\n\nMoney works the same way. You can pay someone's payment link from your\nbalance, get free test USDC on testnet, have a transfer between networks\nthat has not arrived checked again or carried on, retry or cancel a money\nmove, have a deal payment that did not confirm checked again, pause money\nleaving your account, and remove a saved payout address. With your own\nwallet, you can also deposit to your deal guarantee from the assistant; your\nwallet asks you to sign. The same goes for the deposit a financier's offer\nmay need before you get paid now. Resuming money out and adding a payout address stay\non the page, because they need your World ID.\n\nYour account works the same way. You can change your settings, your name,\nbio and skills, your X handle, how Karwan reaches you, whether your assistant\nremembers, whether agents outside Karwan can check your record, and whether\nyour settled deals stay published. You can unlink Telegram, set up or rename\nyour agents, ask your agent to research the market (it tells you the cost\nfirst), send the team feedback, and run your\nbusiness workspace: add it, rename it, say what it trades and update its\ncompany card.\n\nA few steps stay on their page because they need your device, a code or a\ndocument: choosing your profile photo, adding an email, linking Telegram,\nregistering your business and deleting your account.\nThe few steps that need your own device, such as a passkey, your Karwan PIN\nor a World ID check, open their page instead.\n\nA picture or PDF can be picked, pasted or dragged into the message box. It\nwaits there until you send, and shows in your message with the words you\ntyped beside it.\n\nHelp answers how things work and what went wrong, from what your account\nshows. A person from the Karwan team joins the same conversation when you\nask for one, or when the assistant cannot do it, with the conversation so\nfar, so you do not repeat yourself.\n\nEvery deal has a short reference, such as D68F-E7D8, shown on the deal page\nwith a copy button. Give it to the assistant, on the website or in Telegram,\nand it finds the deal among your own deals; you never need the long deal id.\nHelp opened on a deal page already knows which deal you mean, and a person\nbrought in from there sees that deal.\n\nThis is built for testnet and not live yet."
     },
     {
       "id": "brand-colour",
       "title": "Colour",
       "status": "live",
-      "updated": "2026-09-30",
+      "updated": "2026-11-03",
       "tags": [
         "brand",
         "tokens"
@@ -69,7 +89,7 @@
           "date": "2026-09-30"
         }
       ],
-      "body": "These are the published values, from the product's brand palette.\n\n```\naccent              #AFC95B    Karwan green: the one primary action, positive money state\nink / dark          #16202A    ink and dark surface\ncanvas              #EEF2F7    light theme canvas\npaper               #FFFFFF    light cards and email\ndark inset          #27313A\ntext sub on light   #646C74\ntext sub on dark    #A0A6AD\ngreen text on light #42560F    lime-family text that stays readable on light\nhairline on dark    rgba(206, 220, 232, 0.18)\n```\n\nThe accent is a muted lime, softened so green fills do not glare and dark text\nstays legible on top. Use it for one thing per screen. Status colours are\nseparate and always paired with words."
+      "body": "These are the published values, from the product's brand palette.\n\n```\naccent              #AFC95B    Karwan green: the one main button, the send button, signals\nink / dark          #16202A    ink and dark surface\ncanvas              #EEF2F7    light theme canvas\npaper               #FFFFFF    light cards and email\ndark inset          #27313A\ntext sub on light   #646C74\ntext sub on dark    #A0A6AD\ngreen text on light #42560F    lime-family text that stays readable on light\nhairline on dark    rgba(206, 220, 232, 0.18)\n```\n\nThe accent is a muted lime, softened so green fills do not glare and dark text\nstays legible on top. Use it for one thing per screen. Status colours are\nseparate and always paired with words."
     },
     {
       "id": "brand-logo",
@@ -367,10 +387,29 @@
       "body": "Local bank payout corridors are planned and are not live in the current Arc\nTestnet release. A local trade can be created today, but its present settlement\nuses test USDC.\n\nKarwan plans to keep USDC as the cross-border settlement layer while approved\npayout infrastructure converts to local currency. Each corridor must pass\navailability, compliance, recipient, fee, foreign-exchange, reconciliation,\nrefund and support gates before launch."
     },
     {
+      "id": "market-demand-and-prices",
+      "title": "What is in demand, and what it costs",
+      "status": "shipping",
+      "updated": "2026-11-03",
+      "tags": [
+        "market",
+        "agents",
+        "testnet"
+      ],
+      "path": "public/product/market-demand-and-prices.md",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/48-one-agent-per-person.md",
+          "date": "2026-11-03"
+        }
+      ],
+      "body": "Karwan reads demand and prices by the market's ten categories: Design, Tech,\nPhones, Fashion, Food, Farm produce, Home, Lessons, Repairs and Rentals. Each\nrequest and offer belongs to the category its words name.\n\nFor each category Karwan counts the requests posted this week and last week,\nand the offers open now. A category is rising when it has at least two\nrequests this week, more than last week, and a gain of at least a tenth of all\nrequests this week, or one in a quiet week. The Trending on Karwan card on\nHome, the assistant and the daily note to sellers all use the same numbers.\nSellers who serve a rising category hear of it at most once every three days.\n\nPrices come from Karwan's own deals first: the lowest, middle and highest\nprice deals in a category settled at over the last 30 days, shown from three\ndeals. A price range from web research the agents already paid for may follow,\nalways marked as from the web, and it never replaces Karwan's own range.\n\nWeb research an agent paid for is kept, so it is not lost or paid for again\nwhen Karwan restarts.\n\nA seller can ask their assistant to find customers: open requests whose\nshortlist already names them, open requests in the categories they serve that\nthey have not offered on, and the categories they serve that are rising. It\nnever shows who the buyer is.\n\nAnyone can ask their agent to watch a category: new requests in it, a move of\na tenth or more in what Karwan deals there settle at, or it starting to rise.\nThey hear once per change, in the app and on Telegram. Up to five watches run\nat once, each for 30 days, and a watch never moves money."
+    },
+    {
       "id": "messages-by-tag",
       "title": "Message anyone by their Karwan tag",
       "status": "roadmap",
-      "updated": "2026-10-30",
+      "updated": "2026-11-03",
       "tags": [
         "agents",
         "chat",
@@ -383,7 +422,7 @@
           "date": "2026-10-17"
         }
       ],
-      "body": "A person can ask their agent to message someone by Karwan tag before any\ndeal, for example \"send @ada a message: do you make agbada?\". Ada gets it in\nher Karwan chat, with an alert on Telegram and by email, and sees the sender's\ntag, country and tier. She answers with her agent's help.\n\nA market listing, a request a seller is looking at, and a person's public\nrecord page have a Message button, so a buyer can ask before agreeing. The\nfirst message names the ad it is about, and the conversation links back to it.\n\nWhen they agree, either agent starts the protected deal. Money never moves\nfrom a message. A message with a phone number, an email or a link, sent\nbefore any deal between the two, carries a warning to keep payment in Karwan\nescrow. So does any message, before a deal or in a deal's chat, that asks to\nbe paid outside Karwan, such as \"send it to my account\" or a bank account\nnumber. It still goes through, both sides see the warning, and the Karwan team\nis told. Someone whose first messages to five people in a day all go\nunanswered is paused from writing to anyone new for a day, and three messages\nin a row with no answer wait for a reply. Only someone with a Karwan tag can\nmessage, and a message with a link Karwan flags is not sent. Messages are kept\n14 days.\n\nThis is built for testnet and not live."
+      "body": "A person can ask their agent to message someone by Karwan tag before any\ndeal, for example \"send @ada a message: do you make agbada?\". Ada gets it in\nher Karwan chat, with an alert on Telegram and by email, and sees the sender's\ntag, country and tier. She answers with her agent's help.\n\nA market listing, a request a seller is looking at, and a person's public\nrecord page have a Message button, so a buyer can ask before agreeing. The\nfirst message names the ad it is about, and the conversation links back to it.\nA public record also has Ask them for an offer, which starts a protected\ndeal with that person.\n\nWhen they agree, either agent starts the protected deal. Money never moves\nfrom a message. A message with a phone number, an email or a link, sent\nbefore any deal between the two, carries a warning to keep payment in Karwan\nescrow. So does any message, before a deal or in a deal's chat, that asks to\nbe paid outside Karwan, such as \"send it to my account\" or a bank account\nnumber. It still goes through, both sides see the warning, and the Karwan team\nis told. Someone whose first messages to five people in a day all go\nunanswered is paused from writing to anyone new for a day, and three messages\nin a row with no answer wait for a reply. Only someone with a Karwan tag can\nmessage, and a message with a link Karwan flags is not sent. Messages are kept\n14 days.\n\nThis is built for testnet and not live."
     },
     {
       "id": "milestone-escrow",
@@ -407,7 +446,7 @@
       "id": "negotiation-in-assistant",
       "title": "Your agent negotiates while you sleep",
       "status": "roadmap",
-      "updated": "2026-11-01",
+      "updated": "2026-11-03",
       "tags": [
         "market",
         "assistant",
@@ -428,7 +467,7 @@
           "date": "2026-11-01"
         }
       ],
-      "body": "Post what you need in the assistant, on the website or Telegram, and you can\nclose the chat. Your agent asks sellers for offers and negotiates, and the\nassistant writes back in the same conversation, and on Telegram, only when\nsomething moves: offers in, your shortlist ready with the seller the agent\nrecommends, a near match when nothing fits your budget, an agreed deal, the\nmoney locked, the work delivered.\n\nWhen you post, you can turn on Agree for me. Your agent then agrees with the\nseller it recommends, within your budget, and you wake up to an agreed deal\nready for one tap to lock the money. It never agrees above your budget and\nnever moves money on its own.\n\nOffers move the way a market does. Change your request and your agent looks\nagain at once at the offers it holds; it can recommend one up to the most you\nallowed above your budget, and counters it toward your budget. Sellers who\noffered get a turn to keep, lower or withdraw their offer, and sellers whose\noffer is not the lowest hear once that a lower one is in, never its price.\nOffers only go down, at most three times per seller per request. Sellers never\nsee how far above your budget you would go.\n\nWhen your budget is far under what the work goes for and no seller takes it,\nyour agent tells you plainly, with the market price, and you choose to allow\nmore or post again. Nobody is pushed below their own price. Agents never go\nquiet. Every seller whose agent judges that your request fits what they sell\nmakes an offer. A seller whose lowest price is above your budget still offers,\nat their lowest, and you see that offer as outside your request; you decide\nwhether to take it. A seller who needs more days than your request gives still\noffers, with the days they need, and you see how many days longer it takes; if\nyou choose it, the deal runs on their days. A request of a kind a seller has\nnot set up yet, and a counter under their lowest price, become one\nquestion to that seller, in the app, the assistant, by email and on Telegram,\nwith a suggested answer they take, change or turn down. While they decide, you\nsee that the seller is checking, never their price or limit. Nothing is\noffered or agreed while a question waits.\n\nYour shortlist lists every seller who fits and offered, not only the first\nfew. It ranks them by how well they fit your request, then by reputation and\nscore, then by how close their terms are to what you asked. The seller your\nagent recommends is always within your budget and your date. An offer above\nyour budget, or one that needs longer, is marked outside your request, and you\ncan still choose it. A seller whose agent\nis not linked to their account yet is listed, and you can choose them once\nthey link it; ads work the same way, so a seller's posted offer reaches you\neven when its price is above your budget.\n\nOn your request page each offer is one line: the seller's photo, name and\nprice, and its place in your agent's order, with the agent's pick marked. Tap\nan offer to see the rest and to accept it.\n\nWhen your agent cannot agree a price with anyone, the request says so and\nstays yours until its date. You can still accept an offer, cancel the request\n(nothing was paid), or change it, and a change makes your agent look at the\noffers again and ask the sellers again.\n\nYour request page says how many sellers fit, how many offered and how many are\nchecking the price, never who. When a minute passes and nobody on Karwan sells\nit yet, it says so plainly, and you can share the request with a seller you\nknow while your agent keeps looking. Sellers who fit hear of your request when it is\nposted, not on a timer, and a seller who sets up a new way is matched against\nthe open requests straight away. Example stock on the market never counts as a\nseller.\n\nThe agents haggle like people. Neither opens at its limit. A seller's agent\ncomes down by a schedule, firm while there is time and little competition,\nsteadier near the deadline or with several offers, one step only after your\nagent moved, never under the seller's lowest, and it offers more time before it\nreaches that lowest. It aims to agree within three exchanges and never runs\npast five; the fourth is a last price, and anything past it is a question to\nthe seller. Every move carries one short reason you can read, and a reason\nnever names a limit, a budget or another offer. A seller's agent agrees to a\nprice under its own offer only when the seller chose Agree for me; otherwise\nit asks them first.\n\nThis is built for testnet and not live yet."
+      "body": "Post what you need in the assistant, on the website or Telegram, and you can\nclose the chat. Your agent asks sellers for offers and negotiates, and the\nassistant writes back in the same conversation, and on Telegram, only when\nsomething moves: offers in, your shortlist ready with the seller the agent\nrecommends, a near match when nothing fits your budget, an agreed deal, the\nmoney locked, the work delivered.\n\nWhen you post, you can turn on Agree for me. Your agent then agrees with the\nseller it recommends, within your budget, and you wake up to an agreed deal\nready for one tap to lock the money. It never agrees above your budget and\nnever moves money on its own.\n\nOffers move the way a market does. Change your request and your agent looks\nagain at once at the offers it holds; it can recommend one up to the most you\nallowed above your budget, and counters it toward your budget. Sellers who\noffered get a turn to keep, lower or withdraw their offer, and sellers whose\noffer is not the lowest hear once that a lower one is in, never its price.\nOffers only go down, at most three times per seller per request. Sellers never\nsee how far above your budget you would go.\n\nWhen your budget is far under what the work goes for and no seller takes it,\nyour agent tells you plainly, with the market price, and you choose to allow\nmore or post again. Nobody is pushed below their own price. Agents never go\nquiet. Every seller whose agent judges that your request fits what they sell\nmakes an offer. A seller whose lowest price is above your budget still offers,\nat their lowest, and you see that offer as outside your request; you decide\nwhether to take it. A seller who needs more days than your request gives still\noffers, with the days they need, and you see how many days longer it takes; if\nyou choose it, the deal runs on their days. A request of a kind a seller has\nnot set up yet, and a counter under their lowest price, become one\nquestion to that seller, in the app, the assistant, by email and on Telegram,\nwith a suggested answer they take, change or turn down. While they decide, you\nsee that the seller is checking, never their price or limit. Nothing is\noffered or agreed while a question waits.\n\nYour shortlist lists every seller who fits and offered, not only the first\nfew. It ranks them by how well they fit your request, then by reputation and\nscore, then by how close their terms are to what you asked. The seller your\nagent recommends is always within your budget and your date. An offer above\nyour budget, or one that needs longer, is marked outside your request, and you\ncan still choose it. A seller whose agent\nis not linked to their account yet is listed, and you can choose them once\nthey link it; ads work the same way, so a seller's posted offer reaches you\neven when its price is above your budget.\n\nYou post a request on one screen: what you need, your budget and when you\nneed it. It is paid at once unless you choose to pay in parts.\n\nOn your request page each offer is one line: the seller's photo, name and\nrating, the price, and its place in your agent's order, with the agent's pick\nmarked. Tap an offer to see its facts and why your agent placed it there, and\nto accept it.\n\nWhen your agent cannot agree a price with anyone, the request says so and\nstays yours until its date. You can still accept an offer, cancel the request\n(nothing was paid), or change it, and a change makes your agent look at the\noffers again and ask the sellers again.\n\nYour request page says how many sellers fit, how many offered and how many are\nchecking the price, never who. When a minute passes and nobody on Karwan sells\nit yet, it says so plainly, and you can share the request with a seller you\nknow while your agent keeps looking. Sellers who fit hear of your request when it is\nposted, not on a timer, and a seller who sets up a new way is matched against\nthe open requests straight away. Example stock on the market never counts as a\nseller.\n\nThe agents haggle like people. Neither opens at its limit. A seller's agent\ncomes down by a schedule, firm while there is time and little competition,\nsteadier near the deadline or with several offers, one step only after your\nagent moved, never under the seller's lowest, and it offers more time before it\nreaches that lowest. It aims to agree within three exchanges and never runs\npast five; the fourth is a last price, and anything past it is a question to\nthe seller. Every move carries one short reason you can read, and a reason\nnever names a limit, a budget or another offer. A seller's agent agrees to a\nprice under its own offer only when the seller chose Agree for me; otherwise\nit asks them first.\n\nThis is built for testnet and not live yet."
     },
     {
       "id": "open-trade-finance-roadmap",
@@ -472,7 +511,7 @@
       "id": "photos-on-offers",
       "title": "Photos on offers",
       "status": "roadmap",
-      "updated": "2026-10-24",
+      "updated": "2026-11-03",
       "tags": [
         "market",
         "offers",
@@ -485,7 +524,7 @@
           "date": "2026-10-24"
         }
       ],
-      "body": "An offer on Karwan's market can carry up to four photos, so a buyer sees the\nitem before agreeing a deal. The first photo shows on the market card and all\nof them on the offer page.\n\nYou add photos on the offer form, or send them to your assistant before it\ndrafts the offer. You say so in the words you send with it, for example\n\"selling this\" or \"for my offer\", on the website or in Telegram. On the\nwebsite a photo sent with no words asks whether it is for an offer. The assistant's offer card shows how many photos it adds, and nothing\nis posted until you confirm.\n\nPhotos are resized on your device before they are sent, which also drops the\nlocation data a phone camera adds. Anyone signed in can report an offer or\nits photos from the offer page, and the team reviews every report.\n\nThis is built for testnet and not live yet."
+      "body": "An offer on Karwan's market can carry up to four photos, so a buyer sees the\nitem before agreeing a deal. The first photo shows on the market card and all\nof them on the offer page, where they swipe sideways on a phone.\n\nYou add photos on the offer form, or send them to your assistant before it\ndrafts the offer. You say so in the words you send with it, for example\n\"selling this\" or \"for my offer\", on the website or in Telegram. On the\nwebsite a photo sent with no words asks whether it is for an offer. The assistant's offer card shows how many photos it adds, and nothing\nis posted until you confirm.\n\nPhotos are resized on your device before they are sent, which also drops the\nlocation data a phone camera adds. Anyone signed in can report an offer or\nits photos from the offer page, and the team reviews every report.\n\nThis is built for testnet and not live yet."
     },
     {
       "id": "po-financing",
@@ -799,7 +838,7 @@
       "id": "your-karwan-record",
       "title": "Your Karwan record, set up on the way",
       "status": "roadmap",
-      "updated": "2026-10-29",
+      "updated": "2026-11-03",
       "tags": [
         "reputation",
         "agents",
@@ -813,7 +852,7 @@
           "date": "2026-10-27"
         }
       ],
-      "body": "Deals held by Karwan's escrow family count on each side's Karwan record. The\nrecord links a person's buying and selling agents to them, and their deals\nand checks are written to it. Nothing ever waits for it: paying, agreeing to\na deal, making an offer and a selling agent's offers all go ahead with or\nwithout a record.\n\nWhen Karwan holds the person's wallets, as for email, passkey and Telegram\naccounts, Karwan sets the record up itself the first time it is needed, with\nno step from them, on Arc Testnet. On mainnet that takes one confirmation\nwith a passkey or a Karwan PIN.\n\nSomeone who signs in with their own wallet never takes a separate step either.\nThe record's steps ride along with the next transaction they sign on Arc in\nKarwan, such as adding money to their agents or putting up a deal guarantee, in\nthe same wallet prompt. They are added only when the wallet's USDC covers the\nsmall extra network fee, and never when the whole balance is being sent.\nThe person's own transaction always comes first and never fails because of\nthe record. Once it is set up, the result says so in one line. A transaction\nsigned on another chain, or from a smart-contract wallet, goes on its own and\nthe next one carries the record.\n\nThe escrow notes each side's record when the buyer pays in, so a deal paid\nin before a side had a record runs normally but does not count on that\nside's record. When that happens to someone with their own wallet, the\nsettled deal's receipt offers to count their next deals, with one signature.\nIt shows at most once a month and can be ignored.\n\nThe buying agent can pay up to 1,005 USDC at a time and 10,000 USDC in total\nfor one year. When it reaches its year or its total, it steps aside so a\npayment still goes through, and it is linked again with the next setup.\n\nAfter each payment on a deal, the seller's earnings move from their selling\nagent to their own wallet; a move that is still waiting shows in their\nbalance and is tried again. Once a deal settles, the deal page says whether\nit is on both records. On mainnet, deals can be up to 1,000 USDC while\nKarwan is in beta; testnet allows larger deals. A deal over the limit is\nrefused before any money moves, with the largest amount allowed.\n\nNew deals on Arc Testnet have opened on the escrow family since 24 October\n2026; mainnet follows an external audit."
+      "body": "Deals held by Karwan's escrow family count on each side's Karwan record. The\nrecord links a person's buying and selling agents to them, and their deals\nand checks are written to it. Nothing ever waits for it: paying, agreeing to\na deal, making an offer and a selling agent's offers all go ahead with or\nwithout a record.\n\nWhen Karwan holds the person's wallets, as for email, passkey and Telegram\naccounts, Karwan sets the record up itself the first time it is needed, with\nno step from them, on Arc Testnet. On mainnet that takes one confirmation\nwith a passkey or a Karwan PIN.\n\nSomeone who signs in with their own wallet never takes a separate step either.\nThe record's steps ride along with the next transaction they sign on Arc in\nKarwan, such as adding money to their agents or putting up a deal guarantee, in\nthe same wallet prompt. They are added only when the wallet's USDC covers the\nsmall extra network fee, and never when the whole balance is being sent.\nThe person's own transaction always comes first and never fails because of\nthe record. Once it is set up, the result says so in one line. A transaction\nsigned on another chain, or from a smart-contract wallet, goes on its own and\nthe next one carries the record. While a person's record is not on yet, Home\nshows Turn on your record with one button that sets it up.\n\nThe escrow notes each side's record when the buyer pays in, so a deal paid\nin before a side had a record runs normally but does not count on that\nside's record. When that happens to someone with their own wallet, the\nsettled deal's receipt offers to count their next deals, with one signature.\nIt shows at most once a month and can be ignored.\n\nThe buying agent can pay up to 1,005 USDC at a time and 10,000 USDC in total\nfor one year. When it reaches its year or its total, it steps aside so a\npayment still goes through, and it is linked again with the next setup.\n\nAfter each payment on a deal, the seller's earnings move from their selling\nagent to their own wallet; a move that is still waiting shows in their\nbalance and is tried again. Once a deal settles, the deal page says whether\nit is on both records. On mainnet, deals can be up to 1,000 USDC while\nKarwan is in beta; testnet allows larger deals. A deal over the limit is\nrefused before any money moves, with the largest amount allowed.\n\nNew deals on Arc Testnet have opened on the escrow family since 24 October\n2026; mainnet follows an external audit."
     }
   ],
   "facts": [
@@ -831,7 +870,7 @@
         "x402",
         "testnet"
       ],
-      "summary": "On Arc Testnet, a Karwan agent pays 0.01 USD over x402 to read the other side's deal record before it commits. Payment settles through Circle Gateway. The first live read ran on 16 October 2026.",
+      "summary": "On Arc Testnet, a Karwan agent pays 0.005 USDC over x402 to read the other side's deal record before it commits. Payment settles through Circle Gateway. The first live read ran on 16 October 2026.",
       "sources": [
         {
           "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/13-portable-reputation.md",
@@ -843,8 +882,37 @@
         "note": "The seller's agent reads the buyer's record and passes when disputes lost outnumber completed deals.",
         "lastVerified": ""
       },
-      "updated": "2026-10-16",
+      "updated": "2026-11-03",
       "path": "public/product/agent-record-checks.md"
+    },
+    {
+      "id": "agents-pay-for-research",
+      "title": "Your agent pays for its own research",
+      "status": "shipping",
+      "publishable": false,
+      "blockedBy": "not-live",
+      "capability": true,
+      "audience": "all",
+      "tags": [
+        "agents",
+        "x402",
+        "research",
+        "testnet"
+      ],
+      "summary": "On Arc Testnet, a person's agent pays for the market research it uses, from its own balance, over x402 on Arc settled through Circle Gateway. Karwan runs the web searches and pays the search provider.",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/48-one-agent-per-person.md",
+          "date": "2026-11-03"
+        }
+      ],
+      "check": {
+        "kind": "manual",
+        "note": "Built, not deployed yet. Prices and search sizes read against the research pricing and its tests, which passed on 3 November 2026.",
+        "lastVerified": "2026-11-03"
+      },
+      "updated": "2026-11-03",
+      "path": "public/product/agents-pay-for-research.md"
     },
     {
       "id": "assistant-mode-and-help",
@@ -879,7 +947,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-10-30",
+      "updated": "2026-11-03",
       "path": "public/product/assistant-mode-and-help.md"
     },
     {
@@ -902,7 +970,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-09-30",
+      "updated": "2026-11-03",
       "path": "public/brand/colour.md"
     },
     {
@@ -1301,6 +1369,34 @@
       "path": "public/product/local-payout-roadmap.md"
     },
     {
+      "id": "market-demand-and-prices",
+      "title": "What is in demand, and what it costs",
+      "status": "shipping",
+      "publishable": false,
+      "blockedBy": "not-live",
+      "capability": true,
+      "audience": "all",
+      "tags": [
+        "market",
+        "agents",
+        "testnet"
+      ],
+      "summary": "Karwan reads demand and prices by the market's ten categories: Design, Tech, Phones, Fashion, Food, Farm produce, Home, Lessons, Repairs and Rentals. Each request and offer belongs to the category its words name.",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/48-one-agent-per-person.md",
+          "date": "2026-11-03"
+        }
+      ],
+      "check": {
+        "kind": "manual",
+        "note": "Built, not deployed yet. Read against the market store and its tests, which passed on 3 November 2026.",
+        "lastVerified": "2026-11-03"
+      },
+      "updated": "2026-11-03",
+      "path": "public/product/market-demand-and-prices.md"
+    },
+    {
       "id": "messages-by-tag",
       "title": "Message anyone by their Karwan tag",
       "status": "roadmap",
@@ -1321,7 +1417,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-10-30",
+      "updated": "2026-11-03",
       "path": "public/product/messages-by-tag.md"
     },
     {
@@ -1380,7 +1476,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-11-01",
+      "updated": "2026-11-03",
       "path": "public/product/negotiation-in-assistant.md"
     },
     {
@@ -1444,7 +1540,7 @@
         "offers",
         "testnet"
       ],
-      "summary": "An offer on Karwan's market can carry up to four photos, so a buyer sees the item before agreeing a deal. The first photo shows on the market card and all of them on the offer page.",
+      "summary": "An offer on Karwan's market can carry up to four photos, so a buyer sees the item before agreeing a deal. The first photo shows on the market card and all of them on the offer page, where they swipe sideways on a phone.",
       "sources": [
         {
           "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/28-photos-on-listings.md",
@@ -1452,7 +1548,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-10-24",
+      "updated": "2026-11-03",
       "path": "public/product/photos-on-offers.md"
     },
     {
@@ -1872,7 +1968,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-10-29",
+      "updated": "2026-11-03",
       "path": "public/product/your-karwan-record.md"
     }
   ]

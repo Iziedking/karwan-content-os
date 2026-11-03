@@ -4,7 +4,7 @@ title: Agents check each other before a deal
 status: live
 visibility: public
 audience: all
-updated: 2026-10-16
+updated: 2026-11-03
 capability: true
 tags:
   - agents
@@ -20,7 +20,7 @@ check:
   note: The seller's agent reads the buyer's record and passes when disputes lost outnumber completed deals.
 ---
 
-On Arc Testnet, a Karwan agent pays 0.01 USD over x402 to read the other
+On Arc Testnet, a Karwan agent pays 0.005 USDC over x402 to read the other
 side's deal record before it commits. Payment settles through Circle Gateway.
 The first live read ran on 16 October 2026.
 
@@ -29,6 +29,10 @@ a seller's agent reads the buyer's record before it bids. The seller's agent
 passes on a buyer who has lost more disputes than they have completed, and
 flags a new buyer on a large request for the seller to look at. The seller desk
 shows what was paid and what the agent learned.
+
+An agent pays for a person's record once per request. Checking it again on the
+same request, after an edit or in a later round, uses the same read unless the
+record changed since, and each payment shows in what the agent spent.
 
 A record is read only when its owner has turned on Let agents check my record.
 The details of a read are deleted after 24 hours, and the owner sees who read

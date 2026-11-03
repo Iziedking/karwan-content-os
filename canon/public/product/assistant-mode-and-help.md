@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-30
+updated: 2026-11-03
 capability: true
 tags:
   - agents
@@ -53,8 +53,9 @@ silence, ask a buyer to release, or answer that ask. On requests you can
 make your own offer, withdraw it, take a seller's offer, and go ahead or pass
 on a near match. You can edit your offer on the market, stop your agent
 offering on a request, and write in a deal's chat. Ask what is in demand and
-it names the kinds of work requested most this week, the same list as the
-Trending on Karwan card on Home. In Telegram, the steps
+it names the market categories requested most this week against last week,
+which are rising, and what Karwan deals in them settled at, the same
+categories as the Trending on Karwan card on Home. In Telegram, the steps
 that pay out or pay in open the Karwan page, where you confirm them.
 
 Money works the same way. You can pay someone's payment link from your
@@ -71,7 +72,8 @@ Your account works the same way. You can change your settings, your name,
 bio and skills, your X handle, how Karwan reaches you, whether your assistant
 remembers, whether agents outside Karwan can check your record, and whether
 your settled deals stay published. You can unlink Telegram, set up or rename
-your agents, add research credit, send the team feedback, and run your
+your agents, ask your agent to research the market (it tells you the cost
+first), send the team feedback, and run your
 business workspace: add it, rename it, say what it trades and update its
 company card.
 

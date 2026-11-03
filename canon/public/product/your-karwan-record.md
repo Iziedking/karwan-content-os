@@ -4,7 +4,7 @@ title: Your Karwan record, set up on the way
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-11-03
 capability: true
 tags:
   - reputation
@@ -35,7 +35,8 @@ small extra network fee, and never when the whole balance is being sent.
 The person's own transaction always comes first and never fails because of
 the record. Once it is set up, the result says so in one line. A transaction
 signed on another chain, or from a smart-contract wallet, goes on its own and
-the next one carries the record.
+the next one carries the record. While a person's record is not on yet, Home
+shows Turn on your record with one button that sets it up.
 
 The escrow notes each side's record when the buyer pays in, so a deal paid
 in before a side had a record runs normally but does not count on that

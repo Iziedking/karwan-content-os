@@ -4,7 +4,7 @@ title: Photos on offers
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-24
+updated: 2026-11-03
 capability: true
 tags:
   - market
@@ -17,7 +17,7 @@ sources:
 
 An offer on Karwan's market can carry up to four photos, so a buyer sees the
 item before agreeing a deal. The first photo shows on the market card and all
-of them on the offer page.
+of them on the offer page, where they swipe sideways on a phone.
 
 You add photos on the offer form, or send them to your assistant before it
 drafts the offer. You say so in the words you send with it, for example
