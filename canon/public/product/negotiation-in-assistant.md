@@ -59,10 +59,11 @@ few. It ranks them by how well they fit your request, then by reputation and
 score, then by how close their terms are to what you asked. The seller your
 agent recommends is always within your budget and your date. An offer above
 your budget, or one that needs longer, is marked outside your request, and you
-can still choose it. A seller whose agent
-is not linked to their account yet is listed, and you can choose them once
-they link it; ads work the same way, so a seller's posted offer reaches you
-even when its price is above your budget.
+can still choose it. A seller whose agent is not linked to their account yet
+is listed too; only a deal on an older escrow asks them to link it before you
+choose them. Ads work the same way, so a seller's posted offer reaches you
+even when its price is above your budget. If Karwan restarts while offers are
+coming in, your shortlist still arrives when the window closes.
 
 You post a request on one screen: what you need, your budget and when you
 need it. It is paid at once unless you choose to pay in parts.
