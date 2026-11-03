@@ -38,4 +38,7 @@ in a row with no answer wait for a reply. Only someone with a Karwan tag can
 message, and a message with a link Karwan flags is not sent. Messages are kept
 14 days.
 
+In a conversation your messages show in ink and the other person's on a
+light card, and the round Send button is the one green control.
+
 This is built for testnet and not live.
