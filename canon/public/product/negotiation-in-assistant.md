@@ -65,7 +65,9 @@ choose them. Ads work the same way, so a seller's posted offer reaches you
 even when its price is above your budget. If Karwan restarts while offers are
 coming in, your shortlist still arrives when the window closes. A seller who
 does not answer your agent's counter within three minutes is passed over, and
-your agent goes to the next offer, also across a restart.
+your agent goes to the next offer, also across a restart. Your agent keeps its
+notes on each request, so after a restart it carries on in the same round at
+the same price.
 
 You post a request on one screen: what you need, your budget and when you
 need it. It is paid at once unless you choose to pay in parts.
