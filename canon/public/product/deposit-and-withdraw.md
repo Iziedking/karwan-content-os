@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-10-24
+updated: 2026-11-03
 capability: true
 tags:
   - money
@@ -34,6 +34,8 @@ funds, so it picks the chain the USDC is on and signs the transfer.
 
 Withdrawals reach Ethereum, Base, Arbitrum, Optimism, Polygon and Solana, and
 never require that chain's gas token to receive.
+Before a withdrawal moves, Karwan shows it once more: where it goes, on which
+network, and that it cannot be undone. Nothing leaves until you confirm.
 
 The word for this is Deposit and Withdraw. Not top up, not add money, not cash
 out, and never the name of the transfer protocol underneath: which rail carries a
