@@ -4,7 +4,7 @@ title: Colour
 status: live
 visibility: public
 audience: all
-updated: 2026-09-30
+updated: 2026-11-03
 capability: false
 tags:
   - brand
@@ -17,7 +17,7 @@ sources:
 These are the published values, from the product's brand palette.
 
 ```
-accent              #AFC95B    Karwan green: the one primary action, positive money state
+accent              #AFC95B    Karwan green: the one main button, the send button, signals
 ink / dark          #16202A    ink and dark surface
 canvas              #EEF2F7    light theme canvas
 paper               #FFFFFF    light cards and email
