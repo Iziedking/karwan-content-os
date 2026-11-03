@@ -40,6 +40,10 @@ network, and that it cannot be undone. Nothing leaves until you confirm.
 Every move lands in Activity under its day with a plus or minus sign, not a
 colour, and opens a receipt you can save as an image or a PDF.
 
+A payment link opens a page anyone can pay, signed in or not. It shows who
+asks, the amount and what it is for, follows the money step by step, and
+ends with a receipt both sides see as Paid.
+
 The word for this is Deposit and Withdraw. Not top up, not add money, not cash
 out, and never the name of the transfer protocol underneath: which rail carries a
 move is not something a person sending money needs to hold in their head.
