@@ -4,7 +4,7 @@ title: Sharing your full passport
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-24
+updated: 2026-11-03
 capability: true
 tags:
   - reputation
@@ -14,8 +14,8 @@ sources:
     date: 2026-10-24
 ---
 
-Your passport is sealed: other people see your standing and a few plain
-reasons, never your numbers. When someone asks to see your record before a
+Other people see your standing, a few plain reasons and how many deals you
+finished and how many on time, never your score or your amounts. When someone asks to see your record before a
 deal, you can show them the full passport you see yourself, amounts and the
 money held as a reserve included.
 
