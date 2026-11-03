@@ -19,10 +19,14 @@ finished and how many on time, never your score or your amounts. When someone as
 deal, you can show them the full passport you see yourself, amounts and the
 money held as a reserve included.
 
-Open your passport and tap Share full record, or ask your assistant on the
+Open your Trade record page and tap Share full record, or ask your assistant on the
 website, Telegram or WhatsApp. Choose one person by their Karwan tag, who must
 be signed in to open it, or a link anyone can open, for someone not on Karwan
 yet. Choose 24 hours or 7 days.
+
+Profile shows your record in one line, your level and the deals you completed.
+It opens your Trade record page, which holds every number, what others see,
+your earlier deals and where your record comes from.
 
 Your passport lists each live share, who it is for, until when and how often it
 was opened. Stop any of them at any time; the link then shows the sealed
