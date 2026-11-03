@@ -4,7 +4,7 @@ title: Invoice factoring
 status: live
 visibility: public
 audience: all
-updated: 2026-10-30
+updated: 2026-11-03
 capability: true
 tags:
   - financing
@@ -44,6 +44,9 @@ page ranks them, and takes or turns one down; a financier sees the requests they
 may fund and makes an offer, which is refused before anything moves if their
 wallet does not hold the advance. Taking an offer and making one are confirmed on
 Karwan, where every figure is shown before money moves.
+
+On the financier desk each part is one card of rows and amounts carry no
+colour; the one green button is Pay the seller, when a seller is waiting.
 
 Being paid early is not yet open on deals made on Karwan's new escrow. Deals made
 before it can use it now.

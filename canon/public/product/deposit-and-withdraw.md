@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-11-03
+updated: 2026-11-04
 capability: true
 tags:
   - money
@@ -36,6 +36,8 @@ Withdrawals reach Ethereum, Base, Arbitrum, Optimism, Polygon and Solana, and
 never require that chain's gas token to receive.
 Before a withdrawal moves, Karwan shows it once more: where it goes, on which
 network, and that it cannot be undone. Nothing leaves until you confirm.
+Withdrawing to a bank account or a card is coming soon. Both are listed on
+the Withdraw screen and cannot be picked yet.
 
 Every move lands in Activity under its day with a plus or minus sign, not a
 colour, and opens a receipt you can save as an image or a PDF.
