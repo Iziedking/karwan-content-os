@@ -38,6 +38,8 @@ Before a withdrawal moves, Karwan shows it once more: where it goes, on which
 network, and that it cannot be undone. Nothing leaves until you confirm.
 Withdrawing to a bank account or a card is coming soon. Both are listed on
 the Withdraw screen and cannot be picked yet.
+The Transfer balance holds your USDC from every network together, ready to
+move to Arc in one step.
 
 Every move lands in Activity under its day with a plus or minus sign, not a
 colour, and opens a receipt you can save as an image or a PDF.
