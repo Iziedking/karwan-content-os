@@ -4,7 +4,7 @@ title: Pay someone by the hour, or monthly
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-30
+updated: 2026-11-04
 capability: true
 tags:
   - market
@@ -47,6 +47,9 @@ Hours the hirer objects to wait for Karwan's review team, and the rest are paid
 at once. If the team does not rule within 5 days, those hours are split half
 and half. Either side can end the work with one week's notice, or one month's
 for a retainer. When the work ends, it goes on both people's records.
+
+On the work page each week is its own card, and the one green button is the
+step that is next. On posted work the offers sit in one card, best fit first.
 
 Hourly work runs from the website, the assistant and Telegram. The hirer's
 money steps are confirmed on Karwan itself. It runs on Arc Testnet, up to about
