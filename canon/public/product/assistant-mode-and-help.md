@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-03
+updated: 2026-11-04
 capability: true
 tags:
   - agents
@@ -99,3 +99,7 @@ Help opened on a deal page already knows which deal you mean, and a person
 brought in from there sees that deal.
 
 This is built for testnet and not live yet.
+
+Every docs page has three buttons under its title. Copy for AI copies the page
+as plain text. Ask Claude and Ask ChatGPT open that chat in a new tab with the
+page link and a question already typed in.
