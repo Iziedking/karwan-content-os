@@ -103,3 +103,7 @@ This is built for testnet and not live yet.
 Every docs page has three buttons under its title. Copy for AI copies the page
 as plain text. Ask Claude and Ask ChatGPT open that chat in a new tab with the
 page link and a question already typed in.
+
+On the landing page, the example questions open the assistant with the
+question already asked, whether they are tapped, thrown into the chat bar or
+typed. Talk to our team writes to admin@karwan.site.
