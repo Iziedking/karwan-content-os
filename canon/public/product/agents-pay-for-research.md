@@ -51,4 +51,11 @@ would go over and offers to raise the budget. Once a week, unless you turn it
 off, you get one line in the app and on Telegram on what your agents spent and
 what for, the price of each record check and what is left in the data balance.
 
+Money is one page with three parts: Balance, Agent and Deal guarantee, each
+with a short tip that says what it is. The Agent part shows the money with your
+agent, which still counts in your one balance, and the weekly limit for checks.
+Top up adds to it from your balance, Withdraw moves it back to your wallet in
+seconds, and Change limit sets the week's limit (0.50, 1 or 5 USDC). This week
+shows what it spent and what is left, and each spend opens its receipt.
+
 On mainnet, agents will pay Circle's services marketplace directly for this.

@@ -41,6 +41,14 @@ the Withdraw screen and cannot be picked yet.
 The Transfer balance holds your USDC from every network together, ready to
 move to Arc in one step.
 
+Adding money and withdrawing each have their own page, the same from Home
+and from Money, on a phone and on a computer. A withdrawal starts with where it
+goes, then the amount: only money that is ready leaves, and money in the
+Transfer balance or with your agent is shown beside it with a way to bring it
+here. When money lands or a withdrawal arrives, a card stays on the page with
+the amount, where it came from or went, and how long it took, until you press
+Done. The Deal guarantee sits on Money too, with Add and Withdraw.
+
 Every move lands in Activity under its day with a plus or minus sign, not a
 colour, and opens a receipt you can save as an image or a PDF.
 
