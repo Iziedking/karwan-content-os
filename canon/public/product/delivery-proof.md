@@ -4,7 +4,7 @@ title: What counts as delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-30
+updated: 2026-11-05
 capability: true
 tags:
   - delivery
@@ -33,6 +33,14 @@ work, with a short note. The link has to point to a real site before the
 delivery is accepted. Every link is checked for safety; one the check holds is
 hidden from the buyer and never paid for, not even when the buyer's review time
 ends, until a person at Karwan clears it or the seller sends another link.
+
+Karwan also compares the delivery with what was agreed, using a language
+model. When that check cannot run, the deal says so in plain words: Karwan
+couldn't check the delivery, the buyer checks the work before releasing, and
+automatic release waits for them. Nothing is wrong with the seller's delivery
+because of it. Karwan tries the check again a few minutes later, and either side
+can ask for Check again on the deal page or from the assistant. Checks run on
+chain by Chainlink CRE are not live yet.
 
 Separately from links, the security agent screens each match when it is funded.
 A match it holds shows Held for a look on the deal, with one shared line and
