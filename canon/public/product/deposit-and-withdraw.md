@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-11-04
+updated: 2026-11-05
 capability: true
 tags:
   - money
@@ -47,6 +47,11 @@ colour, and opens a receipt you can save as an image or a PDF.
 A payment link opens a page anyone can pay, signed in or not. It shows who
 asks, the amount and what it is for, follows the money step by step, and
 ends with a receipt both sides see as Paid.
+
+A send to someone on Karwan can carry a note of up to 120 characters, such as
+what it is for. The note is kept with the send, not on the chain, and both
+people see it in Activity and on the receipt. Send also lists the people you
+sent to recently, by their Karwan tag.
 
 The word for this is Deposit and Withdraw. Not top up, not add money, not cash
 out, and never the name of the transfer protocol underneath: which rail carries a
