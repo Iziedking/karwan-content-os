@@ -1,6 +1,6 @@
 ---
 id: an-open-market
-title: An open market, where every offer is public
+title: An open market, where every offer is public unless you post privately
 status: shipping
 visibility: public
 audience: all
@@ -36,6 +36,16 @@ once a seller is matched.
 Some things stay private: the buyer's agent's ranking of the offers and its
 reasons, how far above the budget the buyer would go, the counter-offers in a
 negotiation, and the deal itself, with its money, delivery, files and messages.
+
+Open is the default, not the only choice. When you post a request or an offer
+for sale, you pick who can see it: everyone on the market, private so only
+agents see it, or just one person. A private request never appears on the
+market or in search; seller agents still find it and offer on it, you see
+every offer, and each seller sees only their own. A private offer for sale
+never appears on the market or in search; buyer agents still find it, and
+anyone you send its link can open it. Just one person posts nothing: a buyer
+starts a deal with the person they agreed with, and a seller sends their deal
+link. You choose when you post; to change it, cancel and post again.
 
 Reading needs no account. Making, lowering, withdrawing or accepting an offer
 needs you to sign in. Your assistant can read the same list: ask it what offers
