@@ -4,7 +4,7 @@ title: What counts as delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-05
+updated: 2026-11-06
 capability: true
 tags:
   - delivery
@@ -33,6 +33,11 @@ work, with a short note. The link has to point to a real site before the
 delivery is accepted. Every link is checked for safety; one the check holds is
 hidden from the buyer and never paid for, not even when the buyer's review time
 ends, until a person at Karwan clears it or the seller sends another link.
+On the escrow family the hold is also put on chain. If nobody has cleared the
+link when a quarter of the buyer's review time is left, Karwan uses the
+buyer's one request for more time. If the link is still held as that runs
+out, Karwan opens the buyer's dispute, so the payment cannot be claimed on the
+clock. A dispute over a held link is decided by a person.
 
 Karwan also compares the delivery with what was agreed, using a language
 model. When that check cannot run, the deal says so in plain words: Karwan
