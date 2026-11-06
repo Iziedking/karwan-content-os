@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-11-05
+updated: 2026-11-06
 capability: true
 tags:
   - money
@@ -55,6 +55,13 @@ colour, and opens a receipt you can save as an image or a PDF.
 A payment link opens a page anyone can pay, signed in or not. It shows who
 asks, the amount and what it is for, follows the money step by step, and
 ends with a receipt both sides see as Paid.
+
+A link asks for money for 7 days unless the person who makes it picks
+another length: 1 day, 30 days, or any date up to 90 days ahead, on the
+request screen or by telling the assistant. The owner can end an open link
+early from its page; money sent to it after that still reaches them. When a
+deposit to someone's own address matches the amount of two or more of their
+open requests, it is credited but none is marked paid, and Activity says so.
 
 A send to someone on Karwan can carry a note of up to 120 characters, such as
 what it is for. The note is kept with the send, not on the chain, and both
