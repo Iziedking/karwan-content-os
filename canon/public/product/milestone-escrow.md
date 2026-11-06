@@ -24,7 +24,7 @@ the buyer has the review time the deal set, at most 30 days, to check it.
 A request, an offer or a new deal reads its words into the parts it is paid
 in: "sketches first, then the final files" becomes two parts, each saying
 what it delivers. Plain work is one payment. Either way the form shows the
-terms once more before anything is sent, and the parts can be changed there. Before a request is posted, the offers already on Karwan that fit it within its budget are named, and posting is still your call.
+terms once more before anything is sent, and the parts can be changed there. Before a request is posted, the offers already on Karwan that fit it within its budget are named, and posting is still your call. A request or a deal can carry up to four photos or PDFs: a request's are seen by whoever can read it, a deal's only by the two sides.
 
 During that time the buyer can release the payment, ask once for more time
 to check, or raise a problem. Karwan reminds them a day before the time runs
