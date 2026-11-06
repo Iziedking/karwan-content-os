@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-04
+updated: 2026-11-06
 capability: true
 tags:
   - agents
@@ -28,6 +28,17 @@ account. To change a card before you confirm it, say what to change, such as
 a later due date, and the agent prepares it again with the rest kept. A card
 from an earlier conversation shows whether it was done and can never be
 confirmed again; ask, and the agent prepares a new one.
+
+Karwan also says your one next move. On the website a short note sits at the
+bottom of the page with one line and one button, such as "Delivery is in for
+your deal. Check it and approve." It picks the most urgent thing waiting on you:
+a dispute that needs your side, a delivery to check, a request to cancel or for
+more time, a deal to fund or agree to, a match to approve, offers to compare, a
+delivery due soon. With nothing waiting and no money yet, it asks you to add
+money; with nothing at all yet, it asks what you need or what you sell. It never
+shows on the page it points to, while you type, or over a confirm, and once you
+close it, it stays closed for the visit. Ask the assistant what to do next, here
+or on Telegram, and it gives the same move.
 
 A deal is built the same way. Name the person and say what the deal is
 for, or just say you want to make your first deal and the agent asks who it
