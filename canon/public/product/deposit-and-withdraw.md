@@ -63,6 +63,12 @@ early from its page; money sent to it after that still reaches them. When a
 deposit to someone's own address matches the amount of two or more of their
 open requests, it is credited but none is marked paid, and Activity says so.
 
+Only USDC is added to a balance. A token that is not USDC, sent to a deposit
+address or a payment link, is never added and never swapped or moved by
+itself. Activity shows it once as Token not added, with the amount, the token
+and the network, and a person from the team sends it back to an address the
+owner gives. Network coins such as ETH or SOL sent there are not shown.
+
 A send to someone on Karwan can carry a note of up to 120 characters, such as
 what it is for. The note is kept with the send, not on the chain, and both
 people see it in Activity and on the receipt. Send also lists the people you
