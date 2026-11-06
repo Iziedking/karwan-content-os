@@ -21,7 +21,7 @@ sources:
     date: 2026-10-30
 ---
 
-With Use assistant switched on, the whole account runs from one
+In assistant mode, opened from Home, the whole account runs from one
 conversation. You say what you want, your agent prepares it as a card, and
 nothing moves until you confirm the card. Conversations are kept on your
 account. To change a card before you confirm it, say what to change, such as
