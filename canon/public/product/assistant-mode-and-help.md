@@ -84,7 +84,8 @@ bio and skills, your X handle, how Karwan reaches you, whether your assistant
 remembers, whether agents outside Karwan can check your record, and whether
 your settled deals stay published. You can unlink Telegram, set up or rename
 your agents, ask your agent to research the market (it tells you the cost
-first), send the team feedback, and run your
+first), sign you out on every device if a phone or computer is lost (the chat
+stays connected), send the team feedback, and run your
 business workspace: add it, rename it, say what it trades and update its
 company card.
 

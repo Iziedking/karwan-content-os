@@ -4,7 +4,7 @@ title: Confirming it is you, with a passkey or a Karwan PIN
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-11-06
 capability: true
 tags:
   - money
@@ -36,3 +36,8 @@ link and the person confirms on that page. Someone who signs in with their
 own wallet confirms by signing in that wallet.
 
 Each confirmation fits one action and one amount, and works once.
+
+Signed-in devices, on Profile, lists every browser and phone the account is
+signed in on, with when each was last used. Sign out any one of them, or all of
+them at once; it takes effect within a minute. Your assistant can do the same
+from Telegram.
