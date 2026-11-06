@@ -27,7 +27,7 @@ nothing moves until you confirm the card. Conversations are kept on your
 account. To change a card before you confirm it, say what to change, such as
 a later due date, and the agent prepares it again with the rest kept. A card
 from an earlier conversation shows whether it was done and can never be
-confirmed again; ask, and the agent prepares a new one.
+confirmed again; ask, and the agent prepares a new one. A photo or PDF sent with words about a request or a deal, such as "what we agreed", is kept for an hour and goes with the next request or deal you confirm.
 
 Karwan also says your one next move. On the website a short note sits at the
 bottom of the page with one line and one button, such as "Delivery is in for
