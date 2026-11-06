@@ -69,6 +69,13 @@ itself. Activity shows it once as Token not added, with the amount, the token
 and the network, and a person from the team sends it back to an address the
 owner gives. Network coins such as ETH or SOL sent there are not shown.
 
+A transfer between Arc and another network finishes even if Karwan restarts
+partway. Once the USDC has left, Karwan reads Circle's record of the transfer
+and marks it arrived when Circle has delivered it. If Circle reports that it
+could not deliver, or the send was never confirmed, nothing is sent again by
+itself: a person from the team checks it, and the move shows Needs attention
+in Activity.
+
 A send to someone on Karwan can carry a note of up to 120 characters, such as
 what it is for. The note is kept with the send, not on the chain, and both
 people see it in Activity and on the receipt. Send also lists the people you
