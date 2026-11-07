@@ -75,6 +75,8 @@ the same price.
 You post a request on one screen: what you need, your budget and when you
 need it. It is paid at once unless you choose to pay in parts.
 
+You post an offer in three short pages: what you sell, then the price and when it is ready, then photos and posting. Under the form, Your offers keeps everything you are selling in one list: each offer your agent made from one of your posted offers sits under it, with Withdraw and Open.
+
 On your request page each offer is one line: the seller's photo, name and
 rating, the price, and its place in your agent's order, with the agent's pick
 marked. Tap an offer to see its facts and why your agent placed it there, and
