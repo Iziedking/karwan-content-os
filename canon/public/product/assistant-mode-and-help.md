@@ -102,7 +102,8 @@ typed beside it.
 Help answers how things work and what went wrong, from what your account
 shows. A person from the Karwan team joins the same conversation when you
 ask for one, or when the assistant cannot do it, with the conversation so
-far, so you do not repeat yourself.
+far, so you do not repeat yourself. That conversation opens only in the
+browser that started it, or for the signed-in person who started it.
 
 Every deal has a short reference, such as D68F-E7D8, shown on the deal page
 with a copy button. Give it to the assistant, on the website or in Telegram,
