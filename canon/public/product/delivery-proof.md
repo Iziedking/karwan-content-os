@@ -4,7 +4,7 @@ title: What counts as delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-06
+updated: 2026-11-07
 capability: true
 tags:
   - delivery
@@ -73,7 +73,7 @@ one.
 
 Goods worth more than 50 USDC are delivered with a photo of the item. Any
 delivery can carry up to four photos, added on the deal page or sent to the
-assistant with a caption like "delivered" or "packed".
+assistant while you talk about the delivery. No special words are needed.
 
 Both sides see every delivery on the deal page: the links to open, where the
 goods are, what Karwan checked, the photos and the deliveries before this one.
