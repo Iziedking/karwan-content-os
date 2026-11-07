@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-11-06
+updated: 2026-11-07
 capability: true
 tags:
   - money
@@ -75,6 +75,13 @@ and marks it arrived when Circle has delivered it. If Circle reports that it
 could not deliver, or the send was never confirmed, nothing is sent again by
 itself: a person from the team checks it, and the move shows Needs attention
 in Activity.
+
+When a payment to you could not be delivered at the time, the contract keeps
+it for you as money owed, and only the wallet it was owed to can collect it.
+Money shows it with the amount and a Collect button, and asking the assistant
+whether anything is owed to you gives the same answer. Collect sends it to the
+wallet it was owed to, never anywhere else, and a receipt lands in Activity.
+Karwan collects it for a wallet it holds; a wallet you connected signs once.
 
 A send to someone on Karwan can carry a note of up to 120 characters, such as
 what it is for. The note is kept with the send, not on the chain, and both
