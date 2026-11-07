@@ -47,6 +47,14 @@ because of it. Karwan tries the check again a few minutes later, and either side
 can ask for Check again on the deal page or from the assistant. Checks run on
 chain by Chainlink CRE are not live yet.
 
+When the check finds the delivery does not match the request, the release
+waits and the buyer's move is Ask for changes. The buyer can also accept that
+delivery after their own review with I checked it, release, on the deal page or
+from the assistant's release card; the release records that they checked the
+work themselves. A person at Karwan can clear the gap too, with a written
+reason; that pays nothing, and the buyer's review starts then. Either way it
+counts for that one delivery, and a new delivery is checked again.
+
 Separately from links, the security agent screens each match when it is funded.
 A match it holds shows Held for a look on the deal, with one shared line and
 only the lines meant for that side. The money stays in escrow and release
