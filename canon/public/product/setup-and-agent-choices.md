@@ -32,7 +32,7 @@ do: get paid for your work, sell products, buy or hire, run business deals,
 or build a record clients trust. It asks only what those answers need: what
 you do and your usual price on one screen, which it reads back to you as your
 usual and lowest price and delivery time (one price is both; a range makes its
-low end your lowest), then whether you have clients and how to reach you. A line from your agent on each screen says what the answer is for.
+low end your lowest), then whether you have clients and how to reach you. Your price is asked in the currency you read, set by your country: someone in Nigeria answers in naira, such as ₦30,000 to ₦60,000 or 30k, and your agent keeps it in USDC at today's rate. Anywhere else it is asked in USDC. A line from your agent on each screen says what the answer is for.
 
 What you tell your agent sets up your agent and your public profile by
 itself. It shows the result as "Here's your Karwan", with the first offer or
