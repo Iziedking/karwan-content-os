@@ -20,7 +20,7 @@ check:
 ---
 
 Karwan reads demand and prices by the market's ten categories: Design, Tech,
-Phones and laptops, Fashion, Food, Farm produce, Home, Lessons, Repairs and Rentals. Each
+Phones and electronics, Fashion, Food, Farm produce, Home, Lessons, Repairs and Rentals. Each
 request and offer belongs to the category its words name.
 
 For each category Karwan counts the requests posted this week and last week,

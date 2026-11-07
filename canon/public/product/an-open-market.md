@@ -4,7 +4,7 @@ title: An open market, where every offer is public unless you post privately
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-05
+updated: 2026-11-07
 capability: true
 tags:
   - market
@@ -50,3 +50,8 @@ link. You choose when you post; to change it, cancel and post again.
 Reading needs no account. Making, lowering, withdrawing or accepting an offer
 needs you to sign in. Your assistant can read the same list: ask it what offers
 a request has.
+
+When a new offer goes up, each person with a Karwan agent hears of it once.
+If it fits a request they posted in the last 30 days, the alert says so and
+names the words it fits. Otherwise it reads New on the market. An offer posted
+privately is never sent as news.
