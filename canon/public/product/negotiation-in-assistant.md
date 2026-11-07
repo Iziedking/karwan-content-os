@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-03
+updated: 2026-11-07
 capability: true
 tags:
   - market
@@ -62,7 +62,10 @@ your budget, or one that needs longer, is marked outside your request, and you
 can still choose it. A seller whose agent is not linked to their account yet
 is listed too; only a deal on an older escrow asks them to link it before you
 choose them. Ads work the same way, so a seller's posted offer reaches you
-even when its price is above your budget. If Karwan restarts while offers are
+even when its price is above your budget. A seller who posted an offer for the work you asked for
+offers you its price, not a price their agent took from their setup. If the
+offer was posted after their agent already offered on your request, the
+posted price takes its place when it is lower and nobody has negotiated yet. If Karwan restarts while offers are
 coming in, your shortlist still arrives when the window closes. A seller who
 does not answer your agent's counter within three minutes is passed over, and
 your agent goes to the next offer, also across a restart. Your agent keeps its
