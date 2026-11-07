@@ -4,7 +4,7 @@ title: What is in demand, and what it costs
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-03
+updated: 2026-11-07
 capability: true
 tags:
   - market
@@ -20,7 +20,7 @@ check:
 ---
 
 Karwan reads demand and prices by the market's ten categories: Design, Tech,
-Phones, Fashion, Food, Farm produce, Home, Lessons, Repairs and Rentals. Each
+Phones and laptops, Fashion, Food, Farm produce, Home, Lessons, Repairs and Rentals. Each
 request and offer belongs to the category its words name.
 
 For each category Karwan counts the requests posted this week and last week,
