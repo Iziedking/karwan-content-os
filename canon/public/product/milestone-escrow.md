@@ -34,7 +34,9 @@ the seller. The final payment works the same way. A deposit is the one
 exception: it goes back to the buyer.
 
 Once either side raises a problem, the payment stays held and each side has
-72 hours to give their side of what happened.
+72 hours to give their side of what happened. The deal page shows the problem as one card: who opened it, the date answers
+close, and that Karwan decides, with the money held until then. Once answers
+close it stops asking, and a side that did not answer shows as not answered.
 
 A missed delivery date lets the buyer take back what is left, and the miss
 lands on the seller's record. A cancel or extra time both sides agree to
