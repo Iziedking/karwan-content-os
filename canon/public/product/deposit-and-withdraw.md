@@ -76,6 +76,14 @@ could not deliver, or the send was never confirmed, nothing is sent again by
 itself: a person from the team checks it, and the move shows Needs attention
 in Activity.
 
+Every 15 minutes Karwan looks again at any money move that has not finished
+after an hour. When the chain shows every part of it went through, Karwan
+finishes the record, so the receipt and Activity read right without anyone
+pressing anything. It never cancels a move or sends money again by itself.
+Anything it cannot prove stays as it is, and the team is told. On a deal,
+the buyer and the seller can both ask for a payment that needs attention to
+be checked again.
+
 When a payment to you could not be delivered at the time, the contract keeps
 it for you as money owed, and only the wallet it was owed to can collect it.
 Money shows it with the amount and a Collect button, and asking the assistant
