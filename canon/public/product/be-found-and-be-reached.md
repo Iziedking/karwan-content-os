@@ -43,7 +43,10 @@ budget and whether it happens in person, online or by delivery, and gets up to
 five people who chose to be found: best skill fit first, then verified, tier
 and rating, then distance, with one recommended. Each shows how far away they
 are, how they work, and a price inside the budget or "Asks for a quote". A
-search costs nothing and contacts nobody. Alerts to the sellers found and
-offers to buyers come next. Verification is not required on testnet; on
+search costs nothing and contacts nobody. The buyer then picks one to three of
+them and asks: the need is posted privately, seen only by the buyer and the
+people asked, and each gets one deal alert, reminded at most three times and
+never at night. They answer with their price or say no thanks, and the buyer
+picks an offer as usual. Offers from sellers to buyers come next. Verification is not required on testnet; on
 mainnet both sides must be verified, checked automatically through identity
 and business verification partners.
