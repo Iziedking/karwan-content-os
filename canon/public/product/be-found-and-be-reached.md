@@ -37,8 +37,13 @@ in the chat once two people agree to meet.
 Anyone can block a person. Neither then gets alerts or offers from the other,
 and the person blocked is not told. Contact is limited so nobody is flooded.
 
-What runs on Arc Testnet today is being found and reached: the settings, the
-needs and blocks. Agents finding people from them, the alerts to sellers and
-the offers to buyers come next. Verification is not required on testnet; on
+What runs on Arc Testnet today is being found and reached, the settings, needs
+and blocks, and finding people. A buyer tells their agent what they need, their
+budget and whether it happens in person, online or by delivery, and gets up to
+five people who chose to be found: best skill fit first, then verified, tier
+and rating, then distance, with one recommended. Each shows how far away they
+are, how they work, and a price inside the budget or "Asks for a quote". A
+search costs nothing and contacts nobody. Alerts to the sellers found and
+offers to buyers come next. Verification is not required on testnet; on
 mainnet both sides must be verified, checked automatically through identity
 and business verification partners.
