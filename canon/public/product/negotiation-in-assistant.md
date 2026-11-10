@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-07
+updated: 2026-11-10
 capability: true
 tags:
   - market
@@ -17,6 +17,8 @@ sources:
     date: 2026-10-27
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/46-offers-you-can-read.md
     date: 2026-11-01
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/73-agents-that-bargain.md
+    date: 2026-11-09
 ---
 
 Post what you need in the assistant, on the website or Telegram, and you can
@@ -105,5 +107,26 @@ the seller. Every move carries one short reason you can read, and a reason
 never names a limit, a budget or another offer. A seller's agent agrees to a
 price under its own offer only when the seller chose Agree for me; otherwise
 it asks them first.
+
+A new way of bargaining is built and switched off until it is tested. On a
+request posted with it on, sellers see your budget only as a range, never the
+exact figure and never how far above it you would go. A seller whose price is
+under your budget opens between that price and your budget, never above your
+budget. A fixed price above your budget stays as it is and shows outside your
+request; any other offer above it is countered down. Your agent bargains with
+every seller who fits at once, at the same pace as theirs, offers more days once
+before a last price, and may meet in the middle when the two are close. It may
+tell a seller you have a better offer, only when that is true, never who or how
+much.
+
+Your shortlist is then ordered by one score that weighs how well each offer
+fits, its price against your budget, ratings and reputation. A strong fit at a
+fair price comes before a perfect fit that costs far more, and within your
+budget a cheaper offer ranks higher. Each offer says where its price opened and
+why it sits where it does. With Agree for me off, your agent asks before it
+agrees: you see Your call with the seller's price and your agent's own, and you
+agree at that price or let your agent keep bargaining, in the app, the
+assistant or on Telegram. Agreeing moves no money; you still accept and lock
+the money.
 
 This is built for testnet and not live yet.
