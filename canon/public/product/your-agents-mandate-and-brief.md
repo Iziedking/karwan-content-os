@@ -58,7 +58,8 @@ open, one switch on the agent page, or "turn my agent off" to your assistant,
 stops your agent altogether. It makes no offers, does not bargain, recommend or
 agree on your requests, finds nobody, rests its market watches and paid
 research, and sends no brief. Offers still arrive on your requests and you
-choose by hand. Offers it already made stand until their date, and you are
-asked if a buyer chooses one. Deals already running, your money, direct deals,
+choose by hand. Offers it already made stand until their date. You are
+asked if a buyer chooses one, and a buyer's counter on one comes to you as a
+question: take their price, hold at yours, or walk away. Deals already running, your money, direct deals,
 payment links and your assistant are unchanged. Turning it back on starts from
 now; it does not act on what it missed.
