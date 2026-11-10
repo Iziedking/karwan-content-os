@@ -127,7 +127,10 @@ once. Every other seller is asked in the app, on Telegram and by email, and has
 decline, or ask for more once. While you wait you can choose someone else at
 any time. If they ask for more, you approve the new price or choose someone
 else. If they decline or do not answer in time, your request is open again with
-its other offers and you are told.
+its other offers and you are told. Buying a posted offer as listed follows the
+same switch: a seller who chose Ask me first, or turned their agent off, is
+asked about each order, and you pay only after they accept. Other sellers
+posted that price, so their agent still accepts the order at once.
 
 Your shortlist is then ordered by one score that weighs how well each offer
 fits, its price against your budget, ratings and reputation. A strong fit at a
