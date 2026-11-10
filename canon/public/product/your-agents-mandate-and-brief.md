@@ -4,7 +4,7 @@ title: What your agent may do, and its morning brief
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-05
+updated: 2026-11-11
 capability: true
 tags:
   - agents
@@ -52,3 +52,13 @@ waits for the brief. You can change the hours or turn them off.
 
 Your agent keeps a record of everything it told you for 30 days, so it never
 sends the same brief twice. Ask your assistant what your agent did today.
+
+Switching your agent off is built and switched off until it is tested. With it
+open, one switch on the agent page, or "turn my agent off" to your assistant,
+stops your agent altogether. It makes no offers, does not bargain, recommend or
+agree on your requests, finds nobody, rests its market watches and paid
+research, and sends no brief. Offers still arrive on your requests and you
+choose by hand. Offers it already made stand until their date, and you are
+asked if a buyer chooses one. Deals already running, your money, direct deals,
+payment links and your assistant are unchanged. Turning it back on starts from
+now; it does not act on what it missed.
