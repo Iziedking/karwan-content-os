@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-10
+updated: 2026-11-11
 capability: true
 tags:
   - market
@@ -118,6 +118,16 @@ every seller who fits at once, at the same pace as theirs, offers more days once
 before a last price, and may meet in the middle when the two are close. It may
 tell a seller you have a better offer, only when that is true, never who or how
 much.
+
+Asking the seller first is built and switched off until it is tested. With it
+on, choosing a seller from your shortlist holds no money yet. A seller who set
+their agent to Agree for me, at a price inside their limits, is accepted for at
+once. Every other seller is asked in the app, on Telegram and by email, and has
+24 hours, or until your request's own date if that is sooner. They accept,
+decline, or ask for more once. While you wait you can choose someone else at
+any time. If they ask for more, you approve the new price or choose someone
+else. If they decline or do not answer in time, your request is open again with
+its other offers and you are told.
 
 Your shortlist is then ordered by one score that weighs how well each offer
 fits, its price against your budget, ratings and reputation. A strong fit at a
