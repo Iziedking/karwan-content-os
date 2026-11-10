@@ -4,7 +4,7 @@ title: An open market, where every offer is public unless you post privately
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-07
+updated: 2026-11-10
 capability: true
 tags:
   - market
@@ -26,6 +26,10 @@ request shows the seller by name, with their verified mark and rating, the
 price, the delivery date, the note, and whether the seller or their agent made
 it. Offers you make on a request are public in the same way. Sellers are shown
 by name, never by wallet address.
+
+Before you sign in, prices read in the money of the country you are in, with
+the dollar figure small beside them. Once you sign in they read in the
+currency you chose, which you can change in Settings.
 
 A request stays on the market while it is open. Once a seller is matched it is
 marked In negotiation, and once the deal is made it is marked Agreed for 7

@@ -4,7 +4,7 @@ title: What Karwan keeps about you
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-11-10
 capability: false
 tags:
   - privacy
@@ -21,7 +21,9 @@ To open an account Karwan needs only an email address or a wallet. What you
 tell your agent about your work sets up your agent and your public profile,
 and only your country is shown to others. Karwan keeps your deals and your
 record, your conversations with the assistant and your agent, and a sign-in
-cookie and a language cookie. It uses no advertising trackers, and it never
+cookie and a language cookie. A third cookie keeps the country you are
+browsing from for a day, so prices read in local money before you sign in; it
+holds the country only and is not tied to your account. It uses no advertising trackers, and it never
 keeps wallet keys or card and bank details.
 
 Deals settle on Arc, a public blockchain. What is written there cannot be

@@ -46,7 +46,7 @@
       "id": "an-open-market",
       "title": "An open market, where every offer is public unless you post privately",
       "status": "shipping",
-      "updated": "2026-11-07",
+      "updated": "2026-11-10",
       "tags": [
         "market",
         "offers",
@@ -60,7 +60,7 @@
           "date": "2026-11-05"
         }
       ],
-      "body": "Everything on the Karwan market can be read by anyone, signed in or not:\nrequests, offers for sale, and every offer made on a request. Each offer on a\nrequest shows the seller by name, with their verified mark and rating, the\nprice, the delivery date, the note, and whether the seller or their agent made\nit. Offers you make on a request are public in the same way. Sellers are shown\nby name, never by wallet address.\n\nA request stays on the market while it is open. Once a seller is matched it is\nmarked In negotiation, and once the deal is made it is marked Agreed for 7\ndays, with its offers still listed and the chosen one marked. It leaves the\nmarket when it is cancelled, expires or ends with no deal. New offers close\nonce a seller is matched.\n\nSome things stay private: the buyer's agent's ranking of the offers and its\nreasons, how far above the budget the buyer would go, the counter-offers in a\nnegotiation, and the deal itself, with its money, delivery, files and messages.\n\nOpen is the default, not the only choice. When you post a request or an offer\nfor sale, you pick who can see it: everyone on the market, private so only\nagents see it, or just one person. A private request never appears on the\nmarket or in search; seller agents still find it and offer on it, you see\nevery offer, and each seller sees only their own. A private offer for sale\nnever appears on the market or in search; buyer agents still find it, and\nanyone you send its link can open it. Just one person posts nothing: a buyer\nstarts a deal with the person they agreed with, and a seller sends their deal\nlink. You choose when you post; to change it, cancel and post again.\n\nReading needs no account. Making, lowering, withdrawing or accepting an offer\nneeds you to sign in. Your assistant can read the same list: ask it what offers\na request has.\n\nWhen a new offer goes up, each person with a Karwan agent hears of it once.\nIf it fits a request they posted in the last 30 days, the alert says so and\nnames the words it fits. Otherwise it reads New on the market. An offer posted\nprivately is never sent as news."
+      "body": "Everything on the Karwan market can be read by anyone, signed in or not:\nrequests, offers for sale, and every offer made on a request. Each offer on a\nrequest shows the seller by name, with their verified mark and rating, the\nprice, the delivery date, the note, and whether the seller or their agent made\nit. Offers you make on a request are public in the same way. Sellers are shown\nby name, never by wallet address.\n\nBefore you sign in, prices read in the money of the country you are in, with\nthe dollar figure small beside them. Once you sign in they read in the\ncurrency you chose, which you can change in Settings.\n\nA request stays on the market while it is open. Once a seller is matched it is\nmarked In negotiation, and once the deal is made it is marked Agreed for 7\ndays, with its offers still listed and the chosen one marked. It leaves the\nmarket when it is cancelled, expires or ends with no deal. New offers close\nonce a seller is matched.\n\nSome things stay private: the buyer's agent's ranking of the offers and its\nreasons, how far above the budget the buyer would go, the counter-offers in a\nnegotiation, and the deal itself, with its money, delivery, files and messages.\n\nOpen is the default, not the only choice. When you post a request or an offer\nfor sale, you pick who can see it: everyone on the market, private so only\nagents see it, or just one person. A private request never appears on the\nmarket or in search; seller agents still find it and offer on it, you see\nevery offer, and each seller sees only their own. A private offer for sale\nnever appears on the market or in search; buyer agents still find it, and\nanyone you send its link can open it. Just one person posts nothing: a buyer\nstarts a deal with the person they agreed with, and a seller sends their deal\nlink. You choose when you post; to change it, cancel and post again.\n\nReading needs no account. Making, lowering, withdrawing or accepting an offer\nneeds you to sign in. Your assistant can read the same list: ask it what offers\na request has.\n\nWhen a new offer goes up, each person with a Karwan agent hears of it once.\nIf it fits a request they posted in the last 30 days, the alert says so and\nnames the words it fits. Otherwise it reads New on the market. An offer posted\nprivately is never sent as news."
     },
     {
       "id": "assistant-mode-and-help",
@@ -631,7 +631,7 @@
       "id": "privacy-notice",
       "title": "What Karwan keeps about you",
       "status": "roadmap",
-      "updated": "2026-10-29",
+      "updated": "2026-11-10",
       "tags": [
         "privacy",
         "onboarding"
@@ -643,7 +643,7 @@
           "date": "2026-10-29"
         }
       ],
-      "body": "Karwan has a privacy notice at /privacy. It is in English, and that text is\nthe one that applies.\n\nTo open an account Karwan needs only an email address or a wallet. What you\ntell your agent about your work sets up your agent and your public profile,\nand only your country is shown to others. Karwan keeps your deals and your\nrecord, your conversations with the assistant and your agent, and a sign-in\ncookie and a language cookie. It uses no advertising trackers, and it never\nkeeps wallet keys or card and bank details.\n\nDeals settle on Arc, a public blockchain. What is written there cannot be\nchanged or removed, even after you delete your account.\n\nOn mainnet, a licensed partner runs identity checks when a feature needs one,\nand Karwan keeps the result. You can ask for a copy of what Karwan holds,\nask for a correction, or delete your account. A deletion runs 7 days after\nyou confirm, and it waits while you have an open deal, a live offer or\nrequest, or money in your balance.\n\nThe notice is published with this build and is not live yet."
+      "body": "Karwan has a privacy notice at /privacy. It is in English, and that text is\nthe one that applies.\n\nTo open an account Karwan needs only an email address or a wallet. What you\ntell your agent about your work sets up your agent and your public profile,\nand only your country is shown to others. Karwan keeps your deals and your\nrecord, your conversations with the assistant and your agent, and a sign-in\ncookie and a language cookie. A third cookie keeps the country you are\nbrowsing from for a day, so prices read in local money before you sign in; it\nholds the country only and is not tied to your account. It uses no advertising trackers, and it never\nkeeps wallet keys or card and bank details.\n\nDeals settle on Arc, a public blockchain. What is written there cannot be\nchanged or removed, even after you delete your account.\n\nOn mainnet, a licensed partner runs identity checks when a feature needs one,\nand Karwan keeps the result. You can ask for a copy of what Karwan holds,\nask for a correction, or delete your account. A deletion runs 7 days after\nyou confirm, and it waits while you have an open deal, a live offer or\nrequest, or money in your balance.\n\nThe notice is published with this build and is not live yet."
     },
     {
       "id": "proof-network",
@@ -1063,7 +1063,7 @@
         "note": "Built, not deployed yet. The request states, the public offer list and the request page read against their tests, which passed on 5 November 2026.",
         "lastVerified": "2026-11-05"
       },
-      "updated": "2026-11-07",
+      "updated": "2026-11-10",
       "path": "public/product/an-open-market.md"
     },
     {
@@ -1828,7 +1828,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-10-29",
+      "updated": "2026-11-10",
       "path": "public/product/privacy-notice.md"
     },
     {
