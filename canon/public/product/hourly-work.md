@@ -58,7 +58,10 @@ note and a link if they have one, and the hirer is told each time. If a session
 did not happen the hirer can say so straight away; that is kept as a note and
 no money moves. After the month ends the hirer approves the recorded sessions
 or says how many did not happen. If they say nothing, the recorded sessions are
-paid when the review ends. Sessions not held come back to the hirer. Sessions
+paid when the review ends. Sessions not held come back to the hirer. Halfway
+through the month, if fewer than half the sessions are recorded, both people
+are told once that the month is behind the pace they agreed. Nothing else
+changes. Sessions
 are set up on the website when hiring monthly or posting monthly work, by
 filling in Sessions a month, or through the assistant on the website and in
 Telegram. On the work page each month lists its sessions with the note and
