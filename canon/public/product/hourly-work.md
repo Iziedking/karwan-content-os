@@ -58,13 +58,18 @@ note and a link if they have one, and the hirer is told each time. If a session
 did not happen the hirer can say so straight away; that is kept as a note and
 no money moves. After the month ends the hirer approves the recorded sessions
 or says how many did not happen. If they say nothing, the recorded sessions are
-paid when the review ends. Sessions not held come back to the hirer. For now
-sessions are set up and recorded through the assistant, on the website and in
-Telegram.
+paid when the review ends. Sessions not held come back to the hirer. Sessions
+are set up on the website when hiring monthly or posting monthly work, by
+filling in Sessions a month, or through the assistant on the website and in
+Telegram. On the work page each month lists its sessions with the note and
+link; the worker records a session there, and the hirer says one did not happen
+or reviews the month there.
 
 Work that repeats is not posted as a one-time request. When someone asks the
 assistant for a tutor at a price a month, it sets up monthly work instead, and
-asks one question when it cannot tell.
+asks one question when it cannot tell. The request form on the website asks how
+you pay: a fixed price stays a request, and monthly or by the hour opens the
+form for posting that work.
 
 On the work page each week is its own card, and the one green button is the
 step that is next. On posted work the offers sit in one card, best fit first.
