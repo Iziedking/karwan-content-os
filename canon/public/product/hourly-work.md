@@ -4,7 +4,7 @@ title: Pay someone by the hour, or monthly
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-04
+updated: 2026-11-11
 capability: true
 tags:
   - market
@@ -12,6 +12,8 @@ tags:
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/32-kind-of-deal-and-hourly-work.md
     date: 2026-10-29
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/76-monthly-work-with-sessions.md
+    date: 2026-11-11
 ---
 
 A hirer can pay someone by the hour or monthly. A virtual assistant, for
@@ -47,6 +49,22 @@ Hours the hirer objects to wait for Karwan's review team, and the rest are paid
 at once. If the team does not rule within 5 days, those hours are split half
 and half. Either side can end the work with one week's notice, or one month's
 for a retainer. When the work ends, it goes on both people's records.
+
+Monthly work can be counted in sessions, which suits lessons, classes and
+coaching. The two people agree how many sessions a month holds: three a week is
+12. That month is four weeks, and a session is worth the month's price divided
+by the sessions agreed. The worker records each session as it happens, with a
+note and a link if they have one, and the hirer is told each time. If a session
+did not happen the hirer can say so straight away; that is kept as a note and
+no money moves. After the month ends the hirer approves the recorded sessions
+or says how many did not happen. If they say nothing, the recorded sessions are
+paid when the review ends. Sessions not held come back to the hirer. For now
+sessions are set up and recorded through the assistant, on the website and in
+Telegram.
+
+Work that repeats is not posted as a one-time request. When someone asks the
+assistant for a tutor at a price a month, it sets up monthly work instead, and
+asks one question when it cannot tell.
 
 On the work page each week is its own card, and the one green button is the
 step that is next. On posted work the offers sit in one card, best fit first.
