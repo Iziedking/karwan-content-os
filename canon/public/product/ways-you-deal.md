@@ -42,6 +42,10 @@ which it stops asking you after you said no three times. Each comes as the same
 card you set things up with, and a no is remembered. Under a level you set, your
 agent says no politely and keeps the door open instead of asking you.
 
+A price you type in your own currency is the rule your agent follows. Karwan
+works out the USDC behind it again whenever its rate of the day changes, so a
+lowest price of ₦30,000 stays ₦30,000. A price typed in USDC stays in USDC.
+
 Setup starts you with one way, from how your clients usually pay you. You
 add, change or remove ways on your profile or by telling your agent, and
 nothing is saved until you confirm. Money never moves without your
