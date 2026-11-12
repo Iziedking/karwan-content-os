@@ -4,7 +4,7 @@ title: Pay someone by the hour, or monthly
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-11
+updated: 2026-11-12
 capability: true
 tags:
   - market
@@ -56,7 +56,10 @@ coaching. The two people agree how many sessions a month holds: three a week is
 by the sessions agreed. The worker records each session as it happens, with a
 note and a link if they have one, and the hirer is told each time. If a session
 did not happen the hirer can say so straight away; that is kept as a note and
-no money moves. After the month ends the hirer approves the recorded sessions
+no money moves. While the month is still open the hirer can take that note
+back, and the session counts as held again; the worker is told. A session
+carries one note at a time, so to change the words the hirer takes the note
+back and sends a new one. After the month ends the hirer approves the recorded sessions
 or says how many did not happen. If they say nothing, the recorded sessions are
 paid when the review ends. Sessions not held come back to the hirer. Halfway
 through the month, if fewer than half the sessions are recorded, both people
@@ -65,8 +68,8 @@ changes. Sessions
 are set up on the website when hiring monthly or posting monthly work, by
 filling in Sessions a month, or through the assistant on the website and in
 Telegram. On the work page each month lists its sessions with the note and
-link; the worker records a session there, and the hirer says one did not happen
-or reviews the month there.
+link; the worker records a session there, and the hirer says one did not happen,
+takes that note back, or reviews the month there.
 
 Work that repeats is not posted as a one-time request. When someone asks the
 assistant for a tutor at a price a month, it sets up monthly work instead, and
