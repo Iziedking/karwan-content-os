@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-06
+updated: 2026-11-12
 capability: true
 tags:
   - agents
@@ -19,6 +19,8 @@ sources:
     date: 2026-10-25
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/42-deal-reference.md
     date: 2026-10-30
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/78-a-support-desk-for-money.md
+    date: 2026-11-12
 ---
 
 In assistant mode the whole account runs from one
@@ -36,8 +38,9 @@ a dispute that needs your side, a delivery to check, a request to cancel or for
 more time, a deal to fund or agree to, a match to approve, offers to compare, a
 delivery due soon. With nothing waiting and no money yet, it asks you to add
 money; with nothing at all yet, it asks what you need or what you sell. It never
-shows on the page it points to, while you type, or over a confirm, and once you
-close it, it stays closed for the visit. Ask the assistant what to do next, here
+shows on the page it points to, while you type, or over a confirm, and it steps
+aside rather than sit on top of a button. Once you close it, it stays closed for
+the visit, and no other note follows on that page. Ask the assistant what to do next, here
 or on Telegram, and it gives the same move.
 
 A deal is built the same way. Name the person and say what the deal is
@@ -99,17 +102,21 @@ A picture or PDF can be picked, pasted or dragged into the message box. It
 waits there until you send, and shows in your message with the words you
 typed beside it.
 
-Help answers how things work and what went wrong, from what your account
-shows. A person from the Karwan team joins the same conversation when you
-ask for one, or when the assistant cannot do it, with the conversation so
-far, so you do not repeat yourself. That conversation opens only in the
-browser that started it, or for the signed-in person who started it.
+Help and support is in your Profile. A help bot answers how things work and
+what went wrong, from what your account shows. When you ask for a person, or
+it cannot answer, it asks what you expected and what happened, then opens a
+case with the Karwan team, with a reference such as KS-1042. Your assistant
+does the same on Telegram. Your cases are listed there with where each one
+stands. A reply from the team comes back where you last wrote, Telegram or
+email, and is always on the case page. People reply from 8am to 10pm Lagos
+time, the first reply within 2 hours. The help bot cannot move money or change
+anything; a fix that moves money is done by the team with a second teammate.
 
 Every deal has a short reference, such as D68F-E7D8, shown on the deal page
 with a copy button. Give it to the assistant, on the website or in Telegram,
 and it finds the deal among your own deals; you never need the long deal id.
-Help opened on a deal page already knows which deal you mean, and a person
-brought in from there sees that deal.
+Ask a person on a paused deal, and Get help with this on a transfer that has
+not arrived, open Help and support already about that deal or transfer.
 
 This is built for testnet and not live yet.
 
