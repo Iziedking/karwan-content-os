@@ -139,3 +139,7 @@ page link and a question already typed in.
 On the landing page, the example questions open the assistant with the
 question already asked, whether they are tapped, thrown into the chat bar or
 typed. Talk to our team writes to admin@karwan.site.
+
+The assistant runs on more than one model. Claude answers first; when Claude
+is not available, DeepSeek answers, running on Amazon Web Services in Karwan's
+own account. A signed-in chat never goes through an outside proxy.
