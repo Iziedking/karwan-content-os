@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-12
+updated: 2026-11-13
 capability: true
 tags:
   - agents
@@ -23,7 +23,14 @@ sources:
     date: 2026-11-12
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/79-a-desk-in-plain-words-for-both-networks.md
     date: 2026-11-12
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/80-aman.md
+    date: 2026-11-13
 ---
+
+Karwan's assistant is called Aman, on the website and in Telegram. Aman
+means safety and protection. Type in the Ask Aman box on Home, or tap one of
+its suggestions, and assistant mode opens with your message already sent;
+switch Aman off at the top to go back to where you were.
 
 In assistant mode the whole account runs from one
 conversation. You say what you want, your agent prepares it as a card, and
