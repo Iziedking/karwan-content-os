@@ -21,6 +21,8 @@ sources:
     date: 2026-10-30
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/78-a-support-desk-for-money.md
     date: 2026-11-12
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/79-a-desk-in-plain-words-for-both-networks.md
+    date: 2026-11-12
 ---
 
 In assistant mode the whole account runs from one
@@ -111,6 +113,9 @@ stands. A reply from the team comes back where you last wrote, Telegram or
 email, and is always on the case page. People reply from 8am to 10pm Lagos
 time, the first reply within 2 hours. The help bot cannot move money or change
 anything; a fix that moves money is done by the team with a second teammate.
+The team answers from its own desk, on testnet and on mainnet, and signs in to
+the mainnet desk with a code from their own authenticator app. Nobody from
+Karwan ever asks you for a code, a password or a seed phrase.
 
 Every deal has a short reference, such as D68F-E7D8, shown on the deal page
 with a copy button. Give it to the assistant, on the website or in Telegram,
