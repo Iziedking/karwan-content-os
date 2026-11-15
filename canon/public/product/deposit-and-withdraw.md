@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-11-07
+updated: 2026-11-15
 capability: true
 tags:
   - money
@@ -95,7 +95,8 @@ Karwan collects it for a wallet it holds; a wallet you connected signs once.
 A send to someone on Karwan can carry a note of up to 120 characters, such as
 what it is for. The note is kept with the send, not on the chain, and both
 people see it in Activity and on the receipt. Send also lists the people you
-sent to recently, by their Karwan tag.
+sent to recently, by their Karwan tag. When a send is done, Open receipt under
+Done opens that send's receipt in Activity.
 
 The word for this is Deposit and Withdraw. Not top up, not add money, not cash
 out, and never the name of the transfer protocol underneath: which rail carries a
