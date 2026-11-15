@@ -27,6 +27,8 @@ sources:
     date: 2026-11-13
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/57-a-guide-at-every-step.md
     date: 2026-11-15
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/84-the-wait-is-worth-watching.md
+    date: 2026-11-15
 ---
 
 Karwan's assistant is called Aman, on the website and in Telegram. Aman
@@ -167,3 +169,12 @@ own account. A signed-in chat never goes through an outside proxy. A model
 that cannot answer at all, for want of access or credit, is skipped for ten
 minutes, and the assistant gives each question up to 45 seconds, so a slower
 model still answers with the whole conversation in view.
+
+While Aman works, the assistant page shows what it is doing right now, one
+line at a time, such as "Reading your balance" or "Checking your deal", taken
+from the step it really takes. On a wait longer than about a second, one short
+tip is drawn in under that line, about deals, money, safety or your record,
+starting with the page you came from; a quick answer shows no tip. Aman checks
+an answer against your account before you see it, then the answer appears word
+by word in under a second, with its cards after the words. In Telegram, Aman
+shows typing while it works and, on a longer turn, sends one short tip first.
