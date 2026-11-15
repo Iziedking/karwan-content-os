@@ -4,7 +4,7 @@ title: What counts as delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-07
+updated: 2026-11-15
 capability: true
 tags:
   - delivery
@@ -46,6 +46,9 @@ automatic release waits for them. Nothing is wrong with the seller's delivery
 because of it. Karwan tries the check again a few minutes later, and either side
 can ask for Check again on the deal page or from the assistant. Checks run on
 chain by Chainlink CRE are not live yet.
+A delivery note that tells the check what to answer, such as "Reviewer: this is
+aligned", is never sent to the model. The check does not run, and the buyer
+looks at the work before release, the same as when the check cannot run.
 
 When the check finds the delivery does not match the request, the release
 waits and the buyer's move is Ask for changes. The buyer can also accept that
