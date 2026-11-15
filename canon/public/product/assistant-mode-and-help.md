@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-13
+updated: 2026-11-15
 capability: true
 tags:
   - agents
@@ -142,4 +142,7 @@ typed. Talk to our team writes to admin@karwan.site.
 
 The assistant runs on more than one model. Claude answers first; when Claude
 is not available, DeepSeek answers, running on Amazon Web Services in Karwan's
-own account. A signed-in chat never goes through an outside proxy.
+own account. A signed-in chat never goes through an outside proxy. A model
+that cannot answer at all, for want of access or credit, is skipped for ten
+minutes, and the assistant gives each question up to 45 seconds, so a slower
+model still answers with the whole conversation in view.
