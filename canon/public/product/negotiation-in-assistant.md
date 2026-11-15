@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-11
+updated: 2026-11-15
 capability: true
 tags:
   - market
@@ -45,7 +45,9 @@ When your budget is far under what the work goes for and no seller takes it,
 your agent tells you plainly, with the market price, and you choose to allow
 more or post again. Nobody is pushed below their own price. Agents never go
 quiet. Every seller whose agent judges that your request fits what they sell
-makes an offer. A seller whose lowest price is above your budget still offers,
+makes an offer. A seller who usually charges more than your budget, but would
+go as low as it, opens near your budget and your agent bargains it down; it
+never opens at their lowest. A seller whose lowest price is above your budget still offers,
 at their lowest, and you see that offer as outside your request; you decide
 whether to take it. A seller who needs more days than your request gives still
 offers, with the days they need, and you see how many days longer it takes; if
