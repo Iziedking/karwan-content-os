@@ -20,8 +20,8 @@ check:
 A public page per business, built from settled deals, repayment behaviour and
 counterparty concentration. It follows the wallet, not the platform.
 
-Standing has to be earned in completed work. The deal guarantee, tenure and activity all raise
-the score on their own, which is deliberate, but they cannot carry a tier without
+Standing has to be earned in completed work. Money in the savings pocket, tenure and activity
+all raise the score on their own, which is deliberate, but they cannot carry a tier without
 settled deals behind it. Concentration caps the tier when most of those deals are
 with a single counterparty, so trading in a circle cannot manufacture a record.
 
