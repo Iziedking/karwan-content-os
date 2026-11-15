@@ -25,12 +25,19 @@ sources:
     date: 2026-11-12
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/80-aman.md
     date: 2026-11-13
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/57-a-guide-at-every-step.md
+    date: 2026-11-15
 ---
 
 Karwan's assistant is called Aman, on the website and in Telegram. Aman
-means safety and protection. Type in the Ask Aman box on Home, or tap one of
-its suggestions, and assistant mode opens with your message already sent;
-switch Aman off at the top to go back to where you were.
+means safety and protection. On the website Aman has a face: a round face of
+small green dots, small in the top bar, and larger beside the page when it has
+something to say. Tap it, press Ctrl+K (Cmd+K on a Mac), or tap Ask Aman in
+Profile, and the assistant page opens; Back takes you to the page you came from. Type in the Ask Aman box on Home, or tap one of its
+suggestions, and the assistant page opens with your message already sent. On a
+new conversation Aman offers three questions for the page you came from, such
+as "What happens to my money if they don't deliver?" from a deal. Talk to a
+person, under the box, opens Help and support with what you said last.
 
 In assistant mode the whole account runs from one
 conversation. You say what you want, your agent prepares it as a card, and
@@ -40,17 +47,31 @@ a later due date, and the agent prepares it again with the rest kept. A card
 from an earlier conversation shows whether it was done and can never be
 confirmed again; ask, and the agent prepares a new one. A photo or PDF sent with words about a request or a deal, such as "what we agreed", is kept for an hour and goes with the next request or deal you confirm.
 
-Karwan also says your one next move. On the website a short note sits at the
-bottom of the page with one line and one button, such as "Delivery is in for
-your deal. Check it and approve." It picks the most urgent thing waiting on you:
-a dispute that needs your side, a delivery to check, a request to cancel or for
-more time, a deal to fund or agree to, a match to approve, offers to compare, a
-delivery due soon. With nothing waiting and no money yet, it asks you to add
-money; with nothing at all yet, it asks what you need or what you sell. It never
-shows on the page it points to, while you type, or over a confirm, and it steps
-aside rather than sit on top of a button. Once you close it, it stays closed for
-the visit, and no other note follows on that page. Ask the assistant what to do next, here
-or on Telegram, and it gives the same move.
+Aman stays out of sight until something needs you. Then it comes in beside
+the page, says your one next move in one line with one button, such as
+"Delivery is in for your deal. Check it and approve.", and goes again. A deal
+waiting on you comes first: a dispute that needs your side, a delivery to
+check, a request to cancel or for more time, a deal to fund or agree to, a
+match to approve. Then the next step to be fully set up, then offers to compare
+and a delivery due soon.
+
+Fully set up is six steps, and each one ticks itself from what is true for your
+account: answer the setup questions, add money, give your assistant money to
+work with, set its limits (your prices or budget, and whether it asks you
+before a deal), link Telegram so it can reach you, and make your first deal.
+Your assistant is the agent: it finds buyers and sellers for you and agrees
+prices inside the limits you set. Home shows the same steps under Your first
+trade, and when a step Aman named is done, it smiles for a moment and goes.
+
+Aman never comes in on the page the move opens, while you type, scroll fast,
+read a confirm or move money, and it steps aside rather than sit on top of a
+button. Not now sends it away on that page for the visit, and a second Not now
+keeps it quiet there for the visit. Press and hold the face for its menu: Ask
+Aman, Not on this page, and Hide the guide, which keeps Aman in the top bar
+only, never coming in. Show the guide on pages, in Settings, turns the face off
+altogether, and your account keeps the choice on every device; you can also ask
+the assistant to hide or show it. Ask the assistant what to do next, or whether
+you are set up, here or on Telegram, and it gives the same answer.
 
 A deal is built the same way. Name the person and say what the deal is
 for, or just say you want to make your first deal and the agent asks who it
