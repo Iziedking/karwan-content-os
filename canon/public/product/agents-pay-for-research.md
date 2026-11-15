@@ -31,8 +31,11 @@ it is negotiating runs three: price, marketplace rates and demand.
 
 Ask your assistant to research something and it tells you the exact cost
 before it runs. When your agent's balance is short it says so, nothing is
-paid, and you can add money to it and ask again. Every payment shows in what
-your agent spent. Web results are marked as from the web; Karwan's own market
+paid, and you can add money to it and ask again. An agent with too little in
+its own wallet sends no payment at all: a selling agent that is short when a
+new request arrives prices it with Karwan's own data, and its research is not
+shown as failed. You hear once a week, in the app and on Telegram, to add money
+to it under Money, Agent. Every payment shows in what your agent spent. Web results are marked as from the web; Karwan's own market
 comes first.
 
 A web price counts only when two different sites carry it; two pages of one
