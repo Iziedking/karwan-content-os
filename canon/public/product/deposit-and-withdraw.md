@@ -98,6 +98,13 @@ people see it in Activity and on the receipt. Send also lists the people you
 sent to recently, by their Karwan tag. When a send is done, Open receipt under
 Done opens that send's receipt in Activity.
 
+When part of your balance sits with your agents, Send, Withdraw and an order
+page say how much, with Bring it here. It opens the money card on the same
+page, filled in with what is missing, and the page updates once the money has
+moved. Add money on a page that asks people for you does the same for your
+buying agent. Money arriving from another network or an exchange still has its
+own page, because it needs an address and can take a few minutes.
+
 The word for this is Deposit and Withdraw. Not top up, not add money, not cash
 out, and never the name of the transfer protocol underneath: which rail carries a
 move is not something a person sending money needs to hold in their head.
