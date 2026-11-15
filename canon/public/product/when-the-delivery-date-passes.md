@@ -4,7 +4,7 @@ title: When the delivery date passes
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-26
+updated: 2026-11-15
 capability: true
 tags:
   - escrow
@@ -29,3 +29,8 @@ answered holds the refund: the money stays in the deal until the buyer
 approves or declines, and Karwan reminds the buyer up to three times, a day
 apart. If the buyer declines, the refund goes ahead. If they approve, the
 extra days count from the later of the old date and the moment they approve.
+
+In a deal paid in parts, the same date covers every part. Once that last day
+has passed, the escrow takes no more deliveries: the deal page stops offering
+one and says what is left goes back to the buyer, and the parts already paid
+stay paid.
