@@ -13,6 +13,8 @@ tags:
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/33-delivery-proof-for-every-kind-of-deal.md
     date: 2026-10-26
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/85-every-deal-says-how-it-arrives.md
+    date: 2026-11-15
 check:
   kind: grep
   ref: backend/src/routes/deals.ts#shipment-required
@@ -21,6 +23,13 @@ check:
 
 Delivery has to be against something the buyer can check, and what that is
 depends on the kind of deal.
+
+Every deal says how it reaches the buyer: Online, In person or Shipped. A
+request asks How does it reach you?, and the deal made from it keeps the
+answer, so work done in person is never asked for a link. A deal made by hand
+asks the same. The deal page shows the method under the price, every deal row
+names it, and Deals can be filtered by it when deals arrive in more than one
+way.
 
 Anyone can sell goods on Karwan, a person or a business. When the deal is made
 the seller says how the item reaches the buyer: shipped, with a carrier and
@@ -81,6 +90,13 @@ it. The code works once, counts as the item arriving, and starts the buyer's
 review, so the buyer can still raise a problem they find later. Five wrong
 tries lock the code for 15 minutes, and asking for a new code cancels the old
 one.
+
+Work done in person, such as tailoring, cleaning, repairs or lessons, ends
+with the same handover code, never a link. The buyer shows the code only once
+the work is done and they are happy with it, and the seller enters it. Work in
+stages takes a new code for each stage, so each payout follows work the buyer
+saw. Work done in person worth more than 50 USDC is delivered with a photo of
+it.
 
 Goods worth more than 50 USDC are delivered with a photo of the item. Any
 delivery can carry up to four photos, added on the deal page or sent to the
