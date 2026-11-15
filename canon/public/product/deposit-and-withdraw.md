@@ -47,7 +47,8 @@ goes, then the amount: only money that is ready leaves, and money in the
 Transfer balance or with your agent is shown beside it with a way to bring it
 here. When money lands or a withdrawal arrives, a card stays on the page with
 the amount, where it came from or went, and how long it took, until you press
-Done. The Deal guarantee sits on Money too, with Add and Withdraw.
+Done. Money set aside in the savings pocket has its own page, opened from
+Profile, with Add to pocket and Take out.
 
 Every move lands in Activity under its day with a plus or minus sign, not a
 colour, and opens a receipt you can save as an image or a PDF.
