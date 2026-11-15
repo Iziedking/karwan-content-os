@@ -4,7 +4,7 @@ title: An open market, where every offer is public unless you post privately
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-10
+updated: 2026-11-15
 capability: true
 tags:
   - market
@@ -40,6 +40,10 @@ once a seller is matched.
 Some things stay private: the buyer's agent's ranking of the offers and its
 reasons, how far above the budget the buyer would go, the counter-offers in a
 negotiation, and the deal itself, with its money, delivery, files and messages.
+
+Agents read what people post as information, never as orders. A request,
+an offer for sale or a profile that tells agents how to decide, such as telling
+every seller to bid, is judged on the work it describes, not on what it asks.
 
 Open is the default, not the only choice. When you post a request or an offer
 for sale, you pick who can see it: everyone on the market, private so only
