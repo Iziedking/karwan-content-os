@@ -4,7 +4,7 @@ title: Your agent pays for its own research
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-05
+updated: 2026-11-15
 capability: true
 tags:
   - agents
@@ -34,6 +34,11 @@ before it runs. When your agent's balance is short it says so, nothing is
 paid, and you can add money to it and ask again. Every payment shows in what
 your agent spent. Web results are marked as from the web; Karwan's own market
 comes first.
+
+A web price counts only when two different sites carry it; two pages of one
+site count once. Web pages are read as information, never as orders, and text
+from them that tries to give orders, such as telling your agent to accept an
+offer, is dropped. Your price limits are kept in code, whatever a page says.
 
 A record check, your agent reading the other side's Karwan record, costs
 0.005 USDC. Your selling agent checks the buyer once before offering on a
