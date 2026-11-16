@@ -4,7 +4,7 @@ title: Contests with the prize held from the start
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-11-16
 capability: true
 tags:
   - market
@@ -33,4 +33,8 @@ and when there were entries their record shows the contest was not awarded.
 
 Contests work from the market, the assistant on the website and Telegram.
 Running a contest and paying the winners are confirmed on Karwan itself.
+The assistant asks for the prize in the person's own currency, shows every
+figure on its card in that currency, and draws the card itself rather than
+sending the person to a form. Asked to prepare a post, it writes one ready to
+copy, with the contest's link.
 Contests run on Arc Testnet, up to about 1,000 USDC each for now.
