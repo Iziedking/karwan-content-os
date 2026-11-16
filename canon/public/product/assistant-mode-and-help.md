@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-15
+updated: 2026-11-16
 capability: true
 tags:
   - agents
@@ -67,8 +67,9 @@ trade, and when a step Aman named is done, it smiles for a moment and goes.
 
 Aman never comes in on the page the move opens, while you type, scroll fast,
 read a confirm or move money, and it steps aside rather than sit on top of a
-button. Not now sends it away on that page for the visit, and a second Not now
-keeps it quiet there for the visit. Press and hold the face for its menu: Ask
+button. Aman comes in on its own at most once every 20 minutes, or every 5
+minutes for money that arrived or a deal waiting on you. Not now keeps it
+away for a day on every page, and each new sign-in starts fresh. Press and hold the face for its menu: Ask
 Aman, Not on this page, and Hide the guide, which keeps Aman in the top bar
 only, never coming in. Show the guide on pages, in Settings, turns the face off
 altogether, and your account keeps the choice on every device; you can also ask
@@ -184,7 +185,8 @@ computer and breathes slowly, and holds still with reduced motion or on a slow
 phone. It reacts once to what happens on your account: glad when you are paid
 or your record moves up, sad when a deal falls through or a deadline passes,
 and hurt when a ruling pays a buyer from the savings pocket that backed your
-deal. Each reaction is one line, shown once on one device.
+deal. It is glad when a new offer comes in on your request or someone enters
+your contest. Each reaction is one line, shown once on one device.
 
 Someone new is offered a look around Home or the market and is never thrown
 into it; Show me around in Aman's menu, or asking the assistant, starts it any
