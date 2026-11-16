@@ -178,3 +178,15 @@ starting with the page you came from; a quick answer shows no tip. Aman checks
 an answer against your account before you see it, then the answer appears word
 by word in under a second, with its cards after the words. In Telegram, Aman
 shows typing while it works and, on a longer turn, sends one short tip first.
+
+Aman is alive. Every face of Aman blinks, looks toward the pointer on a
+computer and breathes slowly, and holds still with reduced motion or on a slow
+phone. It reacts once to what happens on your account: glad when you are paid
+or your record moves up, sad when a deal falls through or a deadline passes,
+and hurt when a ruling pays a buyer from the savings pocket that backed your
+deal. Each reaction is one line, shown once on one device.
+
+Someone new is offered a look around Home or the market and is never thrown
+into it; Show me around in Aman's menu, or asking the assistant, starts it any
+time. Not now on a setup step, such as linking Telegram, holds it for 3 days
+and then 14, on every device, and at most one setup step is asked a day.
