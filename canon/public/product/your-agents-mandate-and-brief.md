@@ -43,10 +43,23 @@ What your agent does alone is one switch each: make offers, bargain, agree a
 price, lock money, find people, pay for checks and research, and the morning
 brief. The switches are in Settings under Agent, and your assistant can turn
 any of them on or off with a card you confirm. The budgets and rules for what
-is on are on the Your agent page. Lock money for me is built and not open
-yet: the switch says so, and today no agent locks money without you. When it
-opens you type your own limits, and turning it on or raising a limit is
-confirmed with your passkey on Karwan, never in a chat.
+is on are on the Your agent page.
+
+Lock money for me is built and switched off on every network until Karwan
+opens it, on the test network first. While it is off the switch says Not open
+yet, and no agent locks money without you. When it is open you type your own
+limits, and turning it on or raising a limit is confirmed with your passkey on
+Karwan, never in a chat. Then, on a request where you turned on Agree for me,
+your agent may lock the money for the price it agreed, in a Karwan escrow and
+nowhere else. Before it does, code checks your limit for one deal, your limit
+for the week, how many locks you allow in a day, who the seller is, and
+whether the price is far above the market. If a check fails, if the deal needs
+World ID, or if the seller is not verified, it locks nothing and tells you why,
+and you can lock it yourself. Where a seller has to say yes first, it waits for
+them and checks your limits again when they answer. You are told at once each
+time it locks, and releasing the money is always yours. When a day's locks are
+used up, or locking fails three times in a row, it stops itself until you turn
+it back on.
 
 You can give your agent up to five goals in your own words, such as finding a
 logo designer this week or selling 20 bags of rice this month. On the test
