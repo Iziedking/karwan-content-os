@@ -4,7 +4,7 @@ title: What your agent may do, and its morning brief
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-11
+updated: 2026-11-16
 capability: true
 tags:
   - agents
@@ -14,6 +14,8 @@ tags:
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/52-an-agent-that-works-for-you.md
     date: 2026-11-05
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/87-your-agent-on-autopilot.md
+    date: 2026-11-16
 check:
   kind: manual
   note: Built, not deployed yet. The mandate, the change card, the re-plan, the brief and the progress log read against their tests, which passed on 5 November 2026.
@@ -36,6 +38,15 @@ requests; moving away from asking first closes those questions and looks at the
 requests again. A request's budget is fixed once it is posted, so a new buying
 limit applies to new requests, and the card says which open ones ask for more.
 Changing limits moves no money; paying still needs you.
+
+What your agent does alone is one switch each: make offers, bargain, agree a
+price, lock money, find people, pay for checks and research, and the morning
+brief. The switches are in Settings under Agent, and your assistant can turn
+any of them on or off with a card you confirm. The budgets and rules for what
+is on are on the Your agent page. Lock money for me is built and not open
+yet: the switch says so, and today no agent locks money without you. When it
+opens you type your own limits, and turning it on or raising a limit is
+confirmed with your passkey on Karwan, never in a chat.
 
 You can give your agent up to five goals in your own words, such as finding a
 logo designer this week or selling 20 bags of rice this month. On the test
