@@ -65,6 +65,23 @@ You can give your agent up to five goals in your own words, such as finding a
 logo designer this week or selling 20 bags of rice this month. On the test
 network goals are matched on their words, with no model.
 
+A standing order is a goal your agent works every day. You say once what to
+find or sell, the most you pay for one when buying, until when, and how many
+people to ask a day, from one to five. You can keep up to five. Starting an
+order lets your agent post that need privately, never on the market, and ask
+people for it without a card each time. It moves no money. A buying order
+keeps one private request open and each day asks the best people it has not
+asked yet, inside the same limits as finding people by hand. Their offers come
+to you as on any request, and whether your agent bargains, agrees a price or
+locks the money follows the switches you set. A selling order offers your
+work, at your usual price, to buyers who listed a regular need and let sellers
+reach them. An order ends on its date, when you stop it, or when a deal on its
+request is locked. You get one note on a day it did something, and you are
+told once after three days with nobody new. Pause keeps the order; Stop
+removes it. Orders rest while your agent is off or Find people is switched
+off. You find them on Your agent, and you can start, pause or stop one from
+the assistant or Telegram.
+
 Once a day, at 8:00 Lagos time unless you change it, your agent sends a short
 brief built from your own data, with no model: new offers on your requests,
 questions waiting on you and when the first decides itself, deals waiting on
