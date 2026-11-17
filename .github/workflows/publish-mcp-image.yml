@@ -92,3 +92,73 @@ jobs:
           cache-from: type=registry,ref=${{ steps.tags.outputs.image }}:buildcache
           cache-to: type=registry,ref=${{ steps.tags.outputs.image }}:buildcache,mode=max
           platforms: linux/amd64
+
+  # The image above is only what the server could run. Without this job nothing
+  # pulled it: the backend deploy leaves this service alone on purpose, so the
+  # hosted MCP kept answering from the canon of the day somebody last pulled by
+  # hand.
+  update-server:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      HAS_SERVER: ${{ secrets.VPS_HOST != '' && secrets.VPS_SSH_KEY != '' }}
+    steps:
+      - name: Server secrets are set
+        if: env.HAS_SERVER != 'true'
+        run: |
+          echo "::warning::VPS_HOST or VPS_SSH_KEY is not set in this repository, so the server keeps its old canon. Pull by hand: ops/hosting-the-team-mcp.md"
+
+      - name: Pull and restart the team MCP
+        if: env.HAS_SERVER == 'true'
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          script_stop: true
+          script: |
+            set -eu
+            cd ~/karwan
+            # This service depends on karwan-api in the compose file. With the
+            # tag unset compose reads the API as `:latest`, an image from weeks
+            # ago, so the tag the API runs is always passed and the API is never
+            # touched (--no-deps).
+            TAG="$(cat .deployed-tag 2>/dev/null || true)"
+            if [ -z "$TAG" ]; then
+              echo "no .deployed-tag on the server; refusing to guess the API tag"
+              exit 1
+            fi
+            export KARWAN_API_TAG="$TAG"
+            IMAGE="ghcr.io/iziedking/karwan-content-os/karwan-team-mcp"
+            PREV="$(docker inspect -f '{{.Image}}' karwan-team-mcp 2>/dev/null || true)"
+            if [ -n "${{ secrets.VPS_GHCR_TOKEN }}" ]; then
+              echo "${{ secrets.VPS_GHCR_TOKEN }}" | docker login ghcr.io \
+                -u "${{ secrets.VPS_GHCR_USER }}" --password-stdin
+            fi
+            docker compose pull karwan-team-mcp
+            docker compose up -d --no-deps karwan-team-mcp
+            healthy() {
+              for i in $(seq 1 30); do
+                s="$(docker inspect -f '{{.State.Health.Status}}' karwan-team-mcp 2>/dev/null || echo none)"
+                [ "$s" = "healthy" ] && return 0
+                sleep 2
+              done
+              return 1
+            }
+            if healthy; then
+              docker exec karwan-team-mcp wget -qO- http://127.0.0.1:8790/health
+              echo
+              docker image prune -f
+              exit 0
+            fi
+            echo "new image did not become healthy"
+            docker logs --tail 40 karwan-team-mcp || true
+            if [ -n "$PREV" ]; then
+              echo "going back to the image that was running"
+              docker tag "$PREV" "$IMAGE:latest"
+              docker compose up -d --no-deps karwan-team-mcp
+              healthy || echo "the previous image is not healthy either"
+            fi
+            exit 1

@@ -66,14 +66,27 @@ and pushed to GHCR. The Karwan repo's `docker-compose.yml` pulls it.
 visibility after the first push. A public image here is the whole canon
 published, with no way to unpublish it.
 
-On the VPS:
+The same workflow then updates the server: its `update-server` job pulls the new
+image and restarts this one service after every push to `main` that changes the
+canon or the packages. It needs four secrets in this repository, the same ones
+the Karwan repo deploys with: `VPS_HOST`, `VPS_USER`, `VPS_SSH_KEY` and, when the
+server is not already signed in to GHCR, `VPS_GHCR_USER` and `VPS_GHCR_TOKEN`.
+Without `VPS_HOST` and `VPS_SSH_KEY` the job warns and changes nothing. If the
+new image does not become healthy, the job puts back the image that was running
+and fails.
+
+By hand on the VPS, from `~/karwan`:
 
 ```bash
-docker compose pull karwan-team-mcp
-docker compose up -d karwan-team-mcp
+KARWAN_API_TAG=$(cat .deployed-tag) docker compose pull karwan-team-mcp
+KARWAN_API_TAG=$(cat .deployed-tag) docker compose up -d --no-deps karwan-team-mcp
 docker compose logs -f karwan-team-mcp
 curl -s https://mcp.karwan.site/health
 ```
+
+Never run a bare `docker compose up -d karwan-team-mcp`. This service depends on
+`karwan-api`, and with `KARWAN_API_TAG` unset compose reads the API as `:latest`,
+an image from weeks ago, and may restart the live API on it.
 
 Health reports the canon version and the number of files it parsed. A container
 that booted on a broken canon fails its healthcheck rather than serving half of
