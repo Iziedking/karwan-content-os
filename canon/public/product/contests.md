@@ -4,7 +4,7 @@ title: Contests with the prize held from the start
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-16
+updated: 2026-11-17
 capability: true
 tags:
   - market
@@ -12,6 +12,8 @@ tags:
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/40-contests-and-agent-jobs.md
     date: 2026-10-29
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/88-contests-that-protect-entrants.md
+    date: 2026-11-17
 ---
 
 A buyer can run a contest on Karwan instead of choosing one seller: the best
@@ -20,16 +22,27 @@ when the contest opens and held on Karwan's escrow on Arc, so everyone who
 enters knows it is there.
 
 The buyer picks one to three winners; the prize splits 100, or 70 and 30, or
-50, 30 and 20. Entries stay open for 1 to 30 days and the buyer then has 7 days
-to pick. Anyone except the buyer can enter with up to four images or PDF files
-and a note, and enter again to replace their entry.
+50, 30 and 20. There are three kinds: a design or writing contest (entries for
+1 to 30 days, then 3 to 14 days of judging), a bug bounty (entries for 1 to 60
+days, then 3 to 30 days of judging) and a hackathon (1 to 60 days of building,
+then 3 to 30 days of review). Anyone except the buyer can enter with up to four
+images or PDF files and a note, and enter again to replace their entry without
+losing their place.
 
 Before paying, the buyer sees each entry's first image and note, never the
 full files. Picking pays each winner their share at once, less half of
 Karwan's 1 percent fee on it, and only then do the winners' full files go to
 the buyer. A contest nobody entered can be taken back with the prize and fee
-returned. If the buyer picks nobody by the date, the prize goes back to them,
-and when there were entries their record shows the contest was not awarded.
+returned.
+
+Once someone has entered, the prize goes to entrants. If the buyer picks nobody
+by the end of judging, they have 3 more days; after that the contract pays the
+earliest valid entries, in the order they were first sent, and the buyer's
+record shows the contest was not judged. The buyer can mark an entry not valid,
+with a reason every entrant can read; a marked entry is never paid. If every
+entry is marked, the prize goes back to the buyer. Contests opened before this
+rule keep the earlier one: with nobody picked, the prize goes back to the
+buyer.
 
 Contests work from the market, the assistant on the website and Telegram.
 Running a contest and paying the winners are confirmed on Karwan itself.
