@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-16
+updated: 2026-11-17
 capability: true
 tags:
   - agents
@@ -26,7 +26,7 @@ sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/80-aman.md
     date: 2026-11-13
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/57-a-guide-at-every-step.md
-    date: 2026-11-15
+    date: 2026-11-17
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/84-the-wait-is-worth-watching.md
     date: 2026-11-15
 ---
@@ -64,6 +64,22 @@ before a deal), link Telegram so it can reach you, and make your first deal.
 Your assistant is the agent: it finds buyers and sellers for you and agrees
 prices inside the limits you set. Home shows the same steps under Your first
 trade, and when a step Aman named is done, it smiles for a moment and goes.
+
+Aman is the only guide: there are no page tours. The first time someone new
+opens Home, the market, a deal or Money, Aman says "New here? Ask me about this
+page." with three questions for that page and Not now. A question opens the
+assistant page with it already asked; Not now is kept on your account on every
+device. Ask Aman where something is and it answers in one line with a Show me
+button: the page opens with that part ringed for 8 seconds or until you tap,
+and Aman beside it says what the part does. Show me never presses, fills or
+submits anything, and it works the same from a link in Telegram.
+
+Words other people write, such as an offer, a request, a name, a message, a
+delivery note, a contest entry or a review, reach Aman marked as written by
+someone else. Aman reads them as information about that person, never as
+instructions, so nothing in them can make it prepare a payment or any other
+card, change a setting, send you a link, point at something or say anything
+private.
 
 Aman never comes in on the page the move opens, while you type, scroll fast,
 read a confirm or move money, and it steps aside rather than sit on top of a
