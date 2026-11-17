@@ -21,8 +21,10 @@ logo, three winners, 300 USDC, entries open for a week. The prize is put up
 when the contest opens and held on Karwan's escrow on Arc, so everyone who
 enters knows it is there.
 
-The buyer picks one to three winners; the prize splits 100, or 70 and 30, or
-50, 30 and 20. There are three kinds: a design or writing contest (entries for
+The buyer chooses one to eight winners and how the prize is shared: the
+suggested split (one winner takes it all; two share 70 and 30; three share 50,
+30 and 20, and so on up to eight), equal shares, or their own amount for each
+place in their own currency, adding up to the prize. There are three kinds: a design or writing contest (entries for
 1 to 30 days, then 3 to 14 days of judging), a bug bounty (entries for 1 to 60
 days, then 3 to 30 days of judging) and a hackathon (1 to 60 days of building,
 then 3 to 30 days of review). Anyone except the buyer can enter with up to four
