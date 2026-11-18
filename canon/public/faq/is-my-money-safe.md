@@ -4,7 +4,7 @@ title: What stops the other side taking my money
 status: live
 visibility: public
 audience: all
-updated: 2026-07-27
+updated: 2026-11-18
 capability: false
 tags:
   - faq
@@ -22,6 +22,9 @@ The final tranche always needs an explicit buyer click. Nothing settles the last
 portion on a timer.
 
 If the two sides disagree, either can raise a dispute, which freezes the escrow.
-A dispute is resolved by an arbiter that splits the unreleased funds by
-proportion rather than picking a winner, and that arbiter is a 2-of-3 Safe, so no
-single person can move a disputed deal.
+On deals made on Karwan's newer escrow, a fixed set of rules first proposes an
+outcome from the deal's record. Either side has 72 hours to ask for a person to
+decide instead. A case sent to people is ruled by a Safe that needs two of its
+signers, so no single person rules it; if they do not rule in 5 days, the share
+written into the deal's terms applies. On the older escrow every dispute is
+ruled by a 2-of-3 Safe.

@@ -4,7 +4,7 @@ title: Core terms
 status: live
 visibility: public
 audience: all
-updated: 2026-07-27
+updated: 2026-11-18
 capability: false
 tags:
   - glossary
@@ -30,8 +30,11 @@ settlement. The discount is the cost of the wait.
 purchase order whose escrow is already funded.
 
 **Receivable assignment.** Recording, on the escrow, that a financier is paid
-ahead of the supplier at settlement. It is what makes financing non-recourse: the
-financier is repaid by the contract rather than by chasing the supplier.
+ahead of the supplier at settlement. When the deal pays the supplier, the contract
+repays the financier first, with no chasing. If the deal is refunded or settles
+short, the financier is paid from the part of the supplier's deal guarantee held
+for them, at least a tenth of the advance, and anything beyond that is theirs to
+recover from the supplier.
 
 **x402.** A payment standard for machine-to-machine calls, used here so an agent
 can pay a fraction of a cent for a single piece of data.

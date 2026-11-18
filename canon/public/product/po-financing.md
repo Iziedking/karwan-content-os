@@ -4,7 +4,7 @@ title: Getting paid early on a business order
 status: shipping
 visibility: public
 audience: all
-updated: 2026-10-29
+updated: 2026-11-18
 capability: true
 tags:
   - financing
@@ -17,7 +17,9 @@ sources:
 A seller on a business order made on Karwan's newer escrow can be paid before
 the buyer releases. Purchase-order financing and invoice factoring are the
 same action, Get paid now, from the moment the order is accepted and paid in:
-before delivery, or after it while the buyer reviews or Net terms run.
+before delivery, or after it while the buyer reviews. The order must already be
+paid into escrow in full, so an invoice the buyer has not yet paid, such as one
+on Net 30 terms, cannot be financed today.
 
 A financier offers an advance and what they are paid back. When the seller
 takes the offer, one transaction pays the advance straight to them, assigns

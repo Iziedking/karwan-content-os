@@ -4,7 +4,7 @@ title: Network and contracts
 status: live
 visibility: public
 audience: all
-updated: 2026-10-16
+updated: 2026-11-18
 capability: true
 tags:
   - proof
@@ -23,8 +23,11 @@ check:
 
 Karwan runs on Arc Testnet, chain 5042002, where USDC is the gas token.
 
-Every contract in the live bundle is verified on the explorer. The escrow's
-arbiter is a 2-of-3 Safe, so a disputed escrow cannot be resolved by one key.
+Every contract in the live bundle is verified on the explorer. On the older
+escrow the arbiter is a 2-of-3 Safe, so a disputed escrow cannot be resolved by
+one key. On the newer escrow one key may propose an outcome from a fixed set of
+rules, which takes effect only if neither side objects within 72 hours; a case
+either side objects to is ruled by a Safe that needs two of its signers.
 
 Contract addresses are published and readable by anyone. Treat the explorer as
 the source of truth on any disagreement with a document: the chain is the record,
