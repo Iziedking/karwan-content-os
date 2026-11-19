@@ -23,7 +23,12 @@ and only your country is shown to others. If you tap Use my location at setup
 (Share my location in Telegram), your phone's position goes to Karwan only,
 which finds the nearest town from its own town list (GeoNames, CC BY 4.0); it
 is kept to about a kilometre, used only to find people near you, and never
-shown. Karwan keeps your deals and your
+shown. If you tell your agent your city or area in words, Karwan may look that
+place up on OpenStreetMap's public map service (Nominatim) to work out
+distance; only the typed place and your country leave Karwan's server, never
+your name, your account or your phone's position. The notice lists the
+OpenStreetMap Foundation among the providers that help run Karwan. Karwan
+keeps your deals and your
 record, your conversations with the assistant and your agent, and a sign-in
 cookie and a language cookie. A third cookie keeps the country you are
 browsing from for a day, so prices read in local money before you sign in; it
