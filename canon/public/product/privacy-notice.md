@@ -4,7 +4,7 @@ title: What Karwan keeps about you
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-10
+updated: 2026-11-19
 capability: false
 tags:
   - privacy
@@ -19,7 +19,11 @@ the one that applies.
 
 To open an account Karwan needs only an email address or a wallet. What you
 tell your agent about your work sets up your agent and your public profile,
-and only your country is shown to others. Karwan keeps your deals and your
+and only your country is shown to others. If you tap Use my location at setup
+(Share my location in Telegram), your phone's position goes to Karwan only,
+which finds the nearest town from its own town list (GeoNames, CC BY 4.0); it
+is kept to about a kilometre, used only to find people near you, and never
+shown. Karwan keeps your deals and your
 record, your conversations with the assistant and your agent, and a sign-in
 cookie and a language cookie. A third cookie keeps the country you are
 browsing from for a day, so prices read in local money before you sign in; it
