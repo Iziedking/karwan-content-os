@@ -113,8 +113,15 @@ sent read like a parcel tracker: the carrier, the tracking number (a link when
 the carrier has a tracking page) and what to do next, such as Add the tracking
 number by a date for the seller, or tap It arrived for the buyer. One job shows
 the delivery itself: the link to open it, when it was delivered and what Karwan
-checked. Beside the money line a seal reads Your turn when the person must act,
-or Held with a lock while Karwan holds the money.
+checked. Anything handed over in person shows the buyer's code as the proof:
+the buyer shows it from the deal once they have what they paid for, the seller
+enters it, and the deal then says it was handed over and confirmed with the
+code. Karwan does not ask or keep where or when people meet; the code is what
+proves the handover and pays the seller. Work in stages lists each stage with
+its amount and where its money is (paid out, due now, held, or not paid in
+yet), with one line for what has been paid out and what is held. Beside the
+money line a seal reads Your turn when the person must act, or Held with a
+lock while Karwan holds the money.
 
 Karwan does not inspect goods or judge the quality of work, and it does not
 read the courier's own tracking status yet. What it requires is that each
