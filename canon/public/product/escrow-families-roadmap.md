@@ -4,7 +4,7 @@ title: Escrow families for every kind of trade
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-06
+updated: 2026-11-19
 capability: true
 tags:
   - escrow
@@ -33,9 +33,9 @@ Time covers hourly, daily and retainer work, cycle by cycle. Jobs covers
 ERC-8183 jobs, bounties and contests.
 
 Shared pieces sit behind them: a hub that holds no money, an identity registry
-with 7-day recovery, one dispute clock, the deal guarantee contract and a timelock.
+with 7-day recovery, one dispute clock, the savings pocket contract and a timelock.
 
-The deal guarantee contract is separate from the escrow, so a refusal from it
+The savings pocket contract is separate from the escrow, so a refusal from it
 never blocks a deal. The escrow records the refusal instead. Every 10 minutes
 Karwan reads each guarantee locked on a deal and checks it against what the
 deal needs. It reserves the guarantee again if it would run out while the deal

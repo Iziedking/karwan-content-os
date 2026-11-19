@@ -4,7 +4,7 @@ title: Getting paid early on a business order
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-18
+updated: 2026-11-19
 capability: true
 tags:
   - financing
@@ -24,7 +24,7 @@ on Net 30 terms, cannot be financed today.
 A financier offers an advance and what they are paid back. When the seller
 takes the offer, one transaction pays the advance straight to them, assigns
 the deal's payout to the financier up to the payback, and holds part of the
-seller's deal guarantee, at least a tenth of the advance, until the financier
+seller's savings pocket, at least a tenth of the advance, as the deal guarantee until the financier
 is repaid. When the buyer releases, the escrow pays the financier back first
 and the seller the rest. If the deal settles short, the shortfall is paid to
 the financier from the held guarantee.

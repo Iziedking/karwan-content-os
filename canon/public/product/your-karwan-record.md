@@ -4,7 +4,7 @@ title: Your Karwan record, set up on the way
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-03
+updated: 2026-11-19
 capability: true
 tags:
   - reputation
@@ -29,7 +29,7 @@ with a passkey or a Karwan PIN.
 
 Someone who signs in with their own wallet never takes a separate step either.
 The record's steps ride along with the next transaction they sign on Arc in
-Karwan, such as adding money to their agents or putting up a deal guarantee, in
+Karwan, such as adding money to their agents or to their savings pocket, in
 the same wallet prompt. They are added only when the wallet's USDC covers the
 small extra network fee, and never when the whole balance is being sent.
 The person's own transaction always comes first and never fails because of
