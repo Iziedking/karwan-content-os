@@ -4,7 +4,7 @@ title: What counts as delivery
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-15
+updated: 2026-11-19
 capability: true
 tags:
   - delivery
@@ -15,6 +15,8 @@ sources:
     date: 2026-10-26
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/85-every-deal-says-how-it-arrives.md
     date: 2026-11-15
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/92-every-deal-looks-like-what-it-is.md
+    date: 2026-11-19
 check:
   kind: grep
   ref: backend/src/routes/deals.ts#shipment-required
@@ -105,6 +107,14 @@ assistant while you talk about the delivery. No special words are needed.
 Both sides see every delivery on the deal page: the links to open, where the
 goods are, what Karwan checked, the photos and the deliveries before this one.
 The assistant answers "where is my order" from the same record.
+
+Each kind of deal shows what fits it under the route on the deal page. Goods
+sent read like a parcel tracker: the carrier, the tracking number (a link when
+the carrier has a tracking page) and what to do next, such as Add the tracking
+number by a date for the seller, or tap It arrived for the buyer. One job shows
+the delivery itself: the link to open it, when it was delivered and what Karwan
+checked. Beside the money line a seal reads Your turn when the person must act,
+or Held with a lock while Karwan holds the money.
 
 Karwan does not inspect goods or judge the quality of work, and it does not
 read the courier's own tracking status yet. What it requires is that each
