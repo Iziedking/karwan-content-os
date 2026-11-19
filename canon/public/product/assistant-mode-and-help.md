@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-17
+updated: 2026-11-19
 capability: true
 tags:
   - agents
@@ -65,11 +65,17 @@ Your assistant is the agent: it finds buyers and sellers for you and agrees
 prices inside the limits you set. Home shows the same steps under Your first
 trade, and when a step Aman named is done, it smiles for a moment and goes.
 
-Aman is the only guide: there are no page tours. The first time someone new
-opens Home, the market, a deal or Money, Aman says "New here? Ask me about this
-page." with three questions for that page and Not now. A question opens the
-assistant page with it already asked; Not now is kept on your account on every
-device. Ask Aman where something is and it answers in one line with a Show me
+Aman is the only guide: there are no page tours. Aman guides you a part at a
+time instead. It explains one part of a page in plain words, what it is for
+and what changes if you use it, such as each setting on the Settings page. It
+picks the part you stop on, or the most useful one you have not heard about.
+On a phone or a tablet the line opens under the part and pushes the page down,
+so nothing is covered; on a laptop it sits beside the part. A thin bar shows
+the time left, and the line goes after 8 to 10 seconds or at any tap. Each part
+is explained once, one or two a visit. Aman comes on your 1st, 2nd, 4th and 8th
+visit to a page, then not on its own there, and once you know your way around
+it only checks in now and then. The first time it comes it says hello and
+tells you that you can switch it off. Ask Aman where something is and it answers in one line with a Show me
 button: the page opens with that part ringed for 8 seconds or until you tap,
 and Aman beside it says what the part does. Show me never presses, fills or
 submits anything, and it works the same from a link in Telegram.
@@ -87,9 +93,10 @@ button. Aman comes in on its own at most once every 20 minutes, or every 5
 minutes for money that arrived or a deal waiting on you. Not now keeps it
 away for a day on every page, and each new sign-in starts fresh. Press and hold the face for its menu: Ask
 Aman, Not on this page, and Hide the guide, which keeps Aman in the top bar
-only, never coming in. Show the guide on pages, in Settings, turns the face off
-altogether, and your account keeps the choice on every device; you can also ask
-the assistant to hide or show it. Ask the assistant what to do next, or whether
+only, never coming in. Aman's help on pages, in Settings, does the same: off
+keeps the face in the top bar, and a tap on it still opens the assistant. Your
+account keeps the choice on every device, and you can also ask the assistant
+to switch Aman's help off or on. Ask the assistant what to do next, or whether
 you are set up, here or on Telegram, and it gives the same answer.
 
 A deal is built the same way. Name the person and say what the deal is
@@ -204,7 +211,5 @@ and hurt when a ruling pays a buyer from the savings pocket that backed your
 deal. It is glad when a new offer comes in on your request or someone enters
 your contest. Each reaction is one line, shown once on one device.
 
-Someone new is offered a look around Home or the market and is never thrown
-into it; Show me around in Aman's menu, or asking the assistant, starts it any
-time. Not now on a setup step, such as linking Telegram, holds it for 3 days
+Not now on a setup step, such as linking Telegram, holds it for 3 days
 and then 14, on every device, and at most one setup step is asked a day.
