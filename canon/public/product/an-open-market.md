@@ -82,6 +82,15 @@ IMEI matches before you release. Your assistant asks a seller of goods for the
 condition before it drafts the offer. This is built, not deployed yet (view
 97, 20 Nov 2026).
 
+Each offer page also says Why this seller, with facts only and never a score:
+the Verified seal for their level (ID verified, Business verified when a
+registered business was confirmed, Work verified or Verified; a seller who
+only registered has none), the star rating with how many deals it comes from,
+how many deals they have finished, and when they joined Karwan. A badge is a
+useful check, not a guarantee. Deals finished is public. The city shows only
+for a seller who chose to be found; otherwise only the country. Built, not
+deployed yet (view 97, 20 Nov 2026).
+
 When a new offer goes up, each person with a Karwan agent hears of it once.
 If it fits a request they posted in the last 30 days, the alert says so and
 names the words it fits. Otherwise it reads New on the market. An offer posted
