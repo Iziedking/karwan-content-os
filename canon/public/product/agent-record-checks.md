@@ -4,7 +4,7 @@ title: Agents check each other before a deal
 status: live
 visibility: public
 audience: all
-updated: 2026-11-03
+updated: 2026-11-21
 capability: true
 tags:
   - agents
@@ -33,6 +33,14 @@ shows what was paid and what the agent learned.
 An agent pays for a person's record once per request. Checking it again on the
 same request, after an edit or in a later round, uses the same read unless the
 record changed since, and each payment shows in what the agent spent.
+
+Every spend is told. The first record check or research an agent pays for on a
+request comes to its person at once, in Karwan and on Telegram, by the name
+they gave the agent: "Ada paid 0.04 USDC to check 4 sellers' records." After
+that, at most one note an hour per request sums what was spent since, and in
+the person's quiet hours the note waits until they end. The request page reads
+the same way: "Ada checked 3 records · 0.03 USDC". Built, not deployed yet
+(view 97, 21 Nov 2026).
 
 A record is read only when its owner has turned on Let agents check my record.
 The details of a read are deleted after 24 hours, and the owner sees who read
