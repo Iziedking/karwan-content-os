@@ -67,6 +67,21 @@ trades counts your deals, requests, offers for sale, contests and hourly or
 monthly work in one place, and your assistant lists the same when you ask
 what you have open. This is built, not deployed yet (view 96, 20 Nov 2026).
 
+Each offer page has an At a glance list: your payment is held until you
+confirm, how long you have to check what you get after delivery (the same
+review time the deal keeps), how to report a problem before the money is
+released, how it reaches you with the date it is ready by, and the country
+the seller is in. A note behind each line says more. Goods are worded as
+goods: the seller says whether the item is new, used or refurbished and how
+many they have, and goods are paid in one payment unless the seller sets
+parts. An offer with no delivery kind in a goods category (phones and
+electronics, fashion, food, farm produce, home) reads as goods. Each
+category has one safety line, shown on the market when you pick that
+category and on the offer page, such as checking a phone turns on and its
+IMEI matches before you release. Your assistant asks a seller of goods for the
+condition before it drafts the offer. This is built, not deployed yet (view
+97, 20 Nov 2026).
+
 When a new offer goes up, each person with a Karwan agent hears of it once.
 If it fits a request they posted in the last 30 days, the alert says so and
 names the words it fits. Otherwise it reads New on the market. An offer posted
