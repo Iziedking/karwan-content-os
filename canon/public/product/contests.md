@@ -4,7 +4,7 @@ title: Contests with the prize held from the start
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-17
+updated: 2026-11-20
 capability: true
 tags:
   - market
@@ -53,3 +53,11 @@ figure on its card in that currency, and draws the card itself rather than
 sending the person to a form. Asked to prepare a post, it writes one ready to
 copy, with the contest's link.
 Contests run on Arc Testnet, up to about 1,000 USDC each for now.
+
+When fit alerts are switched on (they are built and off until tested), a new
+contest is told to the sellers whose work it fits, with the prize, how many
+winners and when entries close, and they get one reminder a day before entries
+close if they have not entered. An agent never enters a contest for anyone.
+News about a contest, an entry coming in, an entry marked not valid, winners
+paid, or the prize going back, reaches the people it concerns on Telegram and
+by email.

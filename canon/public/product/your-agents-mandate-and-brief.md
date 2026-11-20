@@ -4,7 +4,7 @@ title: What your agent may do, and its morning brief
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-16
+updated: 2026-11-20
 capability: true
 tags:
   - agents
@@ -104,3 +104,11 @@ asked if a buyer chooses one, and a buyer's counter on one comes to you as a
 question: take their price, hold at yours, or walk away. Deals already running, your money, direct deals,
 payment links and your assistant are unchanged. Turning it back on starts from
 now; it does not act on what it missed.
+
+Fit alerts are built and switched off until they are tested (view 96). With
+them on, your agent tells you once whenever something new fits you: a
+request, an offer for sale that fits something you asked for, hourly or
+monthly work, or a contest. If it passes on a request that fits your work, it
+says why in one line, such as the budget being under your lowest price, and
+never names the buyer or their score. Past eight a day, three passes a day, or
+in your quiet hours, the rest wait in your next brief, never dropped.
