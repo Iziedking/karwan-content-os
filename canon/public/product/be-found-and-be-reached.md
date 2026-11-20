@@ -4,7 +4,7 @@ title: Be found and be reached
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-08
+updated: 2026-11-20
 capability: true
 tags:
   - agents
@@ -14,6 +14,8 @@ tags:
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/72-your-agent-finds-the-people.md
     date: 2026-11-08
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/95-found-by-what-you-mean.md
+    date: 2026-11-20
 ---
 
 Someone new to a city who needs a tailor, a mechanic or a supplier should not
@@ -58,3 +60,11 @@ Interested posts the need privately to that seller with their offer on it, and
 the buyer accepts it as any offer. Verification is not required on testnet; on
 mainnet both sides must be verified, checked automatically through identity
 and business verification partners.
+
+People are found by the work they do, whatever words they use for it. Most
+people who make clothes in Nigeria call themselves tailors, while a buyer may
+ask for a fashion designer. Karwan keeps a word map of names for the same work,
+such as tailor, fashion designer, dressmaker and seamstress, and every match
+uses it without an AI model, so that request reaches the tailors. Work that is
+related but different stays apart: a tailor is not a fabric seller. The word
+map is built and comes to Arc Testnet with the next release.
