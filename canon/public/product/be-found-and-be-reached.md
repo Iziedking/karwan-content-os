@@ -68,3 +68,12 @@ such as tailor, fashion designer, dressmaker and seamstress, and every match
 uses it without an AI model, so that request reaches the tailors. Work that is
 related but different stays apart: a tailor is not a fabric seller. The word
 map is built and comes to Arc Testnet with the next release.
+
+Matching by meaning goes further and is built, but switched off until its model
+is checked on the server. When it is on, what a seller says they sell and what
+a buyer asks for are each turned into a meaning vector once, when they are
+saved or asked, by a model on Amazon Web Services in Karwan's own account. A
+request or a find then also reaches people who describe the same work in other
+words or another language, such as a request in Hausa reaching a tailor who
+wrote in English. People who share a word with the request always come first,
+and the agent still checks each one.

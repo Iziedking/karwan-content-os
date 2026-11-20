@@ -4,7 +4,7 @@ title: What Karwan keeps about you
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-19
+updated: 2026-11-20
 capability: false
 tags:
   - privacy
@@ -34,6 +34,12 @@ cookie and a language cookie. A third cookie keeps the country you are
 browsing from for a day, so prices read in local money before you sign in; it
 holds the country only and is not tied to your account. It uses no advertising trackers, and it never
 keeps wallet keys or card and bank details.
+
+When matching by meaning is switched on, what you say you sell and what you
+ask for are also turned into a meaning vector, a list of numbers, by a model on
+Amazon Web Services in Karwan's own account, so that people find you by what
+you mean. Karwan keeps the vector and a fingerprint of the text, not the text
+again, and deletes them with your account.
 
 Deals settle on Arc, a public blockchain. What is written there cannot be
 changed or removed, even after you delete your account.
