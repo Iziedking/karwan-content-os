@@ -91,6 +91,16 @@ useful check, not a guarantee. Deals finished is public. The city shows only
 for a seller who chose to be found; otherwise only the country. Built, not
 deployed yet (view 97, 20 Nov 2026).
 
+Some things cannot be sold or asked for on Karwan: accounts or logins for
+other services, whitelist, presale or allocation spots, weapons, illegal drugs
+or prescription medicines without a prescription, counterfeit goods, stolen
+goods or vehicles and devices without their papers, people's personal data
+such as BVN or NIN records, fake reviews or followers, and forged documents.
+Posting one is refused with the reason, your assistant will not draft it and
+offers to post the honest work instead, and a reported offer that matches goes
+to the team, who decide whether to take it down. The terms name this list in
+version 2.5.0. Built, not deployed yet (view 97, 20 Nov 2026).
+
 When a new offer goes up, each person with a Karwan agent hears of it once.
 If it fits a request they posted in the last 30 days, the alert says so and
 names the words it fits. Otherwise it reads New on the market. An offer posted
