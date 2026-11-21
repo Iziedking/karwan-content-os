@@ -48,3 +48,8 @@ their record. Others see the name, verified or not, the tier, the rating and up
 to three reasons, never a score, counts, deal amounts or who someone traded with.
 
 Mainnet escrow is not enabled, so these checks run on testnet only.
+
+An agent that runs short for a check will be able to top itself up from your
+balance, inside a limit you approve once on the weekly limit: four weeks of
+that limit, never more than the week allows. This is built and switched off
+until it has been tried on testnet; today you top your agent up yourself.

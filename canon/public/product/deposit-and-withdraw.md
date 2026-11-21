@@ -4,7 +4,7 @@ title: Deposit and withdraw
 status: live
 visibility: public
 audience: all
-updated: 2026-11-15
+updated: 2026-11-21
 capability: true
 tags:
   - money
@@ -38,6 +38,9 @@ Before a withdrawal moves, Karwan shows it once more: where it goes, on which
 network, and that it cannot be undone. Nothing leaves until you confirm.
 Withdrawing to a bank account or a card is coming soon. Both are listed on
 the Withdraw screen and cannot be picked yet.
+Adding money lists a bank transfer and a card first, then crypto. Bank and
+card are coming soon and cannot be picked yet; the crypto steps name USDC and
+the network, because that is what you pick on the exchange or wallet you send from.
 The Transfer balance holds your USDC from every network together, ready to
 move to Arc in one step.
 
