@@ -332,7 +332,7 @@
       "id": "disputes-heard-first",
       "title": "A dispute is heard before anything is decided",
       "status": "shipping",
-      "updated": "2026-11-19",
+      "updated": "2026-11-21",
       "tags": [
         "escrow",
         "disputes",
@@ -345,7 +345,7 @@
           "date": "2026-11-19"
         }
       ],
-      "body": "On deals held by Karwan's escrow family, a dispute is heard before anything\nis decided. Both sides answer three questions on the deal page: what arrived,\nwhat is missing and whether anything was late. Nothing is decided until both\nhave answered or 72 hours have passed.\n\nKarwan then reads both answers, the delivery with its check result and the deal\nchat, and writes a finding. The delivery check is evidence, never a ruling on\nits own. A person at Karwan confirms every finding before anything goes to the\nescrow, and neither side sees a finding until it is confirmed.\n\nA finding that pays the seller in full or refunds the buyer in full goes on the\nescrow with 72 hours for either side to ask for a person to decide. If nobody\nasks, it pays out as found. A part share, a finding not confirmed in time, or a\nheld delivery link goes straight to people: two people at Karwan must agree and\nwrite their reasons, within 5 days. If they do not, the share written into the\ndeal's terms applies.\n\nThe deal page shows each step with its date and a countdown, and the assistant\nsays the same in Telegram and on the website. The money stays held in the\nescrow the whole time.\n\nBuilt and proven on an Arc fork; it is being switched on for Arc Testnet."
+      "body": "On deals held by Karwan's escrow family, a dispute is heard before anything\nis decided. Both sides answer three questions on the deal page: what arrived,\nwhat is missing and whether anything was late. Nothing is decided until both\nhave answered or 72 hours have passed.\n\nKarwan then reads both answers, the delivery with its check result and the deal\nchat, and writes a finding. The delivery check is evidence, never a ruling on\nits own. A person at Karwan confirms every finding before anything goes to the\nescrow, and neither side sees a finding until it is confirmed.\n\nA finding that pays the seller in full or refunds the buyer in full goes on the\nescrow with 72 hours for either side to ask for a person to decide. If nobody\nasks, it pays out as found. A part share, a finding not confirmed in time, or a\nheld delivery link goes straight to people: two people at Karwan must agree and\nwrite their reasons, within 5 days. If they do not, the share written into the\ndeal's terms applies.\n\nThe deal page shows each step with its date and a countdown, and the assistant\nsays the same in Telegram and on the website. The money stays held in the\nescrow the whole time.\n\nOnce a dispute is decided the deal is finished. It moves to the finished deals,\nsays where the money went (paid to the seller, refunded, or split) and the\nproblem card goes away. The record of the dispute stays.\n\nBuilt and proven on an Arc fork; it is being switched on for Arc Testnet."
     },
     {
       "id": "escrow-families-roadmap",
@@ -1556,7 +1556,7 @@
         }
       ],
       "check": null,
-      "updated": "2026-11-19",
+      "updated": "2026-11-21",
       "path": "public/product/disputes-heard-first.md"
     },
     {

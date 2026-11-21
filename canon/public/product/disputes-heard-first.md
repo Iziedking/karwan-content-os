@@ -4,7 +4,7 @@ title: A dispute is heard before anything is decided
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-19
+updated: 2026-11-21
 capability: true
 tags:
   - escrow
@@ -35,5 +35,9 @@ deal's terms applies.
 The deal page shows each step with its date and a countdown, and the assistant
 says the same in Telegram and on the website. The money stays held in the
 escrow the whole time.
+
+Once a dispute is decided the deal is finished. It moves to the finished deals,
+says where the money went (paid to the seller, refunded, or split) and the
+problem card goes away. The record of the dispute stays.
 
 Built and proven on an Arc fork; it is being switched on for Arc Testnet.
