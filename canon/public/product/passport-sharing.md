@@ -29,8 +29,10 @@ yet. Choose 24 hours or 7 days.
 Profile shows your record as one card: deals done, your rating with its count
 and the share on time. Share profile gives a QR code and a link to your profile,
 karwan.site/r/your-tag; your assistant gives the same link. With Show my record
-on, whoever opens it sees your deals, rating and on-time rate, never your score
-or amounts. Turn it off in Profile, Privacy, and they see your name, photo and
+on, whoever opens it sees your deals, rating and on-time rate, and the latest
+notes people wrote after their deals with you, each with its stars and month,
+never who wrote it, your score or amounts. A note with a phone number, an email
+or a link stays private. Turn it off in Profile, Privacy, and they see your name, photo and
 what you sell. Your own view of that profile links to your Trade record page,
 which holds every number, your earlier deals and where your record comes from.
 
