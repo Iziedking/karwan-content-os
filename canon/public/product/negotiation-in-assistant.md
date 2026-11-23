@@ -39,7 +39,9 @@ allowed above your budget, and counters it toward your budget. Sellers who
 offered get a turn to keep, lower or withdraw their offer, and sellers whose
 offer is not the lowest hear once that a lower one is in, never its price.
 Offers only go down, at most three times per seller per request. Sellers never
-see how far above your budget you would go.
+see how far above your budget you would go. Offers that fit but ask more than
+you allowed are never hidden: they show apart, under Over your budget, and you
+can still choose one at its price. Your agent never agrees above your budget.
 
 When your budget is far under what the work goes for and no seller takes it,
 your agent tells you plainly, with the market price, and you choose to allow
