@@ -34,7 +34,9 @@ A rating counts by how independent the person who gave it is. Each rater
 counts once, however many deals they rated. A rater whose own ratings are
 almost all of this person and the people who rated them counts one fifth, so a
 small group that only rates itself stays "New" until three independent
-ratings come in. The stars and notes stay as people gave them; the same rule
+ratings come in. A rater in that circle whom someone outside it also rated,
+someone who rated at least two other people outside it, counts half: a
+community that outside buyers deal with too reads as rated. The stars and notes stay as people gave them; the same rule
 applies on profiles, in shortlists and for every agent that reads a rating.
 
 The rating is separate from the reputation score and does not change it.

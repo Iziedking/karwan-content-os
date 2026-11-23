@@ -123,5 +123,9 @@ order every time: the agent is on and has not stopped itself, the switch for
 that action is on (Make offers, Bargain, Agree a price, Lock money, Find
 people, Checks and research), and the price stays inside the person's limit.
 Locking money also passes the lock rules. With a switch off, the agent asks
-its person instead, or for a paid check or a search, does nothing. Bargain and
-Checks and research apply to both buying and selling.
+its person instead, or for a paid check or a search, does nothing. A paid check
+or search that would go over the weekly limit is not paid for, by the same rule
+wherever it is paid. With Bargain off, your buying agent sends no counter and
+you choose from the list; with Agree a price off, it bargains and brings you
+each price it reaches. Bargain and Checks and research apply to both buying and
+selling.
