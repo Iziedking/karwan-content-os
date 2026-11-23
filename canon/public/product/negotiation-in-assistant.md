@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-15
+updated: 2026-11-23
 capability: true
 tags:
   - market
@@ -122,14 +122,19 @@ tell a seller you have a better offer, only when that is true, never who or how
 much.
 
 Asking the seller first is built and switched off until it is tested. With it
-on, choosing a seller from your shortlist holds no money yet. A seller who set
-their agent to Agree for me, at a price inside their limits, is accepted for at
-once. Every other seller is asked in the app, on Telegram and by email, and has
+on, choosing a seller from your shortlist holds no money yet. Only a seller
+whose agent is on autopilot (it may agree a price and lock money on its own),
+at a price inside their limits, is accepted for at once (view 103, 23 Nov
+2026). Every other seller is asked in the app, on Telegram and by email, and has
 24 hours, or until your request's own date if that is sooner. They accept,
 decline, or ask for more once. While you wait you can choose someone else at
 any time. If they ask for more, you approve the new price or choose someone
 else. If they decline or do not answer in time, your request is open again with
-its other offers and you are told. Buying a posted offer as listed follows the
+its other offers and you are told. When they accept and your agent does not
+hold the price and deal fee yet, their yes stands for a day: you are told to
+fund the deal, and the request page shows the total, what your agent holds and
+what is short, with one button to add the gap and fund. Not funded in time, the
+choice lapses and nothing was held. Buying a posted offer as listed follows the
 same switch: a seller who chose Ask me first, or turned their agent off, is
 asked about each order, and you pay only after they accept. Other sellers
 posted that price, so their agent still accepts the order at once.
