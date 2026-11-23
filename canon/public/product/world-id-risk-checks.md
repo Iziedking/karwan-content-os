@@ -4,7 +4,7 @@ title: World ID only when the risk calls for it
 status: live
 visibility: public
 audience: all
-updated: 2026-10-16
+updated: 2026-11-23
 capability: true
 tags:
   - verification
@@ -26,8 +26,10 @@ USDC or more, many deals from a new account in one day, or a link they sent
 earlier that was judged malicious.
 
 The buyer confirms when choosing an offer. The seller confirms before escrow
-funds, and escrow funds as soon as they pass. A person who already passed World
-ID anywhere on Karwan is not asked again for a first deal.
+funds, and escrow funds as soon as they pass. A seller who reviews the order
+before accepting does the check from Accept on the same card: passing it is
+their yes (view 103, 23 Nov 2026). A person who already passed World ID
+anywhere on Karwan is not asked again for a first deal.
 
 A price far from the market, a low score or a link judged only suspicious never
 asks for World ID. Replayed over 197 testnet deals, these rules asked on 55

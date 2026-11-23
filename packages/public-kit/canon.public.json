@@ -1033,7 +1033,7 @@
       "id": "world-id-risk-checks",
       "title": "World ID only when the risk calls for it",
       "status": "live",
-      "updated": "2026-10-16",
+      "updated": "2026-11-23",
       "tags": [
         "verification",
         "agents",
@@ -1047,7 +1047,7 @@
           "date": "2026-10-16"
         }
       ],
-      "body": "On an agent deal on Arc Testnet, Karwan's trust rules ask a person to confirm\nwith World ID only for one of four reasons: their first deal, a deal of 1,000\nUSDC or more, many deals from a new account in one day, or a link they sent\nearlier that was judged malicious.\n\nThe buyer confirms when choosing an offer. The seller confirms before escrow\nfunds, and escrow funds as soon as they pass. A person who already passed World\nID anywhere on Karwan is not asked again for a first deal.\n\nA price far from the market, a low score or a link judged only suspicious never\nasks for World ID. Replayed over 197 testnet deals, these rules asked on 55\ndeals, down from 97 under the earlier rules.\n\nOn testnet the check can be skipped so testing is never blocked. World ID is\nnot configured on mainnet, where escrow is not enabled yet."
+      "body": "On an agent deal on Arc Testnet, Karwan's trust rules ask a person to confirm\nwith World ID only for one of four reasons: their first deal, a deal of 1,000\nUSDC or more, many deals from a new account in one day, or a link they sent\nearlier that was judged malicious.\n\nThe buyer confirms when choosing an offer. The seller confirms before escrow\nfunds, and escrow funds as soon as they pass. A seller who reviews the order\nbefore accepting does the check from Accept on the same card: passing it is\ntheir yes (view 103, 23 Nov 2026). A person who already passed World ID\nanywhere on Karwan is not asked again for a first deal.\n\nA price far from the market, a low score or a link judged only suspicious never\nasks for World ID. Replayed over 197 testnet deals, these rules asked on 55\ndeals, down from 97 under the earlier rules.\n\nOn testnet the check can be skipped so testing is never blocked. World ID is\nnot configured on mainnet, where escrow is not enabled yet."
     },
     {
       "id": "your-agents-mandate-and-brief",
@@ -2472,7 +2472,7 @@
         "note": "The four reasons that ask for World ID, and the pass that stops a busy new account being asked twice in a day.",
         "lastVerified": ""
       },
-      "updated": "2026-10-16",
+      "updated": "2026-11-23",
       "path": "public/product/world-id-risk-checks.md"
     },
     {
