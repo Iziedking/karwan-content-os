@@ -759,7 +759,7 @@
       "id": "ratings-after-deals",
       "title": "Ratings after a settled deal",
       "status": "roadmap",
-      "updated": "2026-11-19",
+      "updated": "2026-11-23",
       "tags": [
         "reputation",
         "agents",
@@ -774,9 +774,13 @@
         {
           "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/93-ratings-that-fit-the-work.md",
           "date": "2026-11-19"
+        },
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/105-ratings-a-circle-cannot-buy.md",
+          "date": "2026-11-23"
         }
       ],
-      "body": "After a deal settles on Karwan, each person's agent asks them to rate the\nother from 1 to 5, with an optional note, and reminds them once after three\ndays. A rating shows as soon as it is given.\n\nEach person's public rating is the average of the ratings shown, with how\nmany there are, for example \"4.8 from 23 deals\". Under three ratings it shows\n\"New\". Only the two people in a settled deal can rate it, once each, within 14 days\nof it settling. Ratings from disputed deals are counted beside the number,\nfor example \"3.7 from 3 deals, 2 disputed\". A note with a phone number, an email\nor a link is kept private.\n\nThe rating is separate from the reputation score and does not change it.\nAnyone's rating is free to read, for a person or any agent, inside Karwan or\noutside it. Only the rating is free: the score and the counts behind it stay\na paid record read.\n\nAgents use ratings when ranking people for a job, after skill fit, location\nand verification. Each rating counts by how closely that deal's words match\nthe job, recent ratings count more, and the overall rating fills in while a\nperson has few deals like it. So a tailor rated for suits ranks high for a\nsuit and not for a logo, and the list reads, for example, \"4.8 from 3 deals\nlike this, 4.6 overall from 12\".\n\nThis is built for testnet and not live."
+      "body": "After a deal settles on Karwan, each person's agent asks them to rate the\nother from 1 to 5, with an optional note, and reminds them once after three\ndays. A rating shows as soon as it is given.\n\nEach person's public rating is the average of the ratings shown, with how\nmany there are, for example \"4.8 from 23 deals\". Under three ratings it shows\n\"New\". Only the two people in a settled deal can rate it, once each, within 14 days\nof it settling. Ratings from disputed deals are counted beside the number,\nfor example \"3.7 from 3 deals, 2 disputed\". A note with a phone number, an email\nor a link is kept private.\n\nA rating counts by how independent the person who gave it is. Each rater\ncounts once, however many deals they rated. A rater whose own ratings are\nalmost all of this person and the people who rated them counts one fifth, so a\nsmall group that only rates itself stays \"New\" until three independent\nratings come in. The stars and notes stay as people gave them; the same rule\napplies on profiles, in shortlists and for every agent that reads a rating.\n\nThe rating is separate from the reputation score and does not change it.\nAnyone's rating is free to read, for a person or any agent, inside Karwan or\noutside it. Only the rating is free: the score and the counts behind it stay\na paid record read.\n\nAgents use ratings when ranking people for a job, after skill fit, location\nand verification. Each rating counts by how closely that deal's words match\nthe job, recent ratings count more, and the overall rating fills in while a\nperson has few deals like it. So a tailor rated for suits ranks high for a\nsuit and not for a logo, and the list reads, for example, \"4.8 from 3 deals\nlike this, 4.6 overall from 12\".\n\nThis is built for testnet and not live."
     },
     {
       "id": "release-timing",
@@ -2121,10 +2125,14 @@
         {
           "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/93-ratings-that-fit-the-work.md",
           "date": "2026-11-19"
+        },
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/105-ratings-a-circle-cannot-buy.md",
+          "date": "2026-11-23"
         }
       ],
       "check": null,
-      "updated": "2026-11-19",
+      "updated": "2026-11-23",
       "path": "public/product/ratings-after-deals.md"
     },
     {

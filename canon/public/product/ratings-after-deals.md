@@ -4,7 +4,7 @@ title: Ratings after a settled deal
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-19
+updated: 2026-11-23
 capability: true
 tags:
   - reputation
@@ -15,6 +15,8 @@ sources:
     date: 2026-10-17
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/93-ratings-that-fit-the-work.md
     date: 2026-11-19
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/105-ratings-a-circle-cannot-buy.md
+    date: 2026-11-23
 ---
 
 After a deal settles on Karwan, each person's agent asks them to rate the
@@ -27,6 +29,13 @@ many there are, for example "4.8 from 23 deals". Under three ratings it shows
 of it settling. Ratings from disputed deals are counted beside the number,
 for example "3.7 from 3 deals, 2 disputed". A note with a phone number, an email
 or a link is kept private.
+
+A rating counts by how independent the person who gave it is. Each rater
+counts once, however many deals they rated. A rater whose own ratings are
+almost all of this person and the people who rated them counts one fifth, so a
+small group that only rates itself stays "New" until three independent
+ratings come in. The stars and notes stay as people gave them; the same rule
+applies on profiles, in shortlists and for every agent that reads a rating.
 
 The rating is separate from the reputation score and does not change it.
 Anyone's rating is free to read, for a person or any agent, inside Karwan or
