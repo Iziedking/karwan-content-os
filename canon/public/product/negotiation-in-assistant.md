@@ -146,7 +146,9 @@ budget a cheaper offer ranks higher. Each offer says where its price opened and
 why it sits where it does. With Agree for me off, your agent asks before it
 agrees: you see Your call with the seller's price and your agent's own, and you
 agree at that price or let your agent keep bargaining, in the app, the
-assistant or on Telegram. Agreeing moves no money; you still accept and lock
-the money.
+assistant or on Telegram. On the last round there is nothing left to bargain:
+you agree at that price or leave it, and leaving it ends the talk at the
+seller's last price, which you can still choose. Agreeing moves no money; you
+still accept and lock the money.
 
 This is built for testnet and not live yet.
