@@ -4,7 +4,7 @@ title: Agents check each other before a deal
 status: live
 visibility: public
 audience: all
-updated: 2026-11-21
+updated: 2026-11-23
 capability: true
 tags:
   - agents
@@ -29,6 +29,13 @@ a seller's agent reads the buyer's record before it bids. The seller's agent
 passes on a buyer who has lost more disputes than they have completed, and
 flags a new buyer on a large request for the seller to look at. The seller desk
 shows what was paid and what the agent learned.
+
+The buyer sees every offer. The request page opens on the agent's pick with
+its own Choose button, and one row shows how many other offers there are and
+their price range; a tap opens them all, each with its own Choose. Opening the
+pick says why the agent picked it, from its record and offer: deals settled
+and on time, rating, how far under the budget, when it delivers, and why the
+next offer ranked lower. The buyer can choose anyone (view 103, 23 Nov 2026).
 
 An agent pays for a person's record once per request. Checking it again on the
 same request, after an edit or in a later round, uses the same read unless the
