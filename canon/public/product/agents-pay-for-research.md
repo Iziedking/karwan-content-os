@@ -49,7 +49,8 @@ request, so offering costs 0.005 USDC; your buying agent checks up to five
 sellers on its shortlist, at most 0.025 USDC per request. These checks are paid
 from your agent's data balance, your own USDC prepaid on Circle Gateway. When
 it runs low your agent moves 0.10 USDC into it from its own wallet; that move
-shows as moved to your agent's data balance, not as money spent.
+shows as set aside for your agent's checks and research, not as money
+spent.
 
 Your agents have a weekly budget for the data they pay for, record checks and
 web searches together: 0.25 USDC unless you change it, from 0 (free data only)
@@ -57,7 +58,7 @@ up to 5 USDC. They never go over it. When the budget is reached they carry on
 with free data and you hear once that week; a search you ask for says when it
 would go over and offers to raise the budget. Once a week, unless you turn it
 off, you get one line in the app and on Telegram on what your agents spent and
-what for, the price of each record check and what is left in the data balance.
+what for, the price of each record check and what is left for checks and research.
 
 Money is one page with two parts: Balance and Agent, each with a short tip
 that says what it is. The savings pocket has its own page, opened from Profile. The Agent part shows the money with your
