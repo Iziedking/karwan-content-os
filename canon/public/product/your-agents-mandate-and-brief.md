@@ -4,7 +4,7 @@ title: What your agent may do, and its morning brief
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-20
+updated: 2026-11-23
 capability: true
 tags:
   - agents
@@ -108,7 +108,12 @@ now; it does not act on what it missed.
 Fit alerts are built and switched off until they are tested (view 96). With
 them on, your agent tells you once whenever something new fits you: a
 request, an offer for sale that fits something you asked for, hourly or
-monthly work, or a contest. If it passes on a request that fits your work, it
+monthly work, or a contest. An offer for sale fits when it matches, by meaning
+and not by one shared word, a request you posted in the last 30 days at a
+price within that request's budget, or something you told your agent you want
+to buy; the note names that request and its budget, and opens the offer so you
+can order it or leave it. Offers that fit nothing you asked for wait in the
+market and your brief (view 103, 23 Nov 2026). If it passes on a request that fits your work, it
 says why in one line, such as the budget being under your lowest price, and
 never names the buyer or their score. Past eight a day, three passes a day, or
 in your quiet hours, the rest wait in your next brief, never dropped.
