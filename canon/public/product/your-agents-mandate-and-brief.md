@@ -117,3 +117,11 @@ market and your brief (view 103, 23 Nov 2026). If it passes on a request that fi
 says why in one line, such as the budget being under your lowest price, and
 never names the buyer or their score. Past eight a day, three passes a day, or
 in your quiet hours, the rest wait in your next brief, never dropped.
+
+Everything an agent does on its own passes one check in code, in the same
+order every time: the agent is on and has not stopped itself, the switch for
+that action is on (Make offers, Bargain, Agree a price, Lock money, Find
+people, Checks and research), and the price stays inside the person's limit.
+Locking money also passes the lock rules. With a switch off, the agent asks
+its person instead, or for a paid check or a search, does nothing. Bargain and
+Checks and research apply to both buying and selling.
