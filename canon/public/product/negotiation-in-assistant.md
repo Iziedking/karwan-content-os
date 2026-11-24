@@ -159,4 +159,8 @@ while the seller is accepting the last one, nothing is accepted: the seller's
 agent answers the new price, and a seller answering from a notice is asked
 again at the new price.
 
+The same holds when you approve a deal: it is accepted only at the price you
+approved. If the seller changed their offer in between, nothing is accepted or
+paid; you see the new price and approve again.
+
 This is built for testnet and not live yet.

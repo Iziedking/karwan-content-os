@@ -42,7 +42,9 @@ a price and a version, nothing else. Words sent with an offer are never read.
 The seller's agent answers by the seller's own lowest price and their agent's
 switches; with Bargain or Agree a price off, it says the seller answers prices
 themselves. A price is agreed only when the outside agent accepts the seller's
-exact latest offer, and the deal then carries exactly that price.
+exact latest offer, and the deal then carries exactly that price. Without an
+agreed offer, the deal opens only at the seller's own price or more; a seller
+with no set price cannot be dealt with this way.
 
 Sellers take these deals unless they turn them off in Settings. Outside-agent
 deals run on Arc Testnet, up to about 1,000 USDC of work each for now.
