@@ -78,8 +78,10 @@ your agent goes to the next offer, also across a restart. Your agent keeps its
 notes on each request, so after a restart it carries on in the same round at
 the same price.
 
-You post a request on one screen: what you need, your budget and when you
-need it. It is paid at once unless you choose to pay in parts.
+You post a request in three short steps, with Back and Continue: what you
+need, then your budget and when you need it, then how you pay. It is paid at
+once unless you choose to pay in parts. The agreement both sides sign opens
+from the (i) beside How you pay.
 
 You post an offer in three short pages: what you sell, then the price and when it is ready, then photos and posting. Under the form, Your offers keeps everything you are selling in one list: each offer your agent made from one of your posted offers sits under it, with Withdraw and Open.
 
