@@ -388,6 +388,24 @@
       "body": "The money sits in an escrow contract, not with Karwan and not with your\ncounterparty. A buyer funds it before work starts, so a supplier can see the\nmoney exists before shipping. A supplier cannot take it early, and a buyer cannot\nwithdraw it once the deal is accepted.\n\nThe final tranche always needs an explicit buyer click. Nothing settles the last\nportion on a timer.\n\nIf the two sides disagree, either can raise a dispute, which freezes the escrow.\nOn deals made on Karwan's newer escrow, a fixed set of rules first proposes an\noutcome from the deal's record. Either side has 72 hours to ask for a person to\ndecide instead. A case sent to people is ruled by a Safe that needs two of its\nsigners, so no single person rules it; if they do not rule in 5 days, the share\nwritten into the deal's terms applies. On the older escrow every dispute is\nruled by a 2-of-3 Safe."
     },
     {
+      "id": "fast-on-a-slow-line",
+      "title": "Karwan on a slow line",
+      "status": "shipping",
+      "updated": "2026-11-24",
+      "tags": [
+        "direction",
+        "testnet"
+      ],
+      "path": "public/product/fast-on-a-slow-line.md",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/106-fast-on-a-slow-line.md",
+          "date": "2026-11-24"
+        }
+      ],
+      "body": "Karwan is built for a phone on a slow or patchy line, such as 3G in Nigeria.\nA tapped link or tab shows at once that it was pressed, and a thin line runs\nacross the top while the next page loads. The page shows its layout while it\nwaits, never a frozen screen.\n\nA page keeps what it last showed until the fresh answer comes. One line at\nthe top says what is happening: Updating, Slow connection, still trying after\n4 seconds, and after 20 seconds This is taking too long, with Try again. With\nno network it says so and the app keeps showing what you last saw.\n\nMoney always reads fresh before it moves. A figure kept on the phone is never\nthe one a payment uses, and a payment is never sent again on its own after a\nslow answer.\n\nThe landing page loads only what it shows, with no wallet or app code, and\nmore and more screens load their own words in the reader's language only.\nThe main pages each have a ceiling on the code they send, checked before\neach release.\n\nTelegram stays the lightest way in: the agent answers there without the app."
+    },
+    {
       "id": "glossary-core",
       "title": "Core terms",
       "status": "live",
@@ -1620,6 +1638,33 @@
       "check": null,
       "updated": "2026-11-18",
       "path": "public/faq/is-my-money-safe.md"
+    },
+    {
+      "id": "fast-on-a-slow-line",
+      "title": "Karwan on a slow line",
+      "status": "shipping",
+      "publishable": false,
+      "blockedBy": "not-live",
+      "capability": true,
+      "audience": "all",
+      "tags": [
+        "direction",
+        "testnet"
+      ],
+      "summary": "Karwan is built for a phone on a slow or patchy line, such as 3G in Nigeria. A tapped link or tab shows at once that it was pressed, and a thin line runs across the top while the next page loads. The page shows its layout while it waits, never a frozen screen.",
+      "sources": [
+        {
+          "url": "https://github.com/Iziedking/Karwan/blob/main/docs/architecture/106-fast-on-a-slow-line.md",
+          "date": "2026-11-24"
+        }
+      ],
+      "check": {
+        "kind": "manual",
+        "note": "Built, not deployed yet. Read against view 106 and its As built section; the script budget, landing and screen words browser tests passed on 24 November 2026.",
+        "lastVerified": "2026-11-24"
+      },
+      "updated": "2026-11-24",
+      "path": "public/product/fast-on-a-slow-line.md"
     },
     {
       "id": "glossary-core",
