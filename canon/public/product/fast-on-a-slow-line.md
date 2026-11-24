@@ -34,6 +34,8 @@ slow answer.
 
 The landing page loads only what it shows, with no wallet or app code, and
 more and more screens load their own words in the reader's language only.
+The list of wallets loads the first time someone opens it, so email and
+passkey accounts never download it.
 The main pages each have a ceiling on the code they send, checked before
 each release.
 
