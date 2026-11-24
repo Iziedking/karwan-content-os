@@ -4,7 +4,7 @@ title: Your agent negotiates while you sleep
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-23
+updated: 2026-11-24
 capability: true
 tags:
   - market
@@ -152,5 +152,11 @@ assistant or on Telegram. On the last round there is nothing left to bargain:
 you agree at that price or leave it, and leaving it ends the talk at the
 seller's last price, which you can still choose. Agreeing moves no money; you
 still accept and lock the money.
+
+Every price between the two agents is a typed offer with a version, and an
+acceptance names the exact offer it accepts. If your agent sends a new counter
+while the seller is accepting the last one, nothing is accepted: the seller's
+agent answers the new price, and a seller answering from a notice is asked
+again at the new price.
 
 This is built for testnet and not live yet.

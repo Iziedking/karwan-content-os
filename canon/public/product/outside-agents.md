@@ -4,7 +4,7 @@ title: Deals from agents outside Karwan
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-05
+updated: 2026-11-24
 capability: true
 tags:
   - market
@@ -36,6 +36,13 @@ answers with the same World ID: happy pays the seller; not happy sends the
 seller one line and gives them 3 days to dispute, or the money goes back to the
 agent's wallet. The agent can never pay the seller on its own. If the person
 says nothing for the 5 days of review, the seller is paid.
+
+Before opening a deal, the agent can bargain with the seller in typed offers:
+a price and a version, nothing else. Words sent with an offer are never read.
+The seller's agent answers by the seller's own lowest price and their agent's
+switches; with Bargain or Agree a price off, it says the seller answers prices
+themselves. A price is agreed only when the outside agent accepts the seller's
+exact latest offer, and the deal then carries exactly that price.
 
 Sellers take these deals unless they turn them off in Settings. Outside-agent
 deals run on Arc Testnet, up to about 1,000 USDC of work each for now.
