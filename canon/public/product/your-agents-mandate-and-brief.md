@@ -4,7 +4,7 @@ title: What your agent may do, and its morning brief
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-23
+updated: 2026-11-24
 capability: true
 tags:
   - agents
@@ -16,6 +16,8 @@ sources:
     date: 2026-11-05
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/87-your-agent-on-autopilot.md
     date: 2026-11-16
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/104-the-agent-charter.md
+    date: 2026-11-24
 check:
   kind: manual
   note: Built, not deployed yet. The mandate, the change card, the re-plan, the brief and the progress log read against their tests, which passed on 5 November 2026.
@@ -39,11 +41,24 @@ requests again. A request's budget is fixed once it is posted, so a new buying
 limit applies to new requests, and the card says which open ones ask for more.
 Changing limits moves no money; paying still needs you.
 
-What your agent does alone is one switch each: make offers, bargain, agree a
-price, lock money, find people, pay for checks and research, and the morning
-brief. The switches are in Settings under Agent, and your assistant can turn
-any of them on or off with a card you confirm. The budgets and rules for what
-is on are on the Your agent page.
+What your agent does alone comes as one of three levels, at the top of the
+Your agent page in Profile. Ask me first: it finds people and makes offers, and
+every deal waits for you. Bargain for me: it also agrees a price inside your
+limits, which for a seller means your lowest price or more, and you confirm
+before money is held. Autopilot: it also locks money in escrow for deals inside
+your limits, and releasing it stays yours. The level you chose shows its limit
+on its row. Moving down a level needs no passkey. Your assistant can change the
+level with a card you confirm.
+
+Under the levels, Change the details opens one switch each: make offers,
+bargain, agree a price, lock money, find people, pay for checks and research,
+and the morning brief, each with its limit on the same row. Switches set
+between two levels read as your own mix.
+
+If you accept a buyer's price by hand that your agent could have agreed on its
+own, Karwan asks you once whether it may agree for you next time, at your
+lowest price or more. Yes turns Agree a price on. Not now means it is not asked
+again.
 
 Lock money for me is built and switched off on every network until Karwan
 opens it, on the test network first. While it is off the switch says Not open
