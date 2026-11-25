@@ -4,7 +4,7 @@ title: Assistant mode and Help
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-19
+updated: 2026-11-25
 capability: true
 tags:
   - agents
@@ -29,6 +29,8 @@ sources:
     date: 2026-11-17
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/84-the-wait-is-worth-watching.md
     date: 2026-11-15
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/110-a-help-centre-that-answers.md
+    date: 2026-11-25
 ---
 
 Karwan's assistant is called Aman, on the website and in Telegram. Aman
@@ -158,7 +160,16 @@ A picture or PDF can be picked, pasted or dragged into the message box. It
 waits there until you send, and shows in your message with the words you
 typed beside it.
 
-Help and support is in your Profile. A help bot answers how things work and
+Help is a help centre at karwan.site/help, and Help in your Profile opens it.
+It has a search, seven topics and short articles in plain words, each with the
+answer first, what to do, and Did this answer your question? Anyone can read
+them without an account. A round button at the bottom right of every help page
+opens Aman, who answers from the same articles and from your own account, and
+names the article it used. Asking Aman needs you to be signed in; without an
+account you can write to support@karwan.site. If an article did not help, No
+or Sort of opens Aman with your question ready.
+
+Your cases are under Help. A help bot answers how things work and
 what went wrong, from what your account shows. When you ask for a person, or
 it cannot answer, it asks what you expected and what happened, then opens a
 case with the Karwan team, with a reference such as KS-1042. Your assistant
