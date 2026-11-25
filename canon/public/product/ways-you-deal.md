@@ -4,7 +4,7 @@ title: The ways you deal
 status: roadmap
 visibility: public
 audience: all
-updated: 2026-11-01
+updated: 2026-11-25
 capability: true
 tags:
   - agents
@@ -13,6 +13,8 @@ tags:
 sources:
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/26-agents-for-every-deal.md
     date: 2026-10-23
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/111-everything-you-do.md
+    date: 2026-11-25
 ---
 
 Your agents work from the ways you deal, for selling and for buying. Each way
@@ -31,6 +33,18 @@ asked. A request due sooner than you take still gets an offer, with the days
 you need, and if the buyer chooses it the deal runs on your days. When a buyer
 asks for a kind of deal you have not listed, the agent does not offer on its
 own and never goes quiet: it asks you, with a suggested answer, and you decide.
+
+If you sell more than one trade, each trade is its own card: the trade, how
+it is done (in person, online, or made and delivered), how clients pay, and
+its own lowest and usual price. You can hold up to 12, and several can be paid
+the same way, one card per trade. When a request comes in, your agent offers
+from the trade that fits it, at that trade's price. Your public profile shows
+the names of your trades, never their prices. You add a trade from a list that
+suggests as you type, or as you typed it; a trade typed that is not on the list
+is counted by its name alone, never who typed it, so the list grows. You can
+also tell your agent, such as "I also do tailoring": it asks the price and how
+clients pay once, then shows the card, and nothing changes until you say Add
+it.
 
 A goods way can be priced per item. A request that names a count, like 3
 pairs, is then compared per item, and the buyer sees what each comes to.
