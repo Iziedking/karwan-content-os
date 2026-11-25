@@ -4,7 +4,7 @@ title: Be found and be reached
 status: shipping
 visibility: public
 audience: all
-updated: 2026-11-20
+updated: 2026-11-25
 capability: true
 tags:
   - agents
@@ -16,6 +16,8 @@ sources:
     date: 2026-11-08
   - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/95-found-by-what-you-mean.md
     date: 2026-11-20
+  - url: https://github.com/Iziedking/Karwan/blob/main/docs/architecture/108-where-you-are-and-what-you-can-do.md
+    date: 2026-11-25
 ---
 
 Someone new to a city who needs a tailor, a mechanic or a supplier should not
@@ -77,3 +79,18 @@ request or a find then also reaches people who describe the same work in other
 words or another language, such as a request in Hausa reaching a tailor who
 wrote in English. People who share a word with the request always come first,
 and the agent still checks each one.
+
+Someone near me is the first way to start a deal (25 Nov 2026). Say what you
+need, choose near you, in your country or anywhere, and the people found open
+at once. The assistant already knows the place you saved, so asking for "a
+make-up artist near me" searches straight away without asking where you are
+or your budget first. Work done face to face, such as make-up, hair,
+tailoring, repairs, cleaning or catering, is always searched near you and
+never offered online.
+
+Karwan keeps where you are fresh. When nothing is saved, it fills in the city
+your connection comes from. If you once allowed Use my location, it refreshes
+from the phone at most once a day without asking. When your connection shows
+another city two visits in a row, the assistant asks once whether you have
+moved; only your answer changes the place. You can change it any time in
+Profile, Where you are. Only your country is ever shown to others.

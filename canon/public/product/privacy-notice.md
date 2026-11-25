@@ -23,7 +23,12 @@ and only your country is shown to others. If you tap Use my location at setup
 (Share my location in Telegram), your phone's position goes to Karwan only,
 which finds the nearest town from its own town list (GeoNames, CC BY 4.0); it
 is kept to about a kilometre, used only to find people near you, and never
-shown. If you tell your agent your city or area in words, Karwan may look that
+shown. Once allowed, Karwan reads it again at most once a day while you use
+Karwan; it never asks the phone on its own. Each visit, the host of the website
+also tells Karwan the city and country the connection comes from: it fills in
+where you are when you have not said, and when it shows another city two
+visits in a row Karwan asks once whether you have moved; only your answer
+changes the place (view 108, 25 Nov 2026). If you tell your agent your city or area in words, Karwan may look that
 place up on OpenStreetMap's public map service (Nominatim) to work out
 distance; only the typed place and your country leave Karwan's server, never
 your name, your account or your phone's position. The notice lists the
