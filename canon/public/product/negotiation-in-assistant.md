@@ -132,7 +132,9 @@ at a price inside their limits, is accepted for at once (view 103, 23 Nov
 2026). Every other seller is asked in the app, on Telegram and by email, and has
 24 hours, or until your request's own date if that is sooner. They accept,
 decline, or ask for more once. While you wait you can choose someone else at
-any time. If they ask for more, you approve the new price or choose someone
+any time. One choice at a time: while a chosen seller is answering, or has said
+yes, no other offer on your list can be chosen or agreed (25 Nov 2026). If they
+ask for more, you approve the new price or choose someone
 else. If they decline or do not answer in time, your request is open again with
 its other offers and you are told. When they accept and your agent does not
 hold the price and deal fee yet, their yes stands for a day: you are told to
